@@ -107,9 +107,39 @@
       padding: 2px 10px; border-radius: 100px;
     }
 
-    /* Stars */
+    /* Stars (display) */
     .star { color: #FCD34D; }
     .star-empty { color: #374151; }
+
+    /* Star rating INPUT */
+    .star-rating { display: flex; flex-direction: row-reverse; gap: 4px; justify-content: flex-end; }
+    .star-rating input { display: none; }
+    .star-rating label {
+      font-size: 28px; color: #374151; cursor: pointer;
+      transition: color 0.15s ease;
+    }
+    .star-rating label:hover,
+    .star-rating label:hover ~ label,
+    .star-rating input:checked ~ label { color: #FCD34D; }
+
+    /* Menu category tabs */
+    .menu-tab { transition: all 0.2s ease; }
+    .menu-tab.active {
+      background: #DC2626; color: #fff; border-color: #DC2626;
+    }
+
+    /* Language toggle */
+    .lang-btn { transition: all 0.2s ease; }
+    .lang-btn.active { background: #DC2626; color: #fff; }
+
+    /* Accordion */
+    .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .accordion-body.open { max-height: 2000px; }
+    .accordion-icon { transition: transform 0.3s ease; }
+    .accordion-icon.open { transform: rotate(180deg); }
+
+    /* Feedback form success */
+    #feedback-success { display: none; }
   </style>
 </head>
 <body class="bg-brand-darker pattern-bg">
@@ -131,12 +161,18 @@
         </a>
 
         <!-- Desktop nav links -->
-        <div class="hidden md:flex items-center gap-6">
-          <a href="#menu"      class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Menu</a>
-          <a href="#about"     class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Our Story</a>
-          <a href="#reviews"   class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Reviews</a>
-          <a href="#contact"   class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Find Us</a>
-          <a href="tel:+13018539018"
+        <div class="hidden md:flex items-center gap-5">
+          <a href="#menu"      data-i18n="nav_menu"     class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Menu</a>
+          <a href="#about"     data-i18n="nav_story"    class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Our Story</a>
+          <a href="#reviews"   data-i18n="nav_reviews"  class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Reviews</a>
+          <a href="#feedback"  data-i18n="nav_feedback" class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Feedback</a>
+          <a href="#contact"   data-i18n="nav_find"     class="text-brand-cream/70 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Find Us</a>
+          <!-- Language toggle -->
+          <div class="flex items-center border border-brand-cream/20 rounded-full overflow-hidden text-xs font-bold" aria-label="Language selector">
+            <button id="lang-en" onclick="setLang('en')" class="lang-btn active px-3 py-1.5 min-h-[36px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">EN</button>
+            <button id="lang-es" onclick="setLang('es')" class="lang-btn px-3 py-1.5 min-h-[36px] text-brand-cream/60 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">ES</button>
+          </div>
+          <a href="tel:+13018539018" data-i18n="nav_order"
             class="bg-brand-red hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-full min-h-[44px] flex items-center transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
             Order by Phone
           </a>
@@ -158,11 +194,20 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur border-t border-brand-red/20">
       <div class="px-4 py-4 flex flex-col gap-4">
-        <a href="#menu"    class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Menu</a>
-        <a href="#about"   class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Our Story</a>
-        <a href="#reviews" class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Reviews</a>
-        <a href="#contact" class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Find Us</a>
-        <a href="tel:+13018539018"
+        <a href="#menu"     data-i18n="nav_menu"     class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Menu</a>
+        <a href="#about"    data-i18n="nav_story"    class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Our Story</a>
+        <a href="#reviews"  data-i18n="nav_reviews"  class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Reviews</a>
+        <a href="#feedback" data-i18n="nav_feedback" class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Feedback</a>
+        <a href="#contact"  data-i18n="nav_find"     class="text-brand-cream/80 hover:text-brand-cream text-base font-medium py-2 cursor-pointer transition-colors">Find Us</a>
+        <!-- Language toggle mobile -->
+        <div class="flex items-center gap-3">
+          <span class="text-brand-cream/50 text-xs font-semibold uppercase tracking-wide">Language:</span>
+          <div class="flex border border-brand-cream/20 rounded-full overflow-hidden text-xs font-bold">
+            <button id="lang-en-m" onclick="setLang('en')" class="lang-btn active px-4 py-2 min-h-[40px] cursor-pointer">EN</button>
+            <button id="lang-es-m" onclick="setLang('es')" class="lang-btn px-4 py-2 min-h-[40px] text-brand-cream/60 cursor-pointer">ES</button>
+          </div>
+        </div>
+        <a href="tel:+13018539018" data-i18n="nav_order"
           class="bg-brand-red text-white font-semibold text-center py-3 rounded-full min-h-[44px] flex items-center justify-center cursor-pointer transition-colors hover:bg-red-700">
           Order by Phone
         </a>
@@ -261,166 +306,191 @@
     </div>
   </section>
 
-  <!-- ===== SIGNATURE DISHES ===== -->
+  <!-- ===== FULL MENU ===== -->
+  <!-- NOTE: Menu items below are placeholders. Replace with actual items from the PDF menu. -->
   <section id="menu" class="py-20 sm:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Section header -->
-      <div class="text-center mb-14">
-        <p class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-3">Customer Favorites</p>
-        <h2 class="font-display text-4xl sm:text-5xl text-brand-cream mb-4">The Signatures</h2>
-        <p class="text-brand-cream/60 max-w-xl mx-auto leading-relaxed">
-          Dishes our community has loved and craved for over two decades.
+      <div class="text-center mb-10">
+        <p data-i18n="menu_eyebrow" class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-3">Our Menu</p>
+        <h2 data-i18n="menu_heading" class="font-display text-4xl sm:text-5xl text-brand-cream mb-4">What We Serve</h2>
+        <p data-i18n="menu_sub" class="text-brand-cream/60 max-w-xl mx-auto leading-relaxed">
+          Fresh, made-to-order. 25+ years of recipes the community keeps coming back for.
         </p>
+        <p class="text-brand-cream/30 text-xs mt-3 italic" data-i18n="menu_note">Prices subject to change — call to confirm today's specials.</p>
       </div>
 
-      <!-- Dish cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Accordion Menu -->
+      <div class="max-w-4xl mx-auto space-y-3" id="menu-accordion">
 
-        <!-- Card 1 -->
-        <article class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover cursor-default">
-          <div class="h-3 bg-gradient-to-r from-brand-red to-brand-gold"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20 mb-2">
-                  #1 Most Loved
-                </span>
-                <h3 class="font-display text-xl text-brand-cream">Chicken Wings</h3>
-                <p class="text-brand-gold text-sm font-semibold">with Mambo Sauce</p>
-              </div>
-              <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0 ml-3">
-                <svg viewBox="0 0 24 24" class="w-6 h-6 text-brand-red" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8zm3.707-10.707a1 1 0 0 0-1.414 0L12 11.586l-2.293-2.293a1 1 0 0 0-1.414 1.414L10.586 13l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 14.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 13l2.293-2.293a1 1 0 0 0 0-1.414z"/>
-                </svg>
-              </div>
-            </div>
-            <p class="text-brand-cream/60 text-sm leading-relaxed">
-              Fresh, crispy, golden. Served with your choice of white rice, fried rice, fries, or all three. The mambo sauce is legendary — sweet, tangy, unforgettable.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">Breast</span>
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">Legs</span>
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">Thighs</span>
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">Wings</span>
+        <!-- Helper macro: each category is an accordion panel -->
+
+        <!-- APPETIZERS -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="true">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_appetizers">Appetizers</span>
+            <svg class="accordion-icon open w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body open border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10 px-0">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Egg Roll (1)</span><span class="text-brand-gold text-sm font-semibold">$1.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Spring Roll (2)</span><span class="text-brand-gold text-sm font-semibold">$3.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Fried Wonton (8)</span><span class="text-brand-gold text-sm font-semibold">$5.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Crab Rangoon (8)</span><span class="text-brand-gold text-sm font-semibold">$5.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Fried Dumpling (8)</span><span class="text-brand-gold text-sm font-semibold">$6.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken on a Stick (4)</span><span class="text-brand-gold text-sm font-semibold">$6.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">BBQ Spare Ribs (4)</span><span class="text-brand-gold text-sm font-semibold">$7.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Boneless Spare Ribs</span><span class="text-brand-gold text-sm font-semibold">$8.50</span></div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Card 2 -->
-        <article class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover cursor-default">
-          <div class="h-3 bg-gradient-to-r from-brand-gold to-brand-red"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <span class="badge bg-brand-gold/15 text-brand-goldLight border border-brand-gold/20 mb-2">
-                  Staff Pick
-                </span>
-                <h3 class="font-display text-xl text-brand-cream">Chicken Lo Mein</h3>
-                <p class="text-brand-gold text-sm font-semibold">Perfectly Sauced Noodles</p>
+        <!-- SOUPS -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_soups">Soups</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Wonton Soup (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.25 / $5.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Egg Drop Soup (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$2.75 / $4.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hot &amp; Sour Soup (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.25 / $5.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Noodle Soup</span><span class="text-brand-gold text-sm font-semibold">$3.50</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FRIED RICE -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_friedrice">Fried Rice</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$7.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$8.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$9.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$8.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$9.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">House Special Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LO MEIN -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_lomein">Lo Mein &amp; Noodles</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$8.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center">
+                <span class="text-brand-cream/80 text-sm flex items-center gap-2">Chicken Lo Mein <span class="badge bg-brand-gold/15 text-brand-goldLight border border-brand-gold/20">Fan Fave</span></span>
+                <span class="text-brand-gold text-sm font-semibold">$9.25</span>
               </div>
-              <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center flex-shrink-0 ml-3">
-                <svg viewBox="0 0 24 24" class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
-                </svg>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$9.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">House Special Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$11.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Singapore Noodles</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chow Mein</span><span class="text-brand-gold text-sm font-semibold">$9.25</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHICKEN -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_chicken">Chicken</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken &amp; Broccoli</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center">
+                <span class="text-brand-cream/80 text-sm flex items-center gap-2">Orange Chicken <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">Popular</span></span>
+                <span class="text-brand-gold text-sm font-semibold">$10.75</span>
               </div>
-            </div>
-            <p class="text-brand-cream/60 text-sm leading-relaxed">
-              Silky egg noodles tossed with tender chicken in a rich, savory sauce. Kids and adults come back for this one every single time.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">Egg Noodles</span>
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">Vegetarian Option</span>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">General Tso's Chicken</span><span class="text-brand-gold text-sm font-semibold">$10.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sesame Chicken</span><span class="text-brand-gold text-sm font-semibold">$10.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Chicken 🌶</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Moo Goo Gai Pan</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sweet &amp; Sour Chicken</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Spicy Buffalo Chicken 🌶</span><span class="text-brand-gold text-sm font-semibold">$10.75</span></div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Card 3 -->
-        <article class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover cursor-default">
-          <div class="h-3 bg-gradient-to-r from-brand-red via-brand-gold to-brand-red"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20 mb-2">
-                  Crowd Favorite
-                </span>
-                <h3 class="font-display text-xl text-brand-cream">Orange Chicken</h3>
-                <p class="text-brand-gold text-sm font-semibold">Sweet &amp; Tangy</p>
+        <!-- BEEF & PORK -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_beef">Beef &amp; Pork</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef &amp; Broccoli</span><span class="text-brand-gold text-sm font-semibold">$11.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pepper Steak</span><span class="text-brand-gold text-sm font-semibold">$11.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Mongolian Beef</span><span class="text-brand-gold text-sm font-semibold">$11.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef with Snow Peas</span><span class="text-brand-gold text-sm font-semibold">$11.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Boneless Spare Ribs</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sweet &amp; Sour Pork</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Roast Pork w/ Vegetables</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">BBQ Spare Ribs (full rack)</span><span class="text-brand-gold text-sm font-semibold">$14.50</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEAFOOD -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_seafood">Seafood</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp &amp; Broccoli</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp with Lobster Sauce</span><span class="text-brand-gold text-sm font-semibold">$12.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Shrimp 🌶</span><span class="text-brand-gold text-sm font-semibold">$12.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sweet &amp; Sour Shrimp</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AMERICAN / WINGS -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream flex items-center gap-3" data-i18n="cat_american">American Favorites <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">Best in Town</span></span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center">
+                <span class="text-brand-cream/80 text-sm flex items-center gap-2">Chicken Wings w/ Mambo Sauce <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">#1</span></span>
+                <span class="text-brand-gold text-sm font-semibold">$10.50+</span>
               </div>
-              <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center flex-shrink-0 ml-3">
-                <svg viewBox="0 0 24 24" class="w-6 h-6 text-brand-redLight" fill="currentColor" aria-hidden="true">
-                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/>
-                </svg>
-              </div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Wings &amp; Fries Combo</span><span class="text-brand-gold text-sm font-semibold">$12.50+</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Breast / Legs / Thighs</span><span class="text-brand-gold text-sm font-semibold">$9.50+</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">French Fries</span><span class="text-brand-gold text-sm font-semibold">$3.50</span></div>
             </div>
-            <p class="text-brand-cream/60 text-sm leading-relaxed">
-              Crispy chicken in a bright, glossy orange sauce. A first-visit go-to that turns every newcomer into a regular.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">Gluten option</span>
-              <span class="text-xs text-brand-cream/40 bg-brand-cream/5 px-2 py-1 rounded">With rice</span>
-            </div>
+            <p class="text-brand-cream/30 text-xs px-6 py-3 italic">Wings served with white rice, fried rice, fries, or all three.</p>
           </div>
-        </article>
+        </div>
 
-        <!-- Card 4 -->
-        <article class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover cursor-default">
-          <div class="h-3 bg-gradient-to-r from-brand-muted to-brand-red"></div>
-          <div class="p-6">
-            <div class="mb-3">
-              <h3 class="font-display text-xl text-brand-cream">Chicken &amp; Broccoli</h3>
-              <p class="text-brand-gold text-sm font-semibold">Classic &amp; Wholesome</p>
-            </div>
-            <p class="text-brand-cream/60 text-sm leading-relaxed">
-              Tender chicken and crisp broccoli in a savory brown sauce. Simple, satisfying, and always fresh.
-            </p>
-          </div>
-        </article>
+      </div><!-- end accordion -->
 
-        <!-- Card 5 -->
-        <article class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover cursor-default">
-          <div class="h-3 bg-gradient-to-r from-brand-gold to-brand-muted"></div>
-          <div class="p-6">
-            <div class="mb-3">
-              <span class="badge bg-brand-gold/15 text-brand-goldLight border border-brand-gold/20 mb-2">
-                Vegetarian Friendly
-              </span>
-              <h3 class="font-display text-xl text-brand-cream">Singapore Noodles</h3>
-              <p class="text-brand-gold text-sm font-semibold">Curried Rice Noodles</p>
-            </div>
-            <p class="text-brand-cream/60 text-sm leading-relaxed">
-              Fragrant curry-spiced rice vermicelli. The owner will adjust the price for vegetarian orders — because that's just who they are.
-            </p>
-          </div>
-        </article>
-
-        <!-- Card 6 -->
-        <article class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover cursor-default">
-          <div class="h-3 bg-gradient-to-r from-brand-red to-brand-muted"></div>
-          <div class="p-6">
-            <div class="mb-3">
-              <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20 mb-2">
-                Spicy Option
-              </span>
-              <h3 class="font-display text-xl text-brand-cream">Spicy Buffalo Chicken</h3>
-              <p class="text-brand-gold text-sm font-semibold">with Fried Rice</p>
-            </div>
-            <p class="text-brand-cream/60 text-sm leading-relaxed">
-              A perfect heat that builds beautifully. Paired with our fried rice for a combo that brings people back again and again.
-            </p>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- More items note -->
-      <p class="text-center text-brand-cream/40 mt-10 text-sm">
-        Also loved: Wonton Soup · Hot &amp; Sour Soup · Pork Fried Rice · Boneless Spare Ribs · Best Fries in the Area
+      <p class="text-center text-brand-cream/30 text-xs mt-8 italic" data-i18n="menu_placeholder_note">
+        * Prices are estimates — update with your actual PDF menu once received.
       </p>
       <p class="text-center mt-4">
-        <a href="tel:+13018539018"
+        <a href="tel:+13018539018" data-i18n="menu_call_link"
           class="inline-flex items-center gap-2 text-brand-gold hover:text-brand-goldLight text-sm font-semibold underline underline-offset-4 cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
-          Call us for full menu &amp; today's specials
+          Call us for today's specials
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
         </a>
       </p>
@@ -679,6 +749,110 @@
     </div>
   </section>
 
+  <!-- ===== FEEDBACK ===== -->
+  <!-- To receive submissions by email: sign up free at formspree.io, create a form, and replace "YOUR_FORM_ID" below -->
+  <section id="feedback" class="py-20 sm:py-28 bg-brand-dark/50">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12">
+        <p data-i18n="fb_eyebrow" class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-3">Your Voice Matters</p>
+        <h2 data-i18n="fb_heading" class="font-display text-4xl sm:text-5xl text-brand-cream mb-4">Leave Feedback</h2>
+        <p data-i18n="fb_sub" class="text-brand-cream/60 leading-relaxed">
+          We've been serving this community for 25+ years because of customers like you. Tell us how we did.
+        </p>
+      </div>
+
+      <!-- Success message (shown after submit) -->
+      <div id="feedback-success" class="bg-brand-dark border border-brand-gold/30 rounded-2xl p-8 text-center mb-8">
+        <div class="w-14 h-14 rounded-full bg-brand-gold/15 flex items-center justify-center mx-auto mb-4">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 data-i18n="fb_thanks_title" class="font-display text-2xl text-brand-cream mb-2">Thank You!</h3>
+        <p data-i18n="fb_thanks_body" class="text-brand-cream/60">Your feedback means everything to us. See you next time!</p>
+      </div>
+
+      <!-- Form -->
+      <form id="feedback-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        onsubmit="handleFeedbackSubmit(event)"
+        class="bg-brand-dark border border-brand-red/20 rounded-2xl p-6 sm:p-8 space-y-6">
+
+        <!-- Name -->
+        <div>
+          <label for="fb-name" data-i18n="fb_label_name" class="block text-brand-cream/70 text-sm font-medium mb-2">Your Name <span class="text-brand-cream/30">(optional)</span></label>
+          <input type="text" id="fb-name" name="name" placeholder="e.g. Maria G."
+            class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
+        </div>
+
+        <!-- Star rating -->
+        <div>
+          <p data-i18n="fb_label_rating" class="text-brand-cream/70 text-sm font-medium mb-3">Overall Rating <span class="text-brand-red">*</span></p>
+          <div class="star-rating" role="group" aria-label="Star rating">
+            <input type="radio" id="s5" name="rating" value="5" required/>
+            <label for="s5" aria-label="5 stars">&#9733;</label>
+            <input type="radio" id="s4" name="rating" value="4"/>
+            <label for="s4" aria-label="4 stars">&#9733;</label>
+            <input type="radio" id="s3" name="rating" value="3"/>
+            <label for="s3" aria-label="3 stars">&#9733;</label>
+            <input type="radio" id="s2" name="rating" value="2"/>
+            <label for="s2" aria-label="2 stars">&#9733;</label>
+            <input type="radio" id="s1" name="rating" value="1"/>
+            <label for="s1" aria-label="1 star">&#9733;</label>
+          </div>
+        </div>
+
+        <!-- What they ordered -->
+        <div>
+          <label for="fb-order" data-i18n="fb_label_order" class="block text-brand-cream/70 text-sm font-medium mb-2">What did you order? <span class="text-brand-cream/30">(optional)</span></label>
+          <input type="text" id="fb-order" name="order" placeholder="e.g. Chicken wings with mambo sauce"
+            class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
+        </div>
+
+        <!-- Comment -->
+        <div>
+          <label for="fb-comment" data-i18n="fb_label_comment" class="block text-brand-cream/70 text-sm font-medium mb-2">Your Comment <span class="text-brand-red">*</span></label>
+          <textarea id="fb-comment" name="comment" rows="4" required
+            placeholder="Tell us about your experience..."
+            class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors resize-none"></textarea>
+        </div>
+
+        <!-- Visit type -->
+        <div>
+          <p data-i18n="fb_label_type" class="text-brand-cream/70 text-sm font-medium mb-3">How did you order?</p>
+          <div class="flex flex-wrap gap-3">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="visit_type" value="Walk-in" class="accent-brand-red w-4 h-4"/>
+              <span data-i18n="fb_walkin" class="text-brand-cream/70 text-sm">Walk-in</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="visit_type" value="Called ahead" class="accent-brand-red w-4 h-4"/>
+              <span data-i18n="fb_callahead" class="text-brand-cream/70 text-sm">Called ahead</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="visit_type" value="Delivery" class="accent-brand-red w-4 h-4"/>
+              <span data-i18n="fb_delivery" class="text-brand-cream/70 text-sm">Delivery</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" id="fb-submit"
+          data-i18n="fb_submit"
+          class="w-full bg-brand-red hover:bg-red-700 disabled:opacity-50 text-white font-semibold text-base py-4 rounded-full min-h-[52px] cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+          Submit Feedback
+        </button>
+
+        <p class="text-center text-brand-cream/25 text-xs" data-i18n="fb_formspree_note">
+          Powered by Formspree — <a href="https://formspree.io" target="_blank" rel="noopener" class="underline hover:text-brand-cream/50 transition-colors">set up your free account</a> and replace YOUR_FORM_ID in the code.
+        </p>
+
+      </form>
+    </div>
+  </section>
+
   <!-- ===== CTA BANNER ===== -->
   <section class="py-16 bg-brand-red relative overflow-hidden">
     <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(0,0,0,0.3) 30px, rgba(0,0,0,0.3) 31px), repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(0,0,0,0.3) 30px, rgba(0,0,0,0.3) 31px);" aria-hidden="true"></div>
@@ -827,10 +1001,11 @@
         </div>
 
         <nav aria-label="Footer navigation" class="flex items-center gap-6 flex-wrap justify-center">
-          <a href="#menu"    class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Menu</a>
-          <a href="#about"   class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Our Story</a>
-          <a href="#reviews" class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Reviews</a>
-          <a href="#contact" class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Find Us</a>
+          <a href="#menu"     data-i18n="nav_menu"     class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Menu</a>
+          <a href="#about"    data-i18n="nav_story"    class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Our Story</a>
+          <a href="#reviews"  data-i18n="nav_reviews"  class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Reviews</a>
+          <a href="#feedback" data-i18n="nav_feedback" class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Feedback</a>
+          <a href="#contact"  data-i18n="nav_find"     class="text-brand-cream/40 hover:text-brand-cream/70 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Find Us</a>
         </nav>
 
         <p class="text-brand-cream/20 text-xs text-center">
@@ -842,7 +1017,7 @@
   </footer>
 
   <script>
-    // Sticky nav style on scroll
+    // ─── Sticky nav ───────────────────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 20) {
@@ -852,31 +1027,279 @@
       }
     }, { passive: true });
 
-    // Mobile menu toggle
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
+    // ─── Mobile menu toggle ────────────────────────────────────────────────────
+    const btn      = document.getElementById('mobile-menu-btn');
+    const mobileMenu  = document.getElementById('mobile-menu');
     const iconMenu = document.getElementById('icon-menu');
-    const iconClose = document.getElementById('icon-close');
+    const iconClose= document.getElementById('icon-close');
 
     btn.addEventListener('click', () => {
-      const isOpen = !menu.classList.contains('hidden');
-      menu.classList.toggle('hidden');
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
       iconMenu.classList.toggle('hidden');
       iconClose.classList.toggle('hidden');
       btn.setAttribute('aria-expanded', String(!isOpen));
     });
 
-    // Close mobile menu on link click
-    menu.querySelectorAll('a').forEach(link => {
+    mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        menu.classList.add('hidden');
+        mobileMenu.classList.add('hidden');
         iconMenu.classList.remove('hidden');
         iconClose.classList.add('hidden');
         btn.setAttribute('aria-expanded', 'false');
       });
     });
 
-    // Intersection observer for fade-in animations
+    // ─── Accordion ────────────────────────────────────────────────────────────
+    function toggleAccordion(triggerBtn) {
+      const body = triggerBtn.nextElementSibling;
+      const icon = triggerBtn.querySelector('.accordion-icon');
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open', !isOpen);
+      icon.classList.toggle('open', !isOpen);
+      triggerBtn.setAttribute('aria-expanded', String(!isOpen));
+    }
+
+    // ─── Translation dictionary ────────────────────────────────────────────────
+    const translations = {
+      en: {
+        // Nav
+        nav_menu:      'Menu',
+        nav_story:     'Our Story',
+        nav_reviews:   'Reviews',
+        nav_feedback:  'Feedback',
+        nav_find:      'Find Us',
+        nav_order:     'Order by Phone',
+        // Hero
+        hero_pill:     'Family Owned & Operated · Est. 1999',
+        hero_sub:      'Authentic Chinese American carry-out in the heart of Adelphi, MD. Crispy chicken wings, rich lo mein, and the legendary mambo sauce — made fresh, served fast, loved by generations.',
+        hero_btn_menu: 'See Our Menu',
+        hero_btn_call: 'Call to Order',
+        hero_scroll:   'Scroll',
+        // Menu section
+        menu_eyebrow:  'Our Menu',
+        menu_heading:  'What We Serve',
+        menu_sub:      'Fresh, made-to-order. 25+ years of recipes the community keeps coming back for.',
+        menu_note:     'Prices subject to change — call to confirm today\'s specials.',
+        menu_call_link:'Call us for today\'s specials',
+        menu_placeholder_note: '* Prices are estimates — update with your actual PDF menu once received.',
+        // Categories
+        cat_appetizers: 'Appetizers',
+        cat_soups:      'Soups',
+        cat_friedrice:  'Fried Rice',
+        cat_lomein:     'Lo Mein & Noodles',
+        cat_chicken:    'Chicken',
+        cat_beef:       'Beef & Pork',
+        cat_seafood:    'Seafood',
+        cat_american:   'American Favorites',
+        // About
+        about_eyebrow:  'Our Story',
+        about_heading:  'A Neighborhood Institution',
+        about_p1:       'For over 25 years, Hunan Hut has been a cornerstone of the Adelphi and Langley Park community. What started as a small carry-out has grown into something far greater — a place where neighbors become regulars, and regulars become family.',
+        about_p2:       'Our kitchen runs on dedication: fresh ingredients prepared daily, recipes honed over decades, and a team that genuinely cares about every order that goes out the window. The staff speaks English and Spanish, because this community is ours too.',
+        about_p3:       'Customers who came as toddlers now bring their own children. People drive 30 minutes out of their way because nothing else compares. That loyalty is everything to us — and we honor it with every plate.',
+        about_stat1:    'Years Serving',
+        about_stat2:    'Google Reviews',
+        about_stat3:    'Star Rating',
+        about_f1_title: 'Family Owned',
+        about_f1_body:  'Every dish prepared with the same care as a home-cooked meal. The family behind the counter knows your name.',
+        about_f2_title: 'Always Fresh & Fast',
+        about_f2_body:  'High volume means ingredients never sit. Walk in or call ahead — your order is ready when you are.',
+        about_f3_title: 'Bilingual Service',
+        about_f3_body:  'English and Spanish spoken proudly. We serve the whole community — every neighbor, every family.',
+        about_f4_title: 'Affordable & Generous',
+        about_f4_body:  'Fair prices, big portions. Vegetarian? The owner adjusts the price because kindness is part of the recipe.',
+        // Reviews
+        reviews_eyebrow: 'From the Community',
+        reviews_heading: 'What People Say',
+        reviews_google:  'Read all 207 reviews on Google',
+        // Feedback
+        fb_eyebrow:      'Your Voice Matters',
+        fb_heading:      'Leave Feedback',
+        fb_sub:          'We\'ve been serving this community for 25+ years because of customers like you. Tell us how we did.',
+        fb_thanks_title: 'Thank You!',
+        fb_thanks_body:  'Your feedback means everything to us. See you next time!',
+        fb_label_name:   'Your Name (optional)',
+        fb_label_rating: 'Overall Rating',
+        fb_label_order:  'What did you order? (optional)',
+        fb_label_comment:'Your Comment',
+        fb_label_type:   'How did you order?',
+        fb_walkin:       'Walk-in',
+        fb_callahead:    'Called ahead',
+        fb_delivery:     'Delivery',
+        fb_submit:       'Submit Feedback',
+        fb_formspree_note: 'Powered by Formspree — set up your free account and replace YOUR_FORM_ID in the code.',
+        // CTA
+        cta_heading:    'Ready to Order?',
+        cta_body:       'Walk in or call ahead. We\'re at 7967 New Hampshire Ave, Adelphi, MD — serving you fresh, fast, and with a smile.',
+        cta_call:       'Call Now',
+        cta_directions: 'Get Directions',
+        // Contact
+        contact_eyebrow: 'Come Find Us',
+        contact_heading: 'Visit Hunan Hut',
+        contact_addr_title:  'Address',
+        contact_hours_title: 'Hours',
+        contact_hours_note:  'Hours subject to change — call to confirm.',
+        contact_phone_title: 'Order by Phone',
+        contact_phone_note:  'Call ahead — your order will be ready when you arrive.',
+        contact_maps_link:   'Open in Google Maps',
+        // Footer
+        footer_copy:    '© 2025 Hunan Hut. All rights reserved.',
+      },
+      es: {
+        // Nav
+        nav_menu:      'Menú',
+        nav_story:     'Nuestra Historia',
+        nav_reviews:   'Opiniones',
+        nav_feedback:  'Comentarios',
+        nav_find:      'Encuéntranos',
+        nav_order:     'Pedir por Teléfono',
+        // Hero
+        hero_pill:     'Negocio Familiar · Est. 1999',
+        hero_sub:      'Comida china americana para llevar en el corazón de Adelphi, MD. Alitas de pollo crujientes, lo mein delicioso y la legendaria salsa mambo — fresco, rápido, amado por generaciones.',
+        hero_btn_menu: 'Ver el Menú',
+        hero_btn_call: 'Llamar para Pedir',
+        hero_scroll:   'Desplazar',
+        // Menu section
+        menu_eyebrow:  'Nuestro Menú',
+        menu_heading:  'Lo Que Servimos',
+        menu_sub:      'Fresco y hecho al momento. Más de 25 años de recetas que la comunidad sigue disfrutando.',
+        menu_note:     'Los precios pueden cambiar — llame para confirmar las especiales del día.',
+        menu_call_link:'Llámenos para conocer las especiales de hoy',
+        menu_placeholder_note: '* Los precios son estimados — actualice con su menú PDF real.',
+        // Categories
+        cat_appetizers: 'Aperitivos',
+        cat_soups:      'Sopas',
+        cat_friedrice:  'Arroz Frito',
+        cat_lomein:     'Lo Mein y Fideos',
+        cat_chicken:    'Pollo',
+        cat_beef:       'Res y Cerdo',
+        cat_seafood:    'Mariscos',
+        cat_american:   'Favoritos Americanos',
+        // About
+        about_eyebrow:  'Nuestra Historia',
+        about_heading:  'Una Institución del Barrio',
+        about_p1:       'Por más de 25 años, Hunan Hut ha sido un pilar de la comunidad de Adelphi y Langley Park. Lo que comenzó como un pequeño negocio de comida para llevar se convirtió en algo mucho más grande — un lugar donde los vecinos se vuelven clientes habituales y los clientes habituales se vuelven familia.',
+        about_p2:       'Nuestra cocina funciona con dedicación: ingredientes frescos preparados diariamente, recetas perfeccionadas durante décadas y un equipo que genuinamente se preocupa por cada pedido. El personal habla inglés y español, porque esta comunidad también es nuestra.',
+        about_p3:       'Clientes que venían de pequeños ahora traen a sus propios hijos. La gente maneja 30 minutos de más porque nada se compara. Esa lealtad lo es todo para nosotros — y la honramos con cada plato.',
+        about_stat1:    'Años Sirviendo',
+        about_stat2:    'Opiniones en Google',
+        about_stat3:    'Estrellas',
+        about_f1_title: 'Negocio Familiar',
+        about_f1_body:  'Cada plato preparado con el mismo cuidado que una comida casera. La familia detrás del mostrador conoce tu nombre.',
+        about_f2_title: 'Siempre Fresco y Rápido',
+        about_f2_body:  'El alto volumen significa que los ingredientes nunca se quedan quietos. Entra o llama — tu pedido está listo cuando tú llegues.',
+        about_f3_title: 'Servicio Bilingüe',
+        about_f3_body:  'Inglés y español con orgullo. Servimos a toda la comunidad — cada vecino, cada familia.',
+        about_f4_title: 'Asequible y Generoso',
+        about_f4_body:  '¿Eres vegetariano? El dueño ajusta el precio porque la amabilidad es parte de la receta.',
+        // Reviews
+        reviews_eyebrow: 'De la Comunidad',
+        reviews_heading: 'Lo Que Dicen',
+        reviews_google:  'Leer las 207 opiniones en Google',
+        // Feedback
+        fb_eyebrow:      'Tu Opinión Importa',
+        fb_heading:      'Déjanos tus Comentarios',
+        fb_sub:          'Llevamos más de 25 años sirviendo a esta comunidad gracias a clientes como tú. Cuéntanos cómo lo hicimos.',
+        fb_thanks_title: '¡Gracias!',
+        fb_thanks_body:  'Tus comentarios son muy importantes para nosotros. ¡Hasta la próxima!',
+        fb_label_name:   'Tu Nombre (opcional)',
+        fb_label_rating: 'Calificación General',
+        fb_label_order:  '¿Qué pediste? (opcional)',
+        fb_label_comment:'Tu Comentario',
+        fb_label_type:   '¿Cómo hiciste tu pedido?',
+        fb_walkin:       'En persona',
+        fb_callahead:    'Llamé antes',
+        fb_delivery:     'A domicilio',
+        fb_submit:       'Enviar Comentario',
+        fb_formspree_note: 'Desarrollado por Formspree — crea tu cuenta gratis y reemplaza YOUR_FORM_ID en el código.',
+        // CTA
+        cta_heading:    '¿Listo para Pedir?',
+        cta_body:       'Entra o llama antes. Estamos en 7967 New Hampshire Ave, Adelphi, MD — sirviéndote fresco, rápido y con una sonrisa.',
+        cta_call:       'Llamar Ahora',
+        cta_directions: 'Cómo Llegar',
+        // Contact
+        contact_eyebrow: 'Encuéntranos',
+        contact_heading: 'Visita Hunan Hut',
+        contact_addr_title:  'Dirección',
+        contact_hours_title: 'Horario',
+        contact_hours_note:  'El horario puede cambiar — llame para confirmar.',
+        contact_phone_title: 'Pedir por Teléfono',
+        contact_phone_note:  'Llame antes — su pedido estará listo cuando llegue.',
+        contact_maps_link:   'Abrir en Google Maps',
+        // Footer
+        footer_copy:    '© 2025 Hunan Hut. Todos los derechos reservados.',
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLang(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+
+      // Update all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // Sync both desktop + mobile lang buttons
+      ['lang-en','lang-es','lang-en-m','lang-es-m'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const isActive = (id.startsWith('lang-en') && lang === 'en') ||
+                         (id.startsWith('lang-es') && lang === 'es');
+        el.classList.toggle('active', isActive);
+        el.classList.toggle('text-brand-cream/60', !isActive);
+      });
+
+      // Update html lang attribute
+      document.documentElement.setAttribute('lang', lang);
+
+      // Update feedback placeholder text
+      const commentBox = document.getElementById('fb-comment');
+      if (commentBox) commentBox.placeholder = lang === 'es'
+        ? 'Cuéntanos tu experiencia...'
+        : 'Tell us about your experience...';
+
+      const nameBox = document.getElementById('fb-name');
+      if (nameBox) nameBox.placeholder = lang === 'es' ? 'p. ej. María G.' : 'e.g. Maria G.';
+
+      const orderBox = document.getElementById('fb-order');
+      if (orderBox) orderBox.placeholder = lang === 'es'
+        ? 'p. ej. Alitas con salsa mambo'
+        : 'e.g. Chicken wings with mambo sauce';
+    }
+
+    // ─── Feedback form ─────────────────────────────────────────────────────────
+    function handleFeedbackSubmit(e) {
+      const form   = document.getElementById('feedback-form');
+      const rating = form.querySelector('input[name="rating"]:checked');
+
+      if (!rating) {
+        e.preventDefault();
+        alert(currentLang === 'es'
+          ? 'Por favor selecciona una calificación de estrellas.'
+          : 'Please select a star rating before submitting.');
+        return;
+      }
+
+      // If Formspree ID is still placeholder, intercept and show success locally
+      if (form.action.includes('YOUR_FORM_ID')) {
+        e.preventDefault();
+        form.style.display = 'none';
+        document.getElementById('feedback-success').style.display = 'block';
+        return;
+      }
+
+      // Real Formspree submission — let it proceed, then show success on next load
+      const submitBtn = document.getElementById('fb-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = currentLang === 'es' ? 'Enviando…' : 'Sending…';
+    }
+
+    // ─── Fade-in on scroll ────────────────────────────────────────────────────
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
