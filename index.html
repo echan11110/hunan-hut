@@ -172,7 +172,7 @@
             <button id="lang-en" onclick="setLang('en')" class="lang-btn active px-3 py-1.5 min-h-[36px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">EN</button>
             <button id="lang-es" onclick="setLang('es')" class="lang-btn px-3 py-1.5 min-h-[36px] text-brand-cream/60 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">ES</button>
           </div>
-          <a href="tel:+13018539018" data-i18n="nav_order"
+          <a href="tel:+13014393886" data-i18n="nav_order"
             class="bg-brand-red hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-full min-h-[44px] flex items-center transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
             Order by Phone
           </a>
@@ -207,7 +207,7 @@
             <button id="lang-es-m" onclick="setLang('es')" class="lang-btn px-4 py-2 min-h-[40px] text-brand-cream/60 cursor-pointer">ES</button>
           </div>
         </div>
-        <a href="tel:+13018539018" data-i18n="nav_order"
+        <a href="tel:+13014393886" data-i18n="nav_order"
           class="bg-brand-red text-white font-semibold text-center py-3 rounded-full min-h-[44px] flex items-center justify-center cursor-pointer transition-colors hover:bg-red-700">
           Order by Phone
         </a>
@@ -273,7 +273,7 @@
           </svg>
           See Our Menu
         </a>
-        <a href="tel:+13018539018"
+        <a href="tel:+13014393886"
           class="border border-brand-gold/50 hover:border-brand-gold text-brand-gold hover:text-brand-goldLight font-semibold text-base px-8 py-4 rounded-full min-h-[52px] flex items-center gap-2 cursor-pointer transition-colors duration-200 w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
           <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -324,24 +324,110 @@
       <!-- Accordion Menu -->
       <div class="max-w-4xl mx-auto space-y-3" id="menu-accordion">
 
-        <!-- Helper macro: each category is an accordion panel -->
-
-        <!-- APPETIZERS -->
+        <!-- CHEF SPECIALS -->
         <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
           <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="true">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_appetizers">Appetizers</span>
+            <span class="font-display text-lg text-brand-cream flex items-center gap-3" data-i18n="cat_specials">Chef Specials <span class="badge bg-brand-gold/15 text-brand-goldLight border border-brand-gold/20">House Favorites</span></span>
             <svg class="accordion-icon open w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
           <div class="accordion-body open border-t border-brand-red/10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10 px-0">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Egg Roll (1)</span><span class="text-brand-gold text-sm font-semibold">$1.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Spring Roll (2)</span><span class="text-brand-gold text-sm font-semibold">$3.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Fried Wonton (8)</span><span class="text-brand-gold text-sm font-semibold">$5.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Crab Rangoon (8)</span><span class="text-brand-gold text-sm font-semibold">$5.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Fried Dumpling (8)</span><span class="text-brand-gold text-sm font-semibold">$6.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken on a Stick (4)</span><span class="text-brand-gold text-sm font-semibold">$6.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">BBQ Spare Ribs (4)</span><span class="text-brand-gold text-sm font-semibold">$7.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Boneless Spare Ribs</span><span class="text-brand-gold text-sm font-semibold">$8.50</span></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm flex items-center gap-2">Sesame Chicken <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">Popular</span></span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sesame Beef</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm flex items-center gap-2">General Tso&#39;s Chicken <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">Popular</span></span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">General Tso&#39;s Shrimp</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">General Tso&#39;s Tofu</span><span class="text-brand-gold text-sm font-semibold">$12.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Orange Chicken &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Orange Beef &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Orange Shrimp &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Seafood Combination</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Crispy Beef &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Happy Family</span><span class="text-brand-gold text-sm font-semibold">$16.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Triple Delight &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hunan Delight &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Delight &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef w/ Scallop</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Scallops &amp; Shrimp Garlic Sauce &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Lemon Chicken</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WINGS & FRIED CHICKEN -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream flex items-center gap-3" data-i18n="cat_wings">Wings &amp; Fried Chicken <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">Best Seller</span></span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <p class="text-brand-cream/40 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold" data-i18n="wings_fried_only">Fried Chicken Only</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">1 Wing</span><span class="text-brand-gold text-sm font-semibold">$2.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">2 Wings</span><span class="text-brand-gold text-sm font-semibold">$5.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">3 Wings</span><span class="text-brand-gold text-sm font-semibold">$7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">4 Wings</span><span class="text-brand-gold text-sm font-semibold">$9.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">5 Wings</span><span class="text-brand-gold text-sm font-semibold">$11.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">7 Wings</span><span class="text-brand-gold text-sm font-semibold">$15.95</span></div>
+            </div>
+            <p class="text-brand-cream/40 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold" data-i18n="wings_with_sides">Chicken Special &#x2014; w/ Rice &amp; Fries</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">1 Wing</span><span class="text-brand-gold text-sm font-semibold">$6.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">2 Wings</span><span class="text-brand-gold text-sm font-semibold">$9.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">3 Wings</span><span class="text-brand-gold text-sm font-semibold">$11.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">4 Wings</span><span class="text-brand-gold text-sm font-semibold">$13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">5 Wings</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">8 Wings</span><span class="text-brand-gold text-sm font-semibold">$20.00</span></div>
+            </div>
+            <p class="text-brand-cream/40 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold" data-i18n="wings_pieces">Breasts, Legs &amp; Thighs</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10 mb-3">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">1 Breast</span><span class="text-brand-gold text-sm font-semibold">$7.00</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">2 Breasts</span><span class="text-brand-gold text-sm font-semibold">$14.00</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">1 Leg</span><span class="text-brand-gold text-sm font-semibold">$4.00</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">2 Legs</span><span class="text-brand-gold text-sm font-semibold">$8.00</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">1 Thigh</span><span class="text-brand-gold text-sm font-semibold">$6.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">2 Thighs</span><span class="text-brand-gold text-sm font-semibold">$12.00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLASSIC FAVORITES -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_classics">Classic Favorites</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Basket</span><span class="text-brand-gold text-sm font-semibold">$14.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Buffalo Wings &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$16.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork Rib Tips (10 pc)</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork Rib Tips (16 pc)</span><span class="text-brand-gold text-sm font-semibold">$24.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Spare Ribs (4 pc)</span><span class="text-brand-gold text-sm font-semibold">$13.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Tenders (3 pc)</span><span class="text-brand-gold text-sm font-semibold">$13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Fried Fish (3 pc)</span><span class="text-brand-gold text-sm font-semibold">$12.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Box (7 pc)</span><span class="text-brand-gold text-sm font-semibold">$16.95</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- APPETIZERS -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_appetizers">Appetizers</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">French Fries (Sm / Med / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.75 / $5.95 / $7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Seasoned Fries (Sm / Med / Lg)</span><span class="text-brand-gold text-sm font-semibold">$4.75 / $6.95 / $8.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Fried Jumbo Shrimp (4 pc)</span><span class="text-brand-gold text-sm font-semibold">$7.00</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Crab Rangoon (8 pc)</span><span class="text-brand-gold text-sm font-semibold">$7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">BBQ Spareribs (4 pc)</span><span class="text-brand-gold text-sm font-semibold">$7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Fried or Steamed Dumplings (7 pc)</span><span class="text-brand-gold text-sm font-semibold">$7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Mozzarella Sticks (6 pc)</span><span class="text-brand-gold text-sm font-semibold">$4.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Egg Roll</span><span class="text-brand-gold text-sm font-semibold">$2.00</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable Spring Roll</span><span class="text-brand-gold text-sm font-semibold">$2.00</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Cheese and Crackers</span><span class="text-brand-gold text-sm font-semibold">$3.00</span></div>
             </div>
           </div>
         </div>
@@ -354,10 +440,13 @@
           </button>
           <div class="accordion-body border-t border-brand-red/10">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Wonton Soup (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.25 / $5.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Egg Drop Soup (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$2.75 / $4.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hot &amp; Sour Soup (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.25 / $5.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Noodle Soup</span><span class="text-brand-gold text-sm font-semibold">$3.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Egg Drop (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.75 / $7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Wonton (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.75 / $7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hot &amp; Sour &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.75 / $7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Noodle (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$4.75 / $9.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Combination Noodle (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$7.95 / $14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Mixed Vegetable (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$3.75 / $7.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Egg &amp; Corn Soup</span><span class="text-brand-gold text-sm font-semibold">$10.95</span></div>
             </div>
           </div>
         </div>
@@ -370,35 +459,41 @@
           </button>
           <div class="accordion-body border-t border-brand-red/10">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$7.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$8.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$9.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$8.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$9.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">House Special Fried Rice</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$8.95 / $9.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork / Chicken / Beef / Shrimp (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable Combination (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$13.95 / $14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Seafood (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$16.95 / $17.95</span></div>
             </div>
           </div>
         </div>
 
-        <!-- LO MEIN -->
+        <!-- LO MEIN & NOODLES -->
         <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
           <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
             <span class="font-display text-lg text-brand-cream" data-i18n="cat_lomein">Lo Mein &amp; Noodles</span>
             <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
           <div class="accordion-body border-t border-brand-red/10">
+            <p class="text-brand-cream/40 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold">Lo Mein</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$8.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center">
-                <span class="text-brand-cream/80 text-sm flex items-center gap-2">Chicken Lo Mein <span class="badge bg-brand-gold/15 text-brand-goldLight border border-brand-gold/20">Fan Fave</span></span>
-                <span class="text-brand-gold text-sm font-semibold">$9.25</span>
-              </div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$9.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">House Special Lo Mein</span><span class="text-brand-gold text-sm font-semibold">$11.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Singapore Noodles</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chow Mein</span><span class="text-brand-gold text-sm font-semibold">$9.25</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$8.95 / $9.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken / Pork / Beef / Shrimp (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Combination (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$13.95 / $14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Seafood (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$16.95 / $17.95</span></div>
+            </div>
+            <p class="text-brand-cream/40 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold">Rice Noodle</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable</span><span class="text-brand-gold text-sm font-semibold">$10.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork / Chicken / Beef / Shrimp (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Combination</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Seafood</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Singapore Rice Noodle &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+            </div>
+            <p class="text-brand-cream/40 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold">Chow Fun / Drunken Noodle</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10 mb-3">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable</span><span class="text-brand-gold text-sm font-semibold">$10.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork / Chicken / Beef / Shrimp</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Combination</span><span class="text-brand-gold text-sm font-semibold">$16.95</span></div>
             </div>
           </div>
         </div>
@@ -411,37 +506,60 @@
           </button>
           <div class="accordion-body border-t border-brand-red/10">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken &amp; Broccoli</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center">
-                <span class="text-brand-cream/80 text-sm flex items-center gap-2">Orange Chicken <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">Popular</span></span>
-                <span class="text-brand-gold text-sm font-semibold">$10.75</span>
-              </div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">General Tso's Chicken</span><span class="text-brand-gold text-sm font-semibold">$10.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sesame Chicken</span><span class="text-brand-gold text-sm font-semibold">$10.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Chicken 🌶</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Moo Goo Gai Pan</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sweet &amp; Sour Chicken</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Spicy Buffalo Chicken 🌶</span><span class="text-brand-gold text-sm font-semibold">$10.75</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sweet &amp; Sour Chicken (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Broccoli (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken w/ Vegetables (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Moo Goo Gai Pan</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hunan Chicken &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Garlic Sauce &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Curry Chicken &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Szechuan Chicken &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken &amp; Bean Curd</span><span class="text-brand-gold text-sm font-semibold">$13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken String Beans</span><span class="text-brand-gold text-sm font-semibold">$13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Chicken &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Cashew Nut (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Hot Garlic &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
             </div>
           </div>
         </div>
 
-        <!-- BEEF & PORK -->
+        <!-- ROAST PORK -->
         <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
           <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_beef">Beef &amp; Pork</span>
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_pork">Roast Pork</span>
             <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
           <div class="accordion-body border-t border-brand-red/10">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef &amp; Broccoli</span><span class="text-brand-gold text-sm font-semibold">$11.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pepper Steak</span><span class="text-brand-gold text-sm font-semibold">$11.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Mongolian Beef</span><span class="text-brand-gold text-sm font-semibold">$11.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef with Snow Peas</span><span class="text-brand-gold text-sm font-semibold">$11.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Boneless Spare Ribs</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sweet &amp; Sour Pork</span><span class="text-brand-gold text-sm font-semibold">$10.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Roast Pork w/ Vegetables</span><span class="text-brand-gold text-sm font-semibold">$10.25</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">BBQ Spare Ribs (full rack)</span><span class="text-brand-gold text-sm font-semibold">$14.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Roast Pork Broccoli (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Roast Pork Bean Curd</span><span class="text-brand-gold text-sm font-semibold">$13.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Roast Pork w/ Vegetable (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Roast Pork Hot Garlic &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hunan Roast Pork &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$11.50 / $12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Roast Pork String Beans</span><span class="text-brand-gold text-sm font-semibold">$13.50</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEEF -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_beef">Beef</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef Broccoli (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Mongolian Beef</span><span class="text-brand-gold text-sm font-semibold">$17.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef w/ Vegetables (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pepper Steak &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hunan Beef &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef String Beans</span><span class="text-brand-gold text-sm font-semibold">$14.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef &amp; Bean Curd</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Beef &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Szechuan Beef &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Beef Hot Garlic &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Curry Beef &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$13.50</span></div>
             </div>
           </div>
         </div>
@@ -454,41 +572,55 @@
           </button>
           <div class="accordion-body border-t border-brand-red/10">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp &amp; Broccoli</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp with Lobster Sauce</span><span class="text-brand-gold text-sm font-semibold">$12.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Shrimp 🌶</span><span class="text-brand-gold text-sm font-semibold">$12.75</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Sweet &amp; Sour Shrimp</span><span class="text-brand-gold text-sm font-semibold">$12.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Broccoli (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp w/ Vegetables (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Lobster Sauce</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Shrimp Cashew Nuts (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Curry Shrimp &#x1F336;&#xFE0F;</span><span class="text-brand-gold text-sm font-semibold">$13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Hunan Shrimp &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Szechuan Shrimp &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Kung Pao Shrimp &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.50 / $13.50</span></div>
             </div>
           </div>
         </div>
 
-        <!-- AMERICAN / WINGS -->
+        <!-- VEGETABLES & BEAN CURD -->
         <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
           <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream flex items-center gap-3" data-i18n="cat_american">American Favorites <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">Best in Town</span></span>
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_veggies">Vegetables &amp; Bean Curd</span>
             <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
           <div class="accordion-body border-t border-brand-red/10">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center">
-                <span class="text-brand-cream/80 text-sm flex items-center gap-2">Chicken Wings w/ Mambo Sauce <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">#1</span></span>
-                <span class="text-brand-gold text-sm font-semibold">$10.50+</span>
-              </div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Wings &amp; Fries Combo</span><span class="text-brand-gold text-sm font-semibold">$12.50+</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Chicken Breast / Legs / Thighs</span><span class="text-brand-gold text-sm font-semibold">$9.50+</span></div>
-              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">French Fries</span><span class="text-brand-gold text-sm font-semibold">$3.50</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Mixed Vegetables (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$9.95 / $10.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Broccoli w/ Mushrooms (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$9.95 / $10.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Bean Curd Family Style (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.95 / $13.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Bean Curd Szechuan &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.95 / $13.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Szechuan String Bean &#x1F336;&#xFE0F; (Sm / Lg)</span><span class="text-brand-gold text-sm font-semibold">$12.95 / $13.95</span></div>
             </div>
-            <p class="text-brand-cream/30 text-xs px-6 py-3 italic">Wings served with white rice, fried rice, fries, or all three.</p>
+          </div>
+        </div>
+
+        <!-- EGG FOO YOUNG -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_efyoung">Egg Foo Young</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10">
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Vegetable</span><span class="text-brand-gold text-sm font-semibold">$10.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Pork / Chicken / Beef / Shrimp</span><span class="text-brand-gold text-sm font-semibold">$14.95</span></div>
+              <div class="bg-brand-dark px-6 py-3 flex justify-between items-center"><span class="text-brand-cream/80 text-sm">Combination</span><span class="text-brand-gold text-sm font-semibold">$16.95</span></div>
+            </div>
           </div>
         </div>
 
       </div><!-- end accordion -->
 
-      <p class="text-center text-brand-cream/30 text-xs mt-8 italic" data-i18n="menu_placeholder_note">
-        * Prices are estimates — update with your actual PDF menu once received.
-      </p>
+      <p class="text-center text-brand-cream/30 text-xs mt-8 italic">* All prices include tax. &#x1F336;&#xFE0F; = spicy</p>
       <p class="text-center mt-4">
-        <a href="tel:+13018539018" data-i18n="menu_call_link"
+        <a href="tel:+13014393886" data-i18n="menu_call_link"
           class="inline-flex items-center gap-2 text-brand-gold hover:text-brand-goldLight text-sm font-semibold underline underline-offset-4 cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
           Call us for today's specials
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
@@ -862,7 +994,7 @@
         Walk in or call ahead. We're at 7967 New Hampshire Ave, Adelphi, MD — serving you fresh, fast, and with a smile.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+13018539018"
+        <a href="tel:+13014393886"
           class="bg-white text-brand-red font-bold text-lg px-8 py-4 rounded-full min-h-[56px] flex items-center justify-center gap-2 cursor-pointer hover:bg-brand-cream transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-red">
           <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -947,9 +1079,9 @@
             </div>
             <div>
               <h3 class="text-brand-cream font-semibold mb-1">Order by Phone</h3>
-              <a href="tel:+13018539018"
+              <a href="tel:+13014393886"
                 class="text-brand-gold hover:text-brand-goldLight text-lg font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
-                (301) 853-9018
+                (301) 439-3886
               </a>
               <p class="text-brand-cream/50 text-xs mt-1">Call ahead — your order will be ready when you arrive.</p>
             </div>
@@ -1082,16 +1214,23 @@
         menu_sub:      'Fresh, made-to-order. 25+ years of recipes the community keeps coming back for.',
         menu_note:     'Prices subject to change — call to confirm today\'s specials.',
         menu_call_link:'Call us for today\'s specials',
-        menu_placeholder_note: '* Prices are estimates — update with your actual PDF menu once received.',
         // Categories
+        cat_specials:   'Chef Specials',
+        cat_wings:      'Wings & Fried Chicken',
+        cat_classics:   'Classic Favorites',
         cat_appetizers: 'Appetizers',
         cat_soups:      'Soups',
         cat_friedrice:  'Fried Rice',
         cat_lomein:     'Lo Mein & Noodles',
         cat_chicken:    'Chicken',
-        cat_beef:       'Beef & Pork',
+        cat_pork:       'Roast Pork',
+        cat_beef:       'Beef',
         cat_seafood:    'Seafood',
-        cat_american:   'American Favorites',
+        cat_veggies:    'Vegetables & Bean Curd',
+        cat_efyoung:    'Egg Foo Young',
+        wings_fried_only:  'Fried Chicken Only',
+        wings_with_sides:  'Chicken Special — w/ Rice & Fries',
+        wings_pieces:      'Breasts, Legs & Thighs',
         // About
         about_eyebrow:  'Our Story',
         about_heading:  'A Neighborhood Institution',
@@ -1166,16 +1305,23 @@
         menu_sub:      'Fresco y hecho al momento. Más de 25 años de recetas que la comunidad sigue disfrutando.',
         menu_note:     'Los precios pueden cambiar — llame para confirmar las especiales del día.',
         menu_call_link:'Llámenos para conocer las especiales de hoy',
-        menu_placeholder_note: '* Los precios son estimados — actualice con su menú PDF real.',
         // Categories
+        cat_specials:   'Especiales del Chef',
+        cat_wings:      'Alitas y Pollo Frito',
+        cat_classics:   'Favoritos Clásicos',
         cat_appetizers: 'Aperitivos',
         cat_soups:      'Sopas',
         cat_friedrice:  'Arroz Frito',
         cat_lomein:     'Lo Mein y Fideos',
         cat_chicken:    'Pollo',
-        cat_beef:       'Res y Cerdo',
+        cat_pork:       'Cerdo Asado',
+        cat_beef:       'Res',
         cat_seafood:    'Mariscos',
-        cat_american:   'Favoritos Americanos',
+        cat_veggies:    'Vegetales y Tofu',
+        cat_efyoung:    'Egg Foo Young',
+        wings_fried_only:  'Solo Pollo Frito',
+        wings_with_sides:  'Especial de Pollo — con Arroz y Papas',
+        wings_pieces:      'Pechugas, Piernas y Muslos',
         // About
         about_eyebrow:  'Nuestra Historia',
         about_heading:  'Una Institución del Barrio',
