@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://echan11110.github.io/hunan-hut/sitemap.xml
