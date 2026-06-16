@@ -392,6 +392,34 @@
         </a>
       </div>
 
+      <!-- ═══════════════════════════════════════════════════════════════
+           A/B TEST — TEMPORARY: compare PDF vs dedicated page for menu
+           To remove: delete this entire comment block down to the closing
+           div, then delete /menu/ folder and /public/menu.pdf.
+      ════════════════════════════════════════════════════════════════ -->
+      <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center fade-in-up delay-4">
+        <span class="text-brand-cream/30 text-xs uppercase tracking-widest font-semibold hidden sm:block">Menu test →</span>
+
+        <!-- OPTION A: PDF — wire is live; add file at /public/menu.pdf to activate -->
+        <a href="public/menu.pdf" target="_blank" rel="noopener"
+          class="border border-brand-cream/20 hover:border-brand-cream/40 text-brand-cream/60 hover:text-brand-cream/90 text-sm font-semibold px-5 py-2.5 rounded-full min-h-[40px] flex items-center gap-2 cursor-pointer transition-colors duration-200 w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+          View Menu (PDF)
+        </a>
+
+        <!-- OPTION B: Dedicated menu page -->
+        <a href="menu/"
+          class="border border-brand-cream/20 hover:border-brand-cream/40 text-brand-cream/60 hover:text-brand-cream/90 text-sm font-semibold px-5 py-2.5 rounded-full min-h-[40px] flex items-center gap-2 cursor-pointer transition-colors duration-200 w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+          </svg>
+          View Menu (Page)
+        </a>
+      </div>
+      <!-- END A/B TEST ══════════════════════════════════════════════════ -->
+
       <!-- Rating badge -->
       <div class="mt-12 flex items-center justify-center gap-3 fade-in-up delay-4">
         <div class="flex items-center gap-0.5" aria-label="4.1 out of 5 stars">
@@ -449,6 +477,15 @@
             <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
           <div class="accordion-body border-t border-brand-red/10" id="body-wings"></div>
+        </div>
+
+        <!-- SAUCES -->
+        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
+            <span class="font-display text-lg text-brand-cream" data-i18n="cat_sauces">Sauces</span>
+            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="accordion-body border-t border-brand-red/10" id="body-sauces"></div>
         </div>
 
         <!-- CLASSIC FAVORITES -->
@@ -1153,6 +1190,7 @@
         // Categories
         cat_specials:   'Chef Specials',
         cat_wings:      'Wings & Fried Chicken',
+        cat_sauces:     'Sauces',
         cat_classics:   'Classic Favorites',
         cat_appetizers: 'Appetizers',
         cat_soups:      'Soups',
@@ -1254,6 +1292,7 @@
         // Categories
         cat_specials:   'Especiales del Chef',
         cat_wings:      'Alitas y Pollo Frito',
+        cat_sauces:     'Salsas',
         cat_classics:   'Favoritos Clásicos',
         cat_appetizers: 'Aperitivos',
         cat_soups:      'Sopas',
@@ -1353,7 +1392,9 @@
         { en: 'Lemon Chicken',                       es: 'Pollo al Limón',                                price: '$14.95' },
       ]},
       wings: { sections: [
-        { header: { en: 'Fried Chicken Only',                    es: 'Solo Pollo Frito' },
+        // ── Fried Chicken Only ──────────────────────────────────────────────
+        { groupHeader: { en: 'Fried Chicken Only', es: 'Solo Pollo Frito' } },
+        { header: { en: 'Wings', es: 'Alitas' },
           items: [
             { en: '1 Wing',  es: '1 Alita',  price: '$2.95'  },
             { en: '2 Wings', es: '2 Alitas', price: '$5.75'  },
@@ -1364,7 +1405,25 @@
             { en: '7 Wings', es: '7 Alitas', price: '$15.95' },
             { en: '8 Wings', es: '8 Alitas', price: '$17.95' },
           ]},
-        { header: { en: 'Chicken Special — w/ Rice & Fries',     es: 'Especial de Pollo — con Arroz y Papas' },
+        { header: { en: 'Breasts', es: 'Pechugas' },
+          items: [
+            { en: '1 Breast',  es: '1 Pechuga',  price: '$7.00'  },
+            { en: '2 Breasts', es: '2 Pechugas', price: '$14.00' },
+          ]},
+        { header: { en: 'Leg', es: 'Pierna' },
+          items: [
+            { en: '1 Leg',  es: '1 Pierna',  price: '$4.00' },
+            { en: '2 Legs', es: '2 Piernas', price: '$7.00' },
+          ]},
+        { header: { en: 'Thigh', es: 'Muslo' },
+          items: [
+            { en: '1 Thigh',  es: '1 Muslo',  price: '$6.50'  },
+            { en: '2 Thighs', es: '2 Muslos', price: '$12.00' },
+          ]},
+        // ── Chicken Special ─────────────────────────────────────────────────
+        { groupHeader: { en: 'Chicken Special', es: 'Especial de Pollo' },
+          note: { en: 'Served w. Your Choice of: Steamed Rice, Fried Rice, or French Fries. Upgrade: Add Both Rice and Fries +$2', es: 'Servido con tu elección de: Arroz al Vapor, Arroz Frito o Papas Fritas. Mejora: Agrega Ambos Arroces y Papas +$2' } },
+        { header: { en: 'Wings', es: 'Alitas' },
           items: [
             { en: '1 Wing',  es: '1 Alita',  price: '$6.50'  },
             { en: '2 Wings', es: '2 Alitas', price: '$7.95'  },
@@ -1375,16 +1434,30 @@
             { en: '7 Wings', es: '7 Alitas', price: '$18.95' },
             { en: '8 Wings', es: '8 Alitas', price: '$20.95' },
           ]},
-        { header: { en: 'Breasts, Legs & Thighs',                es: 'Pechugas, Piernas y Muslos' }, last: true,
+        { header: { en: 'Breasts', es: 'Pechugas' },
           items: [
-            { en: '1 Breast',  es: '1 Pechuga',  price: '$7.00'  },
-            { en: '2 Breasts', es: '2 Pechugas', price: '$14.00' },
-            { en: '1 Leg',     es: '1 Pierna',   price: '$4.00'  },
-            { en: '2 Legs',    es: '2 Piernas',  price: '$7.00'  },
-            { en: '1 Thigh',   es: '1 Muslo',    price: '$6.50'  },
-            { en: '2 Thighs',  es: '2 Muslos',   price: '$12.00' },
+            { en: '1 Breast',  es: '1 Pechuga',  price: '$9.00'  },
+            { en: '2 Breasts', es: '2 Pechugas', price: '$16.00' },
+          ]},
+        { header: { en: 'Leg and Thigh', es: 'Pierna y Muslo' }, last: true,
+          items: [
+            { en: '1 Leg',               es: '1 Pierna',                    price: '$6.50'  },
+            { en: '1 Thigh',             es: '1 Muslo',                     price: '$8.95'  },
+            { en: '2 Piece Leg & Thigh', es: '2 Piezas Pierna y Muslo',     price: '$9.95'  },
+            { en: '2 Legs',              es: '2 Piernas',                   price: '$9.95'  },
+            { en: 'Leg & Breast',        es: 'Pierna y Pechuga',            price: '$12.00' },
+            { en: '2 Legs & 2 Thighs',  es: '2 Piernas y 2 Muslos',        price: '$15.95' },
+            { en: '2 Legs & 1 Wing',     es: '2 Piernas y 1 Alita',         price: '$11.95' },
           ]},
       ]},
+      sauces: { tags: [
+        { en: 'Mambo Sauce',   es: 'Salsa Mambo'      },
+        { en: 'Ketchup',       es: 'Ketchup'          },
+        { en: 'Barbeque',      es: 'Barbacoa'         },
+        { en: 'Chili Oil',     es: 'Aceite de Chile'  },
+        { en: 'Buffalo Sauce', es: 'Salsa Buffalo'    },
+        { en: 'Hot Sauce',     es: 'Salsa Picante'    },
+      ], note: { en: 'Extra sauce is 25¢', es: 'La salsa extra cuesta 25¢' } },
       classics: { items: [
         { en: 'Shrimp Basket',              es: 'Canasta de Camarones',           price: '$12.50' },
         { en: 'Buffalo Wings 🌶️ (8 pc)',    es: 'Alitas Buffalo 🌶️ (8 pzas)',     price: '$12.50' },
@@ -1525,6 +1598,11 @@
         `<div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10${extra || ''}">${items.map(itemRow).join('')}</div>`;
       const subhead = (text) =>
         `<p class="text-brand-cream/40 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold">${text}</p>`;
+      const groupHead = (text, note) =>
+        `<div class="px-6 pt-5 pb-1 border-t border-brand-red/20 mt-2 first:border-t-0 first:mt-0">` +
+        `<p class="text-brand-redLight text-sm font-bold uppercase tracking-wider">${text}</p>` +
+        (note ? `<p class="text-brand-cream/50 text-xs mt-1 leading-snug">${note}</p>` : '') +
+        `</div>`;
 
       Object.entries(menuData).forEach(([id, data]) => {
         const el = document.getElementById('body-' + id);
@@ -1532,9 +1610,18 @@
         let html = '';
         if (data.sections) {
           data.sections.forEach((sec) => {
-            html += subhead(sec.header[lang]);
-            html += grid(sec.items, sec.last ? ' mb-3' : '');
+            if (sec.groupHeader) {
+              html += groupHead(sec.groupHeader[lang], sec.note ? sec.note[lang] : null);
+            } else {
+              html += subhead(sec.header[lang]);
+              html += grid(sec.items, sec.last ? ' mb-3' : '');
+            }
           });
+        } else if (data.tags) {
+          html += `<div class="px-6 py-4"><p class="text-brand-cream/50 text-xs mb-3">${data.note[lang]}</p>` +
+            `<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">` +
+            data.tags.map(t => `<span class="text-brand-cream/80 text-sm py-1">${t[lang]}</span>`).join('') +
+            `</div></div>`;
         } else {
           html += grid(data.items);
         }
