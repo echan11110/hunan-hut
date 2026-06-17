@@ -392,33 +392,16 @@
         </a>
       </div>
 
-      <!-- ═══════════════════════════════════════════════════════════════
-           A/B TEST — TEMPORARY: compare PDF vs dedicated page for menu
-           To remove: delete this entire comment block down to the closing
-           div, then delete /menu/ folder and /public/menu.pdf.
-      ════════════════════════════════════════════════════════════════ -->
-      <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center items-center fade-in-up delay-4">
-        <span class="text-brand-cream/30 text-xs uppercase tracking-widest font-semibold hidden sm:block">Menu test →</span>
-
-        <!-- OPTION A: PDF — wire is live; add file at /public/menu.pdf to activate -->
-        <a href="public/menu.pdf" target="_blank" rel="noopener"
-          class="border border-brand-cream/20 hover:border-brand-cream/40 text-brand-cream/60 hover:text-brand-cream/90 text-sm font-semibold px-5 py-2.5 rounded-full min-h-[40px] flex items-center gap-2 cursor-pointer transition-colors duration-200 w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
-          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-          </svg>
-          View Menu (PDF)
-        </a>
-
-        <!-- OPTION B: Dedicated menu page -->
+      <!-- Full menu page link -->
+      <div class="mt-4 fade-in-up delay-4">
         <a href="menu/"
-          class="border border-brand-cream/20 hover:border-brand-cream/40 text-brand-cream/60 hover:text-brand-cream/90 text-sm font-semibold px-5 py-2.5 rounded-full min-h-[40px] flex items-center gap-2 cursor-pointer transition-colors duration-200 w-full sm:w-auto justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+          class="inline-flex items-center gap-2 text-brand-cream/50 hover:text-brand-cream/80 text-sm font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
           <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
           </svg>
-          View Menu (Page)
+          View Full Menu
         </a>
       </div>
-      <!-- END A/B TEST ══════════════════════════════════════════════════ -->
 
       <!-- Rating badge -->
       <div class="mt-12 flex items-center justify-center gap-3 fade-in-up delay-4">
