@@ -20,9 +20,12 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_MX">
   <!-- Twitter Card -->
+  <!-- TODO: Replace logo2.png with a 1200x630 food photo (wings, lo mein, etc.) for best social share preview -->
+  <meta property="og:image" content="https://echan11110.github.io/hunan-hut/logo2.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hunan Hut — Chinese Carry-Out | Adelphi, MD">
   <meta name="twitter:description" content="Crispy wings, lo mein, General Tso's. Family-owned 25+ years in Adelphi, MD.">
+  <meta name="twitter:image" content="https://echan11110.github.io/hunan-hut/logo2.png">
   <!-- Hreflang -->
   <link rel="alternate" hreflang="en" href="https://echan11110.github.io/hunan-hut/">
   <link rel="alternate" hreflang="es" href="https://echan11110.github.io/hunan-hut/?lang=es">
@@ -405,7 +408,7 @@
 
       <!-- Rating badge -->
       <div class="mt-12 flex items-center justify-center gap-3 fade-in-up delay-4">
-        <div class="flex items-center gap-0.5" aria-label="4.1 out of 5 stars">
+        <div class="flex items-center gap-0.5" aria-label="200+ Google reviews, 4.1 out of 5 stars">
           <svg class="w-5 h-5 star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           <svg class="w-5 h-5 star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           <svg class="w-5 h-5 star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -414,7 +417,7 @@
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
           </svg>
         </div>
-        <span class="text-brand-cream/60 text-sm"><strong class="text-brand-cream">4.1</strong><span data-i18n="hero_rating"> · 200+ Google reviews</span></span>
+        <span class="text-brand-cream/60 text-sm"><strong class="text-brand-cream">200+</strong><span data-i18n="hero_rating"> · Google reviews</span></span>
       </div>
     </div>
 
@@ -617,8 +620,8 @@
               <div data-i18n="about_stat2" class="text-brand-cream/50 text-xs uppercase tracking-wide">Google Reviews</div>
             </div>
             <div class="text-center">
-              <div class="font-display text-3xl sm:text-4xl text-brand-redLight mb-1">4.1</div>
-              <div data-i18n="about_stat3" class="text-brand-cream/50 text-xs uppercase tracking-wide">Star Rating</div>
+              <div class="font-display text-3xl sm:text-4xl text-brand-redLight mb-1">4.1★</div>
+              <div data-i18n="about_stat3" class="text-brand-cream/50 text-xs uppercase tracking-wide">Google Rating</div>
             </div>
           </div>
         </div>
@@ -823,7 +826,9 @@
 
       <!-- Google link -->
       <div class="text-center mt-10">
-        <a href="https://maps.google.com/?cid=hunan+hut+adelphi+md" target="_blank" rel="noopener noreferrer"
+        <!-- TODO: If you obtain the real numeric Google CID for Hunan Hut, replace href with:
+             https://maps.google.com/?cid=<NUMERIC_CID_HERE> (links directly to the verified listing) -->
+        <a href="https://www.google.com/maps/search/Hunan+Hut+7967+New+Hampshire+Ave+Adelphi+MD" target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center gap-2 text-brand-cream/50 hover:text-brand-cream text-sm cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
           <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true">
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -1040,9 +1045,9 @@
           <!-- Community note -->
           <div class="bg-brand-darker border border-brand-cream/5 rounded-2xl p-6">
             <p class="text-brand-cream/50 text-sm leading-relaxed italic">
-              "This little gem might look rough and of course the sketchy people that tend to walk by don't help, but do yourself a favor and check it out. <strong class="text-brand-cream/70 not-italic">Everything is delicious!</strong>"
+              "<strong class="text-brand-cream/70 not-italic">Best chinese food in the DMV.</strong>"
             </p>
-            <p class="text-brand-cream/30 text-xs mt-2">— Lee Rosas, Local Guide</p>
+            <p class="text-brand-cream/30 text-xs mt-2">— SH, Google Review</p>
           </div>
 
         </div>
@@ -1051,7 +1056,7 @@
         <div class="rounded-2xl overflow-hidden border border-brand-red/15 h-96 lg:h-full min-h-80">
           <iframe
             title="Hunan Hut location map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.0!2d-76.9857!3d38.9943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6b4d5d5d5d5%3A0x0!2s7967+New+Hampshire+Ave%2C+Adelphi%2C+MD+20783!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps?q=7967+New+Hampshire+Ave,+Adelphi,+MD+20783&output=embed"
             width="100%"
             height="100%"
             style="border:0; min-height:320px;"
@@ -1196,7 +1201,7 @@
         about_p3:       'Customers who came as toddlers now bring their own children. People drive 30 minutes out of their way because nothing else compares. That loyalty is everything to us — and we honor it with every plate.',
         about_stat1:    'Years Serving',
         about_stat2:    'Google Reviews',
-        about_stat3:    'Star Rating',
+        about_stat3:    'Google Rating',
         about_f1_title: 'Family Owned',
         about_f1_body:  'Every dish prepared with the same care as a home-cooked meal. The family behind the counter knows your name.',
         about_f2_title: 'Always Fresh & Fast',
@@ -1298,7 +1303,7 @@
         about_p3:       'Clientes que venían de pequeños ahora traen a sus propios hijos. La gente maneja 30 minutos de más porque nada se compara. Esa lealtad lo es todo para nosotros — y la honramos con cada plato.',
         about_stat1:    'Años Sirviendo',
         about_stat2:    'Opiniones en Google',
-        about_stat3:    'Estrellas',
+        about_stat3:    'Calificación Google',
         about_f1_title: 'Negocio Familiar',
         about_f1_body:  'Cada plato preparado con el mismo cuidado que una comida casera. La familia detrás del mostrador conoce tu nombre.',
         about_f2_title: 'Siempre Fresco y Rápido',
