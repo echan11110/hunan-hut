@@ -1,0 +1,12 @@
+# Tooling/session state — never publish
+.claude/
+.claude-flow/
+.gstack/
+.Rhistory
+
+# Personal working files not part of the site
+*.docx
+cold-call-script.md
+
+# Local design experiments
+preview.html
