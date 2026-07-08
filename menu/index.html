@@ -77,6 +77,10 @@
               class="text-xs font-semibold px-2.5 py-1 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
               Español
             </button>
+            <button id="lang-zh" onclick="setLang('zh')"
+              class="text-xs font-semibold px-2.5 py-1 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
+              中文
+            </button>
           </div>
           <a href="tel:+13014393886"
           class="bg-brand-red hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-full min-h-[36px] flex items-center gap-1.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
@@ -1125,6 +1129,174 @@
         // Egg Foo Young
         desc_EF1:'Brócoli, champiñón',
         desc_EF6:'Cerdo, pollo, res, camarones',
+      },
+      zh: {
+        nav_menu:'菜单', nav_order:'订餐',
+        page_title:'我们的菜单',
+        page_subtitle:'所有价格已含税 · ',
+        page_spicy:' = 辣 · 价格如有变动，恕不另行通知',
+        pdf_btn:'查看打印版菜单 (PDF)',
+        jump_to:'跳转到分类',
+        back_top:'返回顶部',
+        ready_order:'准备点餐了吗？',
+        call_btn:'致电 (301) 439-3886',
+        // category names
+        cat_specials:'主厨精选', cat_specials_n:'15 道',
+        cat_wings:'鸡翅和炸鸡', badge_best_seller:'畅销',
+        cat_classics:'经典人气', cat_classics_n:'7 道',
+        cat_appetizers:'开胃小食', cat_appetizers_n:'12 道',
+        cat_soups:'汤类', cat_soups_n:'9 道',
+        cat_friedrice:'炒饭', cat_friedrice_n:'4 道',
+        cat_lomein:'捞面', cat_lomein_n:'4 道',
+        cat_ricenoodle:'米粉', cat_ricenoodle_n:'5 道',
+        cat_chowfun:'河粉 / 醉面', cat_chowfun_n:'3 道',
+        cat_chicken:'鸡肉类', cat_chicken_n:'13 道',
+        cat_beef:'牛肉类', cat_beef_n:'11 道',
+        cat_seafood:'海鲜类', cat_seafood_n:'8 道',
+        cat_pork:'叉烧类', cat_pork_n:'6 道',
+        cat_veggies:'蔬菜类', cat_veggies_n:'5 道',
+        cat_efyoung:'芙蓉蛋', cat_efyoung_n:'6 道',
+        cat_extra:'加购', cat_extra_n:'米饭 · 炒饭 · 捞面',
+        // section notes
+        note_rice:'配白米饭 · 可改炒饭 小+$1，大+$3',
+        note_friedrice:'本店自制 · 鸡蛋、胡萝卜、青豆、洋葱、豆芽',
+        note_lomein:'美味捞面 · 大白菜、胡萝卜，配红烧汁',
+        note_ricenoodle:'本店新鲜自制 · 鸡蛋、大白菜、胡萝卜，配红烧汁',
+        note_chowfun:'新鲜自制河粉 · 大白菜、胡萝卜，配红烧汁',
+        note_efyoung:'3块蛋饼 · 洋葱、豆芽、鸡蛋和芡汁 · 配白米饭 · 加炒饭 +$3',
+        // wings
+        wings_fried_only:'净炸鸡', wings_with_sides:'炸鸡特餐',
+        note_chicken_special:'配白米饭、炒饭或薯条任选一种 · 升级：两样都要 +$2',
+        sauce_options:'酱料选择', sauce_extra:'加酱 25¢',
+        // Chef Specials
+        d_CS1:'芝麻鸡', d_CS2:'芝麻牛', d_CS3:'左宗棠 🌶️',
+        d_CS4:'陈皮鸡 🌶️', d_CS5:'陈皮牛 🌶️', d_CS6:'陈皮虾 🌶️',
+        d_CS7:'海鲜大会', d_CS8:'脆皮牛 🌶️', d_CS9:'全家福',
+        d_CS10:'三鲜大会 🌶️', d_CS11:'湖南三鲜 🌶️', d_CS12:'宫保三鲜 🌶️',
+        d_CS13:'干贝牛', d_CS14:'鱼香干贝虾 🌶️', d_CS15:'柠檬鸡',
+        // Classic Favorites
+        d_CF1:'炸虾篮', d_CF2:'布法罗辣鸡翅 🌶️', d_CF3:'排骨尖',
+        d_CF4:'猪排骨（4条）', d_CF5:'炸鸡柳（3条）',
+        d_CF6:'炸鱼（3块）', d_CF7:'炸虾盒（7只）',
+        // Appetizers
+        d_A1:'薯条', d_A2:'调味薯条', d_A3:'炸大虾（4只）',
+        d_A4:'炸蟹角（8个）', d_A5:'炸云吞（7个）',
+        d_A6:'烧排骨（4条）', d_A7:'煎饺或蒸饺（7个）',
+        d_A8:'香辣蒸虾 🌶️', d_A9:'炸芝士条（6条）',
+        d_A10:'春卷（1条）', d_A11:'素春卷（1条）',
+        d_A12:'牛肉芝士卷（1条）',
+        // Soups
+        d_SP1:'蛋花汤', d_SP2:'鲜肉云吞汤', d_SP3:'酸辣汤 🌶️',
+        d_SP4:'鸡汤面', d_SP5:'什锦汤面',
+        d_SP6:'什菜汤', d_SP7:'鸡肉什菜汤',
+        d_SP8:'鸡茸玉米汤', d_SP9:'蛋花玉米汤',
+        // Fried Rice / Lo Mein
+        d_FR_combo:'叉烧 / 鸡 / 牛 / 虾', d_LM_combo:'鸡 / 叉烧 / 牛 / 虾',
+        d_combo:'什锦', d_veg:'蔬菜', d_seafood:'海鲜',
+        // Chicken
+        d_C1:'甜酸鸡', d_C2:'芥兰鸡', d_C3:'什菜鸡',
+        d_C4:'蘑菇鸡片', d_C5:'湖南鸡 🌶️', d_C6:'鱼香鸡 🌶️',
+        d_C7:'咖喱鸡 🌶️', d_C8:'四川鸡 🌶️', d_C9:'豆腐鸡',
+        d_C10:'四季豆鸡', d_C11:'宫保鸡丁 🌶️',
+        d_C12:'腰果鸡丁', d_C13:'蒜蓉辣鸡 🌶️',
+        // Beef
+        d_B1:'芥兰牛', d_B2:'蒙古牛', d_B3:'什菜牛',
+        d_B4:'青椒牛', d_B5:'湖南牛 🌶️', d_B6:'四季豆牛',
+        d_B7:'豆腐牛', d_B8:'宫保牛 🌶️', d_B9:'四川牛 🌶️',
+        d_B10:'蒜蓉辣牛 🌶️', d_B11:'咖喱牛 🌶️',
+        // Seafood
+        d_S1:'芥兰虾', d_S2:'什菜虾', d_S3:'虾龙糊',
+        d_S4:'腰果虾', d_S5:'咖喱虾 🌶️', d_S6:'湖南虾 🌶️',
+        d_S7:'四川虾 🌶️', d_S8:'宫保虾 🌶️',
+        // Roast Pork
+        d_P1:'芥兰叉烧', d_P2:'豆腐叉烧',
+        d_P3:'什菜叉烧', d_P4:'蒜蓉辣叉烧 🌶️',
+        d_P5:'湖南叉烧 🌶️', d_P6:'四季豆叉烧',
+        // Vegetables
+        d_V1:'炒什菜', d_V2:'蘑菇芥兰',
+        d_V3:'家常豆腐 🌶️', d_V4:'四川豆腐 🌶️',
+        d_V5:'四川四季豆 🌶️',
+        d_RN5:'星洲米粉 🌶️',
+        // ── Descriptions ───────────────────────────────────────────────
+        desc_CS1:'面糊裹炸鸡块，配西兰花、葱、蒜，撒芝麻',
+        desc_CS2:'面糊裹炸牛肉，配西兰花、葱、蒜，撒芝麻',
+        desc_CS3:'葱、西兰花',
+        desc_CS4:'鸡肉、葱、西兰花，配香橙酱汁',
+        desc_CS5:'牛肉、葱、西兰花，配香橙酱汁',
+        desc_CS6:'葱、西兰花，配香橙酱汁',
+        desc_CS7:'干贝、虾、蟹柳、小龙虾、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒',
+        desc_CS8:'炸牛肉丝、洋葱、蒜、胡萝卜',
+        desc_CS9:'牛肉、鸡肉、叉烧、虾、蟹柳、干贝、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒',
+        desc_CS10:'牛肉、鸡肉、虾、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒',
+        desc_CS11:'鸡肉、虾、牛肉、西兰花、青椒、胡萝卜',
+        desc_CS12:'虾、鸡肉、胡萝卜、青椒、蘑菇、玉米笋，撒花生',
+        desc_CS13:'牛肉、干贝、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒',
+        desc_CS14:'干贝、虾、西兰花、大白菜、胡萝卜、蘑菇，配鱼香蒜蓉酱',
+        desc_CS15:'炸嫩鸡、西兰花、柠檬，配甜酸酱',
+        desc_CF1:'面糊裹炸虾',
+        desc_CF2:'鸡翅配布法罗辣酱',
+        desc_A1:'金黄薯条，佐盐和黑胡椒',
+        desc_A2:'金黄薯条佐盐和黑胡椒，配自制调味料',
+        desc_A3:'大虾，配甜酸酱',
+        desc_A4:'香脆金黄蟹角，内馅奶油芝士、洋葱、蟹柳，配甜酸酱',
+        desc_A5:'猪肉馅云吞，配甜酸酱',
+        desc_A6:'烧烤猪肋排，鲜嫩多汁，配烧烤酱',
+        desc_A7:'鸡肉蔬菜馅饺子，配自制饺子蘸酱',
+        desc_A8:'虾配特制 Old Bay 调味料',
+        desc_A9:'外脆内浓的炸芝士条',
+        desc_A10:'虾、蔬菜，配鸭酱或黄芥末',
+        desc_A12:'炸牛肉卷，内馅牛肉、生菜、芝士、洋葱，配鸭酱或黄芥末',
+        desc_SP3:'豆腐、蘑菇、胡萝卜、番茄、黑木耳、鸡蛋',
+        desc_SP4:'鸡汤底',
+        desc_SP5:'鸡肉、虾、叉烧、牛肉',
+        desc_veg_mix:'大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒',
+        desc_SP8:'含鸡蛋',
+        desc_seafood4:'虾、蟹柳、小龙虾、干贝',
+        desc_RN5:'叉烧、鸡肉、虾，配咖喱汁',
+        desc_C1:'面糊炸鸡、胡萝卜、青椒，配甜酸酱',
+        desc_C2:'鸡肉、胡萝卜、西兰花，配红烧汁',
+        desc_C3:'鸡肉、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒，配红烧汁',
+        desc_C4:'鸡肉、西兰花、蘑菇、大白菜、胡萝卜，配白汁',
+        desc_C5:'鸡肉、西兰花、胡萝卜、青椒',
+        desc_C6:'鸡肉、西兰花、大白菜、胡萝卜、蘑菇，配鱼香蒜蓉酱',
+        desc_C7:'鸡肉、洋葱、青椒、大白菜、胡萝卜、蘑菇，配咖喱汁',
+        desc_C8:'鸡肉、西兰花、胡萝卜、青椒、蘑菇',
+        desc_C9:'鸡肉、豆腐、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋，配红烧汁',
+        desc_C10:'鸡肉、葱、四季豆，配红烧汁',
+        desc_C11:'鸡肉、胡萝卜、青椒、蘑菇、玉米笋，撒花生',
+        desc_C12:'鸡肉、胡萝卜、青椒、蘑菇，撒腰果',
+        desc_C13:'鸡肉、青椒、洋葱、包菜、胡萝卜、蘑菇、玉米笋，配鱼香蒜蓉酱',
+        desc_B1:'牛肉、胡萝卜、西兰花，配红烧汁',
+        desc_B2:'牛肉、洋葱、葱、胡萝卜',
+        desc_B3:'牛肉、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒，配红烧汁',
+        desc_B4:'牛排肉、洋葱、青椒，配红烧汁',
+        desc_B5:'牛肉、西兰花、胡萝卜、青椒',
+        desc_B6:'牛肉、葱、四季豆，配红烧汁',
+        desc_B7:'牛肉、豆腐、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒',
+        desc_B8:'牛肉、胡萝卜、青椒、蘑菇、玉米笋，撒花生',
+        desc_B9:'牛肉、西兰花、胡萝卜、青椒、蘑菇',
+        desc_B10:'牛肉、青椒、洋葱、包菜、胡萝卜、蘑菇、玉米笋，配鱼香蒜蓉酱',
+        desc_B11:'牛肉、洋葱、青椒、大白菜、胡萝卜、蘑菇，配咖喱汁',
+        desc_S1:'虾、胡萝卜、西兰花，配红烧汁',
+        desc_S2:'虾、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒，配红烧汁',
+        desc_S3:'虾、豌豆、胡萝卜、蘑菇、蛋白',
+        desc_S4:'虾、胡萝卜、青椒、蘑菇，撒腰果',
+        desc_S5:'虾、洋葱、青椒、大白菜、胡萝卜、蘑菇，配咖喱汁',
+        desc_S6:'虾、西兰花、胡萝卜、青椒',
+        desc_S7:'虾、胡萝卜、青椒、蘑菇',
+        desc_S8:'虾、胡萝卜、青椒、蘑菇、玉米笋，撒花生',
+        desc_P1:'叉烧、胡萝卜、西兰花，配红烧汁',
+        desc_P2:'叉烧、豆腐、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒，配红烧汁',
+        desc_P3:'叉烧、大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒，配红烧汁',
+        desc_P4:'叉烧、青椒、洋葱、包菜、胡萝卜、蘑菇、玉米笋，配鱼香蒜蓉酱',
+        desc_P5:'叉烧、西兰花、胡萝卜、青椒',
+        desc_P6:'叉烧、葱、四季豆，配红烧汁',
+        desc_V2:'大白菜、胡萝卜、西兰花、蘑菇，配红烧汁',
+        desc_V3:'大白菜、胡萝卜、西兰花、蘑菇、玉米笋、竹笋、青椒、炸豆腐，配红烧汁',
+        desc_V4:'蒸豆腐、葱、豌豆、胡萝卜，配白汁',
+        desc_V5:'葱、四季豆，配红烧汁',
+        desc_EF1:'西兰花、蘑菇',
+        desc_EF6:'叉烧、鸡肉、牛肉、虾',
       }
     };
 
@@ -1135,14 +1307,18 @@
         if (t[lang][key] !== undefined) el.textContent = t[lang][key];
       });
       // Toggle button styles
-      document.getElementById('lang-en').classList.toggle('text-brand-cream', lang === 'en');
-      document.getElementById('lang-en').classList.toggle('bg-brand-red/30', lang === 'en');
-      document.getElementById('lang-en').classList.toggle('text-brand-cream/60', lang !== 'en');
-      document.getElementById('lang-en').classList.toggle('bg-brand-red/30', lang === 'en');
-      document.getElementById('lang-es').classList.toggle('text-brand-cream', lang === 'es');
-      document.getElementById('lang-es').classList.toggle('bg-brand-red/30', lang === 'es');
-      document.getElementById('lang-es').classList.toggle('text-brand-cream/60', lang !== 'es');
+      ['en','es','zh'].forEach(code => {
+        const btn = document.getElementById('lang-' + code);
+        if (!btn) return;
+        btn.classList.toggle('text-brand-cream', lang === code);
+        btn.classList.toggle('bg-brand-red/30', lang === code);
+        btn.classList.toggle('text-brand-cream/60', lang !== code);
+      });
     }
+
+    // Honor ?lang= in the URL (e.g. arriving from a language-specific link)
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (['es','zh'].includes(urlLang)) setLang(urlLang);
   </script>
 </body>
 </html>

@@ -19,6 +19,7 @@
   <meta property="og:url" content="https://echan11110.github.io/hunan-hut/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_MX">
+  <meta property="og:locale:alternate" content="zh_CN">
   <!-- Twitter Card -->
   <!-- TODO: Replace logo2.png with a 1200x630 food photo (wings, lo mein, etc.) for best social share preview -->
   <meta property="og:image" content="https://echan11110.github.io/hunan-hut/logo2.png">
@@ -29,6 +30,7 @@
   <!-- Hreflang -->
   <link rel="alternate" hreflang="en" href="https://echan11110.github.io/hunan-hut/">
   <link rel="alternate" hreflang="es" href="https://echan11110.github.io/hunan-hut/?lang=es">
+  <link rel="alternate" hreflang="zh" href="https://echan11110.github.io/hunan-hut/?lang=zh">
   <link rel="alternate" hreflang="x-default" href="https://echan11110.github.io/hunan-hut/">
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -261,6 +263,7 @@
           <div class="flex items-center border border-brand-cream/20 rounded-full overflow-hidden text-xs font-bold" aria-label="Language selector">
             <button id="lang-en" onclick="setLang('en')" class="lang-btn active px-3 py-1.5 min-h-[36px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">English</button>
             <button id="lang-es" onclick="setLang('es')" class="lang-btn px-3 py-1.5 min-h-[36px] text-brand-cream/60 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">Español</button>
+            <button id="lang-zh" onclick="setLang('zh')" class="lang-btn px-3 py-1.5 min-h-[36px] text-brand-cream/60 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">中文</button>
           </div>
           <a href="tel:+13014393886" data-i18n="nav_order"
             class="bg-brand-red hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-full min-h-[44px] flex items-center transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
@@ -295,6 +298,7 @@
           <div class="flex border border-brand-cream/20 rounded-full overflow-hidden text-xs font-bold">
             <button id="lang-en-m" onclick="setLang('en')" class="lang-btn active px-4 py-2 min-h-[40px] cursor-pointer">English</button>
             <button id="lang-es-m" onclick="setLang('es')" class="lang-btn px-4 py-2 min-h-[40px] text-brand-cream/60 cursor-pointer">Español</button>
+            <button id="lang-zh-m" onclick="setLang('zh')" class="lang-btn px-4 py-2 min-h-[40px] text-brand-cream/60 cursor-pointer">中文</button>
           </div>
         </div>
         <a href="tel:+13014393886" data-i18n="nav_order"
@@ -436,13 +440,13 @@
             <img src="images/menu/wings-mambo.jpg" alt="Wings with Mambo Sauce"
               class="fav-img w-full h-48 object-cover"
               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Wings with Mambo Sauce</div>
+            <div data-i18n="fav_title_wings" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Wings with Mambo Sauce</div>
             <span class="absolute top-3 left-3 badge bg-brand-red text-white text-[11px]" data-i18n="fav_badge_best_seller">Best Seller</span>
           </div>
           <div class="p-5">
-            <h3 class="font-display text-lg text-brand-cream mb-1">Wings with Mambo Sauce</h3>
+            <h3 data-i18n="fav_title_wings" class="font-display text-lg text-brand-cream mb-1">Wings with Mambo Sauce</h3>
             <p data-i18n="fav_hook_wings" class="text-brand-cream/55 text-sm leading-snug mb-3">Crispy, fresh, tossed in the legendary mambo sauce — the best in town.</p>
-            <p class="text-brand-gold font-semibold text-sm">8 wings · $17.95</p>
+            <p data-i18n="fav_price_wings" class="text-brand-gold font-semibold text-sm">8 wings · $17.95</p>
           </div>
         </article>
 
@@ -451,9 +455,9 @@
           <img src="images/menu/chicken-lo-mein.jpg" alt="Chicken Lo Mein"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Chicken Lo Mein</div>
+          <div data-i18n="fav_title_lomein" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Chicken Lo Mein</div>
           <div class="p-5">
-            <h3 class="font-display text-lg text-brand-cream mb-1">Chicken Lo Mein</h3>
+            <h3 data-i18n="fav_title_lomein" class="font-display text-lg text-brand-cream mb-1">Chicken Lo Mein</h3>
             <p data-i18n="fav_hook_lomein" class="text-brand-cream/55 text-sm leading-snug mb-3">Silky noodles, cooked perfectly every time.</p>
             <p class="text-brand-gold font-semibold text-sm" data-i18n="fav_price_lomein">from $11.50</p>
           </div>
@@ -464,9 +468,9 @@
           <img src="images/menu/general-tsos.jpg" alt="General Tso's Chicken"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">General Tso's Chicken</div>
+          <div data-i18n="fav_title_tso" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">General Tso's Chicken</div>
           <div class="p-5">
-            <h3 class="font-display text-lg text-brand-cream mb-1">General Tso's Chicken 🌶️</h3>
+            <h3 data-i18n="fav_title_tso" class="font-display text-lg text-brand-cream mb-1">General Tso's Chicken 🌶️</h3>
             <p data-i18n="fav_hook_tso" class="text-brand-cream/55 text-sm leading-snug mb-3">The takeout classic — sweet, crisp, with a kick.</p>
             <p class="text-brand-gold font-semibold text-sm">$14.95</p>
           </div>
@@ -477,9 +481,9 @@
           <img src="images/menu/singapore-noodle.jpg" alt="Singapore Rice Noodle"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Singapore Rice Noodle</div>
+          <div data-i18n="fav_title_singapore" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Singapore Rice Noodle</div>
           <div class="p-5">
-            <h3 class="font-display text-lg text-brand-cream mb-1">Singapore Rice Noodle 🌶️</h3>
+            <h3 data-i18n="fav_title_singapore" class="font-display text-lg text-brand-cream mb-1">Singapore Rice Noodle 🌶️</h3>
             <p data-i18n="fav_hook_singapore" class="text-brand-cream/55 text-sm leading-snug mb-3">Curry-kissed rice noodles with roast pork, chicken &amp; shrimp. A local favorite.</p>
             <p class="text-brand-gold font-semibold text-sm">$14.95</p>
           </div>
@@ -490,9 +494,9 @@
           <img src="images/menu/hot-sour-soup.jpg" alt="Hot &amp; Sour Soup"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Hot &amp; Sour Soup</div>
+          <div data-i18n="fav_title_soup" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Hot &amp; Sour Soup</div>
           <div class="p-5">
-            <h3 class="font-display text-lg text-brand-cream mb-1">Hot &amp; Sour Soup 🌶️</h3>
+            <h3 data-i18n="fav_title_soup" class="font-display text-lg text-brand-cream mb-1">Hot &amp; Sour Soup 🌶️</h3>
             <p data-i18n="fav_hook_soup" class="text-brand-cream/55 text-sm leading-snug mb-3">Rich, tangy, with just the right amount of heat.</p>
             <p class="text-brand-gold font-semibold text-sm" data-i18n="fav_price_soup">from $3.75</p>
           </div>
@@ -503,11 +507,11 @@
           <img src="images/menu/fried-wonton.jpg" alt="Fried Wonton"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Fried Wonton</div>
+          <div data-i18n="fav_title_wonton" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/50 text-sm font-medium text-center px-4">Fried Wonton</div>
           <div class="p-5">
-            <h3 class="font-display text-lg text-brand-cream mb-1">Fried Wonton</h3>
+            <h3 data-i18n="fav_title_wonton" class="font-display text-lg text-brand-cream mb-1">Fried Wonton</h3>
             <p data-i18n="fav_hook_wonton" class="text-brand-cream/55 text-sm leading-snug mb-3">Hand-folded and fried golden. Regulars call them the best around.</p>
-            <p class="text-brand-gold font-semibold text-sm">$7.95 <span class="text-brand-cream/40 font-normal">(7 pc)</span></p>
+            <p class="text-brand-gold font-semibold text-sm">$7.95 <span data-i18n="fav_price_wonton_pc" class="text-brand-cream/40 font-normal">(7 pc)</span></p>
           </div>
         </article>
 
@@ -1255,7 +1259,7 @@
         hero_btn_call: 'Call to Order',
         hero_view_full:'View Full Menu',
         hero_scroll:   'Scroll',
-        hero_rating:   ' · 200+ Google reviews',
+        hero_rating:   ' · Google reviews',
         hero_h1_sub:   'Chinese Carry-Out · Adelphi, MD',
         open_now:      'Open Now · closes at ',
         open_closed:   'Closed · opens at 11:00 AM',
@@ -1269,6 +1273,14 @@
         menu_call_link:'Ready in minutes — just call ahead',
         // Favorites teaser
         fav_badge_best_seller: 'Best Seller',
+        fav_title_wings:     'Wings with Mambo Sauce',
+        fav_title_lomein:    'Chicken Lo Mein',
+        fav_title_tso:       "General Tso's Chicken 🌶️",
+        fav_title_singapore: 'Singapore Rice Noodle 🌶️',
+        fav_title_soup:      'Hot & Sour Soup 🌶️',
+        fav_title_wonton:    'Fried Wonton',
+        fav_price_wings:     '8 wings · $17.95',
+        fav_price_wonton_pc: '(7 pc)',
         fav_hook_wings:     'Crispy, fresh, tossed in the legendary mambo sauce — the best in town.',
         fav_hook_lomein:    'Silky noodles, cooked perfectly every time.',
         fav_hook_tso:       'The takeout classic — sweet, crisp, with a kick.',
@@ -1334,6 +1346,11 @@
         fb_delivery:     'Delivery',
         fb_submit:       'Submit Feedback',
         fb_formspree_note: 'Your feedback goes directly to the Hunan Hut team.',
+        fb_ph_name:      'e.g. Maria G.',
+        fb_ph_order:     'e.g. Chicken wings with mambo sauce',
+        fb_ph_comment:   'Tell us about your experience...',
+        fb_alert_rating: 'Please select a star rating before submitting.',
+        fb_sending:      'Sending…',
         // CTA
         cta_heading:    'Ready to Order?',
         cta_body:       'Walk in or call ahead. We\'re at 7967 New Hampshire Ave, Adelphi, MD — serving you fresh, fast, and with a smile.',
@@ -1374,7 +1391,7 @@
         hero_btn_call: 'Llamar para Pedir',
         hero_view_full:'Ver Menú Completo',
         hero_scroll:   'Desplazar',
-        hero_rating:   ' · 200+ opiniones en Google',
+        hero_rating:   ' · opiniones en Google',
         hero_h1_sub:   'Comida China para Llevar · Adelphi, MD',
         open_now:      'Abierto Ahora · cierra a las ',
         open_closed:   'Cerrado · abre a las 11:00 AM',
@@ -1388,6 +1405,14 @@
         menu_call_link:'Listo en minutos — solo llame con anticipación',
         // Favorites teaser
         fav_badge_best_seller: 'Más Vendido',
+        fav_title_wings:     'Alitas con Salsa Mambo',
+        fav_title_lomein:    'Lo Mein de Pollo',
+        fav_title_tso:       'Pollo del General Tso 🌶️',
+        fav_title_singapore: 'Fideos de Arroz Singapur 🌶️',
+        fav_title_soup:      'Sopa Agripicante 🌶️',
+        fav_title_wonton:    'Wonton Frito',
+        fav_price_wings:     '8 alitas · $17.95',
+        fav_price_wonton_pc: '(7 pzas)',
         fav_hook_wings:     'Crujientes, frescas, bañadas en la legendaria salsa mambo — las mejores de la zona.',
         fav_hook_lomein:    'Fideos sedosos, cocinados a la perfección siempre.',
         fav_hook_tso:       'El clásico de siempre — dulce, crujiente y con un toque picante.',
@@ -1453,6 +1478,11 @@
         fb_delivery:     'A domicilio',
         fb_submit:       'Enviar Comentario',
         fb_formspree_note: 'Tus comentarios van directamente al equipo de Hunan Hut.',
+        fb_ph_name:      'p. ej. María G.',
+        fb_ph_order:     'p. ej. Alitas con salsa mambo',
+        fb_ph_comment:   'Cuéntanos tu experiencia...',
+        fb_alert_rating: 'Por favor selecciona una calificación de estrellas.',
+        fb_sending:      'Enviando…',
         // CTA
         cta_heading:    '¿Listo para Pedir?',
         cta_body:       'Visítanos o llama antes. Estamos en 7967 New Hampshire Ave, Adelphi, MD — sirviéndote fresco, rápido y con una sonrisa.',
@@ -1476,219 +1506,351 @@
         // Menu badges
         badge_house_fav:  'Favoritos de la Casa',
         badge_best_seller:'El Más Vendido',
+      },
+      zh: {
+        // Nav
+        nav_menu:      '菜单',
+        nav_story:     '我们的故事',
+        nav_reviews:   '顾客评价',
+        nav_feedback:  '意见反馈',
+        nav_find:      '门店位置',
+        nav_order:     '电话订餐',
+        // Hero
+        hero_pill:     '家族经营 · 创立于1999年',
+        hero_shimmer:  '25年多的好味道',
+        hero_sub:      '25年多来服务 Adelphi、Hyattsville 和 Langley Park 社区。香脆炸鸡翅、美味捞面，还有传奇的曼波酱 —— 现点现做，出餐快捷，深受几代人喜爱。',
+        hero_btn_menu: '查看菜单',
+        hero_btn_call: '电话订餐',
+        hero_view_full:'查看完整菜单',
+        hero_scroll:   '下滑',
+        hero_rating:   ' 条谷歌评价',
+        hero_h1_sub:   '中式外卖 · 马里兰州 Adelphi',
+        open_now:      '营业中 · 关门时间 ',
+        open_closed:   '已打烊 · 上午 11:00 开门',
+        sticky_call:   '致电 (301) 439-3886',
+        reviews_leave: '在谷歌上给我们留个评价',
+        // Menu section
+        menu_eyebrow:  '我们的菜单',
+        menu_heading:  '顾客最爱',
+        menu_sub:      '现点现做，25年多来深受街坊喜爱。这些是让顾客一再回头的招牌菜。',
+        menu_tax:      '* 所有价格已含税。🌶️ = 辣',
+        menu_call_link:'几分钟即可取餐 —— 提前来电即可',
+        // Favorites teaser
+        fav_badge_best_seller: '畅销招牌',
+        fav_title_wings:     '曼波酱鸡翅',
+        fav_title_lomein:    '鸡肉捞面',
+        fav_title_tso:       '左宗棠鸡 🌶️',
+        fav_title_singapore: '星洲米粉 🌶️',
+        fav_title_soup:      '酸辣汤 🌶️',
+        fav_title_wonton:    '炸云吞',
+        fav_price_wings:     '鸡翅 8只 · $17.95',
+        fav_price_wonton_pc: '（7个）',
+        fav_hook_wings:     '香脆新鲜，裹上传奇曼波酱 —— 全城最好吃。',
+        fav_hook_lomein:    '面条爽滑，每次都恰到好处。',
+        fav_hook_tso:       '外卖经典 —— 甜香酥脆，微微带辣。',
+        fav_hook_singapore: '咖喱香星洲米粉，配叉烧、鸡肉和虾。本地人的最爱。',
+        fav_hook_soup:      '浓郁酸香，辣度恰到好处。',
+        fav_hook_wonton:    '手工包制，炸至金黄。老顾客都说是附近最好吃的。',
+        fav_price_lomein:   '$11.50 起',
+        fav_price_soup:     '$3.75 起',
+        fav_cta_menu:       '查看完整菜单',
+        fav_cta_call:       '电话订餐 · (301) 439-3886',
+        // Categories
+        cat_specials:   '主厨精选',
+        cat_wings:      '鸡翅和炸鸡',
+        cat_sauces:     '酱料',
+        cat_classics:   '经典人气',
+        cat_appetizers: '开胃小食',
+        cat_soups:      '汤类',
+        cat_friedrice:  '炒饭',
+        cat_lomein:     '捞面和面食',
+        cat_chicken:    '鸡肉类',
+        cat_pork:       '叉烧类',
+        cat_beef:       '牛肉类',
+        cat_seafood:    '海鲜类',
+        cat_veggies:    '蔬菜和豆腐',
+        cat_efyoung:    '芙蓉蛋',
+        wings_fried_only:  '净炸鸡',
+        wings_with_sides:  '炸鸡特餐 — 配米饭和薯条',
+        wings_pieces:      '鸡胸、鸡腿和鸡大腿',
+        // About
+        about_eyebrow:  '我们的故事',
+        about_heading:  '社区老字号',
+        about_p1:       '25年多来，Hunan Hut 一直是 Adelphi 和 Langley Park 社区首选的中式外卖店。从一家小小的街坊小店，发展成远近闻名的老字号 —— 在这里，邻居变成常客，常客变成家人。从爽滑的捞面到人人称赞的香脆鸡翅，每道菜都现点现做，满载着让这个社区一再回味的好味道。',
+        about_p2:       '我们的厨房靠的是用心：每天新鲜备料，几十年不断打磨的配方，以及真心在乎每一份出餐的团队。店员会讲英语和西班牙语，因为这个社区也是我们的家。',
+        about_p3:       '小时候来吃的顾客，如今带着自己的孩子来。有人专程开车30分钟，因为别处比不上这个味道。这份信任是我们的一切 —— 我们用每一份餐来回报。',
+        about_stat1:    '年营业历史',
+        about_stat2:    '条谷歌评价',
+        about_stat3:    '谷歌评分',
+        about_f1_title: '家族经营',
+        about_f1_body:  '每道菜都像家常菜一样用心制作。柜台后的这家人记得您的名字。',
+        about_f2_title: '始终新鲜快捷',
+        about_f2_body:  '出餐量大，食材绝不久放。到店点餐或提前来电 —— 您到店时餐已备好。',
+        about_f3_title: '双语服务',
+        about_f3_body:  '英语和西班牙语服务。我们服务整个社区 —— 每位邻居，每个家庭。',
+        about_f4_title: '实惠大份',
+        about_f4_body:  '价格公道，分量十足。吃素？老板会为您调整价格，因为善意也是配方的一部分。',
+        // Reviews
+        reviews_eyebrow: '来自社区',
+        reviews_heading: '顾客怎么说',
+        reviews_google:  '在谷歌上阅读全部 200+ 条评价',
+        // Feedback
+        fb_eyebrow:      '您的意见很重要',
+        fb_heading:      '留下反馈',
+        fb_sub:          '25年多来我们能一直服务这个社区，全靠像您这样的顾客。告诉我们您的用餐体验吧。',
+        fb_thanks_title: '谢谢您！',
+        fb_thanks_body:  '您的反馈对我们无比重要。期待下次再见！',
+        fb_label_name:   '您的姓名（选填）',
+        fb_label_rating: '总体评分',
+        fb_label_order:  '您点了什么？（选填）',
+        fb_label_comment:'您的评价',
+        fb_label_type:   '您是怎么下单的？',
+        fb_walkin:       '到店点餐',
+        fb_callahead:    '提前来电',
+        fb_delivery:     '外送',
+        fb_submit:       '提交反馈',
+        fb_formspree_note: '您的反馈会直接送达 Hunan Hut 团队。',
+        fb_ph_name:      '例如：王丽',
+        fb_ph_order:     '例如：曼波酱鸡翅',
+        fb_ph_comment:   '和我们分享您的体验……',
+        fb_alert_rating: '提交前请先选择星级评分。',
+        fb_sending:      '提交中……',
+        // CTA
+        cta_heading:    '准备点餐了吗？',
+        cta_body:       '欢迎到店或提前来电。地址：7967 New Hampshire Ave, Adelphi, MD —— 新鲜、快捷、笑脸相迎。',
+        cta_call:       '立即致电',
+        cta_directions: '导航前往',
+        // Contact
+        contact_eyebrow: '欢迎光临',
+        contact_heading: '到访 Hunan Hut',
+        contact_addr_title:  '地址',
+        contact_hours_title: '营业时间',
+        hrs_mon_thu:         '周一至周四',
+        hrs_fri_sat:         '周五至周六',
+        hrs_sun:             '周日',
+        contact_hours_note:  '营业时间可能变动 —— 请来电确认。',
+        contact_phone_title: '电话订餐',
+        contact_phone_note:  '提前来电 —— 您到店时餐已备好。',
+        contact_maps_link:   '在谷歌地图中打开',
+        // Footer
+        footer_tagline: '家族经营 自1999年 · 马里兰州 Adelphi',
+        footer_copy:    '© 2026 Hunan Hut。保留所有权利。',
+        // Menu badges
+        badge_house_fav:  '本店招牌',
+        badge_best_seller:'畅销',
       }
     };
 
     // ─── Menu item data (EN + ES) ─────────────────────────────────────────────
     const menuData = {
       specials: { items: [
-        { en: 'Sesame Chicken',                      es: 'Pollo al Sésamo',                               price: '$14.95', badge: { en: 'Popular', es: 'Popular' } },
-        { en: 'Sesame Beef',                         es: 'Res al Sésamo',                                 price: '$17.95' },
-        { en: "General Tso's Chicken 🌶️",              es: 'Pollo del General Tso 🌶️',                      price: '$14.95', badge: { en: 'Popular', es: 'Popular' } },
-        { en: "General Tso's Shrimp 🌶️",             es: 'Camarones del General Tso 🌶️',                  price: '$17.95' },
-        { en: "General Tso's Tofu 🌶️",               es: 'Tofu del General Tso 🌶️',                       price: '$12.95' },
-        { en: 'Orange Chicken 🌶️',                   es: 'Pollo a la Naranja 🌶️',                         price: '$14.95' },
-        { en: 'Orange Beef 🌶️',                      es: 'Res a la Naranja 🌶️',                           price: '$17.95' },
-        { en: 'Orange Shrimp 🌶️',                    es: 'Camarones a la Naranja 🌶️',                     price: '$17.95' },
-        { en: 'Seafood Combination',                 es: 'Combinación de Mariscos',                       price: '$17.95' },
-        { en: 'Crispy Beef 🌶️',                      es: 'Res Crujiente 🌶️',                              price: '$17.95' },
-        { en: 'Happy Family',                        es: 'Familia Feliz',                                 price: '$16.95' },
-        { en: 'Triple Delight 🌶️',                   es: 'Triple Delicia 🌶️',                             price: '$14.95' },
-        { en: 'Hunan Delight 🌶️',                    es: 'Delicias Hunan 🌶️',                             price: '$17.95' },
-        { en: 'Kung Pao Delight 🌶️',                 es: 'Delicias Kung Pao 🌶️',                          price: '$17.95' },
-        { en: 'Beef w/ Scallop',                     es: 'Res con Escalope',                              price: '$17.95' },
-        { en: 'Scallops & Shrimp Garlic Sauce 🌶️',  es: 'Escalopes y Camarones con Salsa de Ajo 🌶️',    price: '$17.95' },
-        { en: 'Lemon Chicken',                       es: 'Pollo al Limón',                                price: '$14.95' },
+        { en: 'Sesame Chicken',                      es: 'Pollo al Sésamo',                               zh: '芝麻鸡',              price: '$14.95', badge: { en: 'Popular', es: 'Popular', zh: '人气' } },
+        { en: 'Sesame Beef',                         es: 'Res al Sésamo',                                 zh: '芝麻牛',              price: '$17.95' },
+        { en: "General Tso's Chicken 🌶️",              es: 'Pollo del General Tso 🌶️',                      zh: '左宗棠鸡 🌶️',         price: '$14.95', badge: { en: 'Popular', es: 'Popular', zh: '人气' } },
+        { en: "General Tso's Shrimp 🌶️",             es: 'Camarones del General Tso 🌶️',                  zh: '左宗棠虾 🌶️',         price: '$17.95' },
+        { en: "General Tso's Tofu 🌶️",               es: 'Tofu del General Tso 🌶️',                       zh: '左宗棠豆腐 🌶️',       price: '$12.95' },
+        { en: 'Orange Chicken 🌶️',                   es: 'Pollo a la Naranja 🌶️',                         zh: '陈皮鸡 🌶️',           price: '$14.95' },
+        { en: 'Orange Beef 🌶️',                      es: 'Res a la Naranja 🌶️',                           zh: '陈皮牛 🌶️',           price: '$17.95' },
+        { en: 'Orange Shrimp 🌶️',                    es: 'Camarones a la Naranja 🌶️',                     zh: '陈皮虾 🌶️',           price: '$17.95' },
+        { en: 'Seafood Combination',                 es: 'Combinación de Mariscos',                       zh: '海鲜大会',            price: '$17.95' },
+        { en: 'Crispy Beef 🌶️',                      es: 'Res Crujiente 🌶️',                              zh: '脆皮牛 🌶️',           price: '$17.95' },
+        { en: 'Happy Family',                        es: 'Familia Feliz',                                 zh: '全家福',              price: '$16.95' },
+        { en: 'Triple Delight 🌶️',                   es: 'Triple Delicia 🌶️',                             zh: '三鲜大会 🌶️',         price: '$14.95' },
+        { en: 'Hunan Delight 🌶️',                    es: 'Delicias Hunan 🌶️',                             zh: '湖南三鲜 🌶️',         price: '$17.95' },
+        { en: 'Kung Pao Delight 🌶️',                 es: 'Delicias Kung Pao 🌶️',                          zh: '宫保三鲜 🌶️',         price: '$17.95' },
+        { en: 'Beef w/ Scallop',                     es: 'Res con Escalope',                              zh: '干贝牛',              price: '$17.95' },
+        { en: 'Scallops & Shrimp Garlic Sauce 🌶️',  es: 'Escalopes y Camarones con Salsa de Ajo 🌶️',    zh: '鱼香干贝虾 🌶️',       price: '$17.95' },
+        { en: 'Lemon Chicken',                       es: 'Pollo al Limón',                                zh: '柠檬鸡',              price: '$14.95' },
       ]},
       wings: { sections: [
         // ── Fried Chicken Only ──────────────────────────────────────────────
-        { groupHeader: { en: 'Fried Chicken Only', es: 'Solo Pollo Frito' } },
-        { header: { en: 'Wings', es: 'Alitas' },
+        { groupHeader: { en: 'Fried Chicken Only', es: 'Solo Pollo Frito', zh: '净炸鸡' } },
+        { header: { en: 'Wings', es: 'Alitas', zh: '鸡翅' },
           items: [
-            { en: '1 Wing',  es: '1 Alita',  price: '$2.95'  },
-            { en: '2 Wings', es: '2 Alitas', price: '$5.75'  },
-            { en: '3 Wings', es: '3 Alitas', price: '$7.95'  },
-            { en: '4 Wings', es: '4 Alitas', price: '$9.95'  },
-            { en: '5 Wings', es: '5 Alitas', price: '$11.95' },
-            { en: '6 Wings', es: '6 Alitas', price: '$13.95' },
-            { en: '7 Wings', es: '7 Alitas', price: '$15.95' },
-            { en: '8 Wings', es: '8 Alitas', price: '$17.95' },
+            { en: '1 Wing',  es: '1 Alita',  zh: '鸡翅 1只', price: '$2.95'  },
+            { en: '2 Wings', es: '2 Alitas', zh: '鸡翅 2只', price: '$5.75'  },
+            { en: '3 Wings', es: '3 Alitas', zh: '鸡翅 3只', price: '$7.95'  },
+            { en: '4 Wings', es: '4 Alitas', zh: '鸡翅 4只', price: '$9.95'  },
+            { en: '5 Wings', es: '5 Alitas', zh: '鸡翅 5只', price: '$11.95' },
+            { en: '6 Wings', es: '6 Alitas', zh: '鸡翅 6只', price: '$13.95' },
+            { en: '7 Wings', es: '7 Alitas', zh: '鸡翅 7只', price: '$15.95' },
+            { en: '8 Wings', es: '8 Alitas', zh: '鸡翅 8只', price: '$17.95' },
           ]},
-        { header: { en: 'Breasts', es: 'Pechugas' },
+        { header: { en: 'Breasts', es: 'Pechugas', zh: '鸡胸' },
           items: [
-            { en: '1 Breast',  es: '1 Pechuga',  price: '$7.00'  },
-            { en: '2 Breasts', es: '2 Pechugas', price: '$14.00' },
+            { en: '1 Breast',  es: '1 Pechuga',  zh: '鸡胸 1块', price: '$7.00'  },
+            { en: '2 Breasts', es: '2 Pechugas', zh: '鸡胸 2块', price: '$14.00' },
           ]},
-        { header: { en: 'Leg', es: 'Pierna' },
+        { header: { en: 'Leg', es: 'Pierna', zh: '鸡小腿' },
           items: [
-            { en: '1 Leg',  es: '1 Pierna',  price: '$4.00' },
-            { en: '2 Legs', es: '2 Piernas', price: '$7.00' },
+            { en: '1 Leg',  es: '1 Pierna',  zh: '鸡小腿 1只', price: '$4.00' },
+            { en: '2 Legs', es: '2 Piernas', zh: '鸡小腿 2只', price: '$7.00' },
           ]},
-        { header: { en: 'Thigh', es: 'Muslo' },
+        { header: { en: 'Thigh', es: 'Muslo', zh: '鸡大腿' },
           items: [
-            { en: '1 Thigh',  es: '1 Muslo',  price: '$6.50'  },
-            { en: '2 Thighs', es: '2 Muslos', price: '$12.00' },
+            { en: '1 Thigh',  es: '1 Muslo',  zh: '鸡大腿 1只', price: '$6.50'  },
+            { en: '2 Thighs', es: '2 Muslos', zh: '鸡大腿 2只', price: '$12.00' },
           ]},
         // ── Chicken Special ─────────────────────────────────────────────────
-        { groupHeader: { en: 'Chicken Special', es: 'Especial de Pollo' },
-          note: { en: 'Served w. Your Choice of: Steamed Rice, Fried Rice, or French Fries. Upgrade: Add Both Rice and Fries +$2', es: 'Servido con tu elección de: Arroz al Vapor, Arroz Frito o Papas Fritas. Mejora: Agrega Ambos Arroces y Papas +$2' } },
-        { header: { en: 'Wings', es: 'Alitas' },
+        { groupHeader: { en: 'Chicken Special', es: 'Especial de Pollo', zh: '炸鸡特餐' },
+          note: { en: 'Served w. Your Choice of: Steamed Rice, Fried Rice, or French Fries. Upgrade: Add Both Rice and Fries +$2', es: 'Servido con tu elección de: Arroz al Vapor, Arroz Frito o Papas Fritas. Mejora: Agrega Ambos Arroces y Papas +$2', zh: '配白米饭、炒饭或薯条任选一种。升级：米饭和薯条都要 +$2' } },
+        { header: { en: 'Wings', es: 'Alitas', zh: '鸡翅' },
           items: [
-            { en: '1 Wing',  es: '1 Alita',  price: '$6.50'  },
-            { en: '2 Wings', es: '2 Alitas', price: '$7.95'  },
-            { en: '3 Wings', es: '3 Alitas', price: '$9.95'  },
-            { en: '4 Wings', es: '4 Alitas', price: '$11.95' },
-            { en: '5 Wings', es: '5 Alitas', price: '$14.95' },
-            { en: '6 Wings', es: '6 Alitas', price: '$16.95' },
-            { en: '7 Wings', es: '7 Alitas', price: '$18.95' },
-            { en: '8 Wings', es: '8 Alitas', price: '$20.95' },
+            { en: '1 Wing',  es: '1 Alita',  zh: '鸡翅 1只', price: '$6.50'  },
+            { en: '2 Wings', es: '2 Alitas', zh: '鸡翅 2只', price: '$7.95'  },
+            { en: '3 Wings', es: '3 Alitas', zh: '鸡翅 3只', price: '$9.95'  },
+            { en: '4 Wings', es: '4 Alitas', zh: '鸡翅 4只', price: '$11.95' },
+            { en: '5 Wings', es: '5 Alitas', zh: '鸡翅 5只', price: '$14.95' },
+            { en: '6 Wings', es: '6 Alitas', zh: '鸡翅 6只', price: '$16.95' },
+            { en: '7 Wings', es: '7 Alitas', zh: '鸡翅 7只', price: '$18.95' },
+            { en: '8 Wings', es: '8 Alitas', zh: '鸡翅 8只', price: '$20.95' },
           ]},
-        { header: { en: 'Breasts', es: 'Pechugas' },
+        { header: { en: 'Breasts', es: 'Pechugas', zh: '鸡胸' },
           items: [
-            { en: '1 Breast',  es: '1 Pechuga',  price: '$9.00'  },
-            { en: '2 Breasts', es: '2 Pechugas', price: '$16.00' },
+            { en: '1 Breast',  es: '1 Pechuga',  zh: '鸡胸 1块', price: '$9.00'  },
+            { en: '2 Breasts', es: '2 Pechugas', zh: '鸡胸 2块', price: '$16.00' },
           ]},
-        { header: { en: 'Leg and Thigh', es: 'Pierna y Muslo' }, last: true,
+        { header: { en: 'Leg and Thigh', es: 'Pierna y Muslo', zh: '鸡小腿和鸡大腿' }, last: true,
           items: [
-            { en: '1 Leg',               es: '1 Pierna',                    price: '$6.50'  },
-            { en: '1 Thigh',             es: '1 Muslo',                     price: '$8.95'  },
-            { en: '2 Piece Leg & Thigh', es: '2 Piezas Pierna y Muslo',     price: '$9.95'  },
-            { en: '2 Legs',              es: '2 Piernas',                   price: '$9.95'  },
-            { en: 'Leg & Breast',        es: 'Pierna y Pechuga',            price: '$12.00' },
-            { en: '2 Legs & 2 Thighs',  es: '2 Piernas y 2 Muslos',        price: '$15.95' },
-            { en: '2 Legs & 1 Wing',     es: '2 Piernas y 1 Alita',         price: '$11.95' },
+            { en: '1 Leg',               es: '1 Pierna',                    zh: '鸡小腿 1只',            price: '$6.50'  },
+            { en: '1 Thigh',             es: '1 Muslo',                     zh: '鸡大腿 1只',            price: '$8.95'  },
+            { en: '2 Piece Leg & Thigh', es: '2 Piezas Pierna y Muslo',     zh: '鸡小腿+鸡大腿 2件',      price: '$9.95'  },
+            { en: '2 Legs',              es: '2 Piernas',                   zh: '鸡小腿 2只',            price: '$9.95'  },
+            { en: 'Leg & Breast',        es: 'Pierna y Pechuga',            zh: '鸡小腿+鸡胸',           price: '$12.00' },
+            { en: '2 Legs & 2 Thighs',  es: '2 Piernas y 2 Muslos',        zh: '鸡小腿 2只+鸡大腿 2只',  price: '$15.95' },
+            { en: '2 Legs & 1 Wing',     es: '2 Piernas y 1 Alita',         zh: '鸡小腿 2只+鸡翅 1只',    price: '$11.95' },
           ]},
       ]},
       sauces: { tags: [
-        { en: 'Mambo Sauce',   es: 'Salsa Mambo'      },
-        { en: 'Ketchup',       es: 'Ketchup'          },
-        { en: 'Barbeque',      es: 'Barbacoa'         },
-        { en: 'Chili Oil',     es: 'Aceite de Chile'  },
-        { en: 'Buffalo Sauce', es: 'Salsa Buffalo'    },
-        { en: 'Hot Sauce',     es: 'Salsa Picante'    },
-      ], note: { en: 'Extra sauce is 25¢', es: 'La salsa extra cuesta 25¢' } },
+        { en: 'Mambo Sauce',   es: 'Salsa Mambo',     zh: '曼波酱'    },
+        { en: 'Ketchup',       es: 'Ketchup',         zh: '番茄酱'    },
+        { en: 'Barbeque',      es: 'Barbacoa',        zh: '烧烤酱'    },
+        { en: 'Chili Oil',     es: 'Aceite de Chile', zh: '辣椒油'    },
+        { en: 'Buffalo Sauce', es: 'Salsa Buffalo',   zh: '布法罗辣酱' },
+        { en: 'Hot Sauce',     es: 'Salsa Picante',   zh: '辣酱'      },
+      ], note: { en: 'Extra sauce is 25¢', es: 'La salsa extra cuesta 25¢', zh: '加酱 25¢' } },
       classics: { items: [
-        { en: 'Shrimp Basket',              es: 'Canasta de Camarones',           price: '$12.50' },
-        { en: 'Buffalo Wings 🌶️ (8 pc)',    es: 'Alitas Buffalo 🌶️ (8 pzas)',     price: '$12.50' },
-        { en: 'Buffalo Wings 🌶️ (12 pc)',   es: 'Alitas Buffalo 🌶️ (12 pzas)',    price: '$18.50' },
-        { en: 'Buffalo Wings 🌶️ (16 pc)',   es: 'Alitas Buffalo 🌶️ (16 pzas)',    price: '$24.50' },
-        { en: 'Pork Rib Tips',              es: 'Puntas de Costilla',             price: '$12.95' },
-        { en: 'Spare Ribs (4 pc)',          es: 'Costillas (4 pzas)',             price: '$13.95' },
-        { en: 'Chicken Tenders (3 pc)',     es: 'Tiras de Pollo (3 pzas)',        price: '$11.95' },
-        { en: 'Fried Fish (3 pc)',          es: 'Pescado Frito (3 pzas)',         price: '$12.95' },
-        { en: 'Shrimp Box (7 pc)',          es: 'Cajita de Camarones (7 pzas)',   price: '$16.95' },
+        { en: 'Shrimp Basket',              es: 'Canasta de Camarones',           zh: '炸虾篮',               price: '$12.50' },
+        { en: 'Buffalo Wings 🌶️ (8 pc)',    es: 'Alitas Buffalo 🌶️ (8 pzas)',     zh: '布法罗辣鸡翅 🌶️（8只）',  price: '$12.50' },
+        { en: 'Buffalo Wings 🌶️ (12 pc)',   es: 'Alitas Buffalo 🌶️ (12 pzas)',    zh: '布法罗辣鸡翅 🌶️（12只）', price: '$18.50' },
+        { en: 'Buffalo Wings 🌶️ (16 pc)',   es: 'Alitas Buffalo 🌶️ (16 pzas)',    zh: '布法罗辣鸡翅 🌶️（16只）', price: '$24.50' },
+        { en: 'Pork Rib Tips',              es: 'Puntas de Costilla',             zh: '排骨尖',               price: '$12.95' },
+        { en: 'Spare Ribs (4 pc)',          es: 'Costillas (4 pzas)',             zh: '排骨（4条）',           price: '$13.95' },
+        { en: 'Chicken Tenders (3 pc)',     es: 'Tiras de Pollo (3 pzas)',        zh: '炸鸡柳（3条）',         price: '$11.95' },
+        { en: 'Fried Fish (3 pc)',          es: 'Pescado Frito (3 pzas)',         zh: '炸鱼（3块）',           price: '$12.95' },
+        { en: 'Shrimp Box (7 pc)',          es: 'Cajita de Camarones (7 pzas)',   zh: '炸虾盒（7只）',         price: '$16.95' },
       ]},
       appetizers: { items: [
-        { en: 'French Fries (Sm / Med / Lg)',            es: 'Papas Fritas (Peq / Med / Gr)',                price: '$3.75 / $5.95 / $7.95' },
-        { en: 'Seasoned Fries (Sm / Med / Lg)',          es: 'Papas Sazonadas (Peq / Med / Gr)',             price: '$4.75 / $6.95 / $8.95' },
-        { en: 'Fried Jumbo Shrimp (4 pc)',               es: 'Camarones Jumbo Fritos (4 pzas)',              price: '$7.00' },
-        { en: 'Crab Rangoon (8 pc)',                     es: 'Crab Rangoon (8 pzas)',                        price: '$7.95' },
-        { en: 'Fried Wonton (7 pc)',                     es: 'Wonton Frito (7 pzas)',                        price: '$7.95' },
-        { en: 'BBQ Spareribs (4 pc)',                    es: 'Costillas BBQ (4 pzas)',                       price: '$11.95' },
-        { en: 'Fried or Steamed Dumplings (7 pc)',       es: 'Dumplings Fritos o al Vapor (7 pzas)',         price: '$7.95' },
-        { en: 'Spicy Steamed Shrimp 🌶️ (½ lb / 1 lb)', es: 'Camarones Picantes al Vapor 🌶️ (½ lb / 1 lb)', price: '$14.95 / $27.95' },
-        { en: 'Mozzarella Sticks (6 pc)',                es: 'Dedos de Queso (6 pzas)',                      price: '$4.75' },
-        { en: 'Egg Roll',                                es: 'Rollito de Huevo',                             price: '$2.00' },
-        { en: 'Vegetable Spring Roll',                   es: 'Rollito Primavera de Vegetales',               price: '$2.00' },
-        { en: 'Steak and Cheese Roll',                   es: 'Rollo de Carne y Queso',                      price: '$3.00' },
+        { en: 'French Fries (Sm / Med / Lg)',            es: 'Papas Fritas (Peq / Med / Gr)',                zh: '薯条（小 / 中 / 大）',      price: '$3.75 / $5.95 / $7.95' },
+        { en: 'Seasoned Fries (Sm / Med / Lg)',          es: 'Papas Sazonadas (Peq / Med / Gr)',             zh: '调味薯条（小 / 中 / 大）',   price: '$4.75 / $6.95 / $8.95' },
+        { en: 'Fried Jumbo Shrimp (4 pc)',               es: 'Camarones Jumbo Fritos (4 pzas)',              zh: '炸大虾（4只）',            price: '$7.00' },
+        { en: 'Crab Rangoon (8 pc)',                     es: 'Crab Rangoon (8 pzas)',                        zh: '炸蟹角（8个）',            price: '$7.95' },
+        { en: 'Fried Wonton (7 pc)',                     es: 'Wonton Frito (7 pzas)',                        zh: '炸云吞（7个）',            price: '$7.95' },
+        { en: 'BBQ Spareribs (4 pc)',                    es: 'Costillas BBQ (4 pzas)',                       zh: '烧排骨（4条）',            price: '$11.95' },
+        { en: 'Fried or Steamed Dumplings (7 pc)',       es: 'Dumplings Fritos o al Vapor (7 pzas)',         zh: '煎饺或蒸饺（7个）',         price: '$7.95' },
+        { en: 'Spicy Steamed Shrimp 🌶️ (½ lb / 1 lb)', es: 'Camarones Picantes al Vapor 🌶️ (½ lb / 1 lb)', zh: '香辣蒸虾 🌶️（½磅 / 1磅）', price: '$14.95 / $27.95' },
+        { en: 'Mozzarella Sticks (6 pc)',                es: 'Dedos de Queso (6 pzas)',                      zh: '炸芝士条（6条）',           price: '$4.75' },
+        { en: 'Egg Roll',                                es: 'Rollito de Huevo',                             zh: '春卷',                    price: '$2.00' },
+        { en: 'Vegetable Spring Roll',                   es: 'Rollito Primavera de Vegetales',               zh: '素春卷',                  price: '$2.00' },
+        { en: 'Steak and Cheese Roll',                   es: 'Rollo de Carne y Queso',                      zh: '牛肉芝士卷',               price: '$3.00' },
       ]},
       soups: { items: [
-        { en: 'Egg Drop (Sm / Lg)',                es: 'Sopa de Huevo (Peq / Gr)',          price: '$3.75 / $7.95'  },
-        { en: 'Pork Wonton (Sm / Lg)',             es: 'Wonton de Cerdo (Peq / Gr)',        price: '$3.75 / $7.95'  },
-        { en: 'Hot & Sour 🌶️ (Sm / Lg)',          es: 'Agripicante 🌶️ (Peq / Gr)',        price: '$3.75 / $7.95'  },
-        { en: 'Chicken Noodle (Sm / Lg)',          es: 'Fideos con Pollo (Peq / Gr)',       price: '$4.75 / $8.95'  },
-        { en: 'Combination Noodle (Sm / Lg)',      es: 'Fideos Combinados (Peq / Gr)',      price: '$7.95 / $14.95' },
-        { en: 'Mixed Vegetable (Sm / Lg)',         es: 'Vegetales Mixtos (Peq / Gr)',       price: '$3.75 / $7.95'  },
-        { en: 'Chicken & Vegetable (Sm / Lg)',     es: 'Pollo y Verduras (Peq / Gr)',       price: '$6.95 / $9.95'  },
-        { en: 'Chicken & Corn Soup',               es: 'Sopa de Pollo y Maíz',             price: '$12.95' },
-        { en: 'Egg & Corn Soup',                   es: 'Sopa de Huevo y Maíz',             price: '$10.95' },
+        { en: 'Egg Drop (Sm / Lg)',                es: 'Sopa de Huevo (Peq / Gr)',          zh: '蛋花汤（小 / 大）',      price: '$3.75 / $7.95'  },
+        { en: 'Pork Wonton (Sm / Lg)',             es: 'Wonton de Cerdo (Peq / Gr)',        zh: '鲜肉云吞汤（小 / 大）',   price: '$3.75 / $7.95'  },
+        { en: 'Hot & Sour 🌶️ (Sm / Lg)',          es: 'Agripicante 🌶️ (Peq / Gr)',        zh: '酸辣汤 🌶️（小 / 大）',  price: '$3.75 / $7.95'  },
+        { en: 'Chicken Noodle (Sm / Lg)',          es: 'Fideos con Pollo (Peq / Gr)',       zh: '鸡汤面（小 / 大）',      price: '$4.75 / $8.95'  },
+        { en: 'Combination Noodle (Sm / Lg)',      es: 'Fideos Combinados (Peq / Gr)',      zh: '什锦汤面（小 / 大）',    price: '$7.95 / $14.95' },
+        { en: 'Mixed Vegetable (Sm / Lg)',         es: 'Vegetales Mixtos (Peq / Gr)',       zh: '什菜汤（小 / 大）',      price: '$3.75 / $7.95'  },
+        { en: 'Chicken & Vegetable (Sm / Lg)',     es: 'Pollo y Verduras (Peq / Gr)',       zh: '鸡肉什菜汤（小 / 大）',   price: '$6.95 / $9.95'  },
+        { en: 'Chicken & Corn Soup',               es: 'Sopa de Pollo y Maíz',             zh: '鸡茸玉米汤',            price: '$12.95' },
+        { en: 'Egg & Corn Soup',                   es: 'Sopa de Huevo y Maíz',             zh: '蛋花玉米汤',            price: '$10.95' },
       ]},
       friedrice: { items: [
-        { en: 'Vegetable (Sm / Lg)',                          es: 'Vegetales (Peq / Gr)',                              price: '$8.95 / $9.95'   },
-        { en: 'Pork / Chicken / Beef / Shrimp (Sm / Lg)',    es: 'Cerdo / Pollo / Res / Camarones (Peq / Gr)',        price: '$11.50 / $12.50' },
-        { en: 'Combination (Sm / Lg)',                        es: 'Combinación (Peq / Gr)',                            price: '$13.95 / $14.95' },
-        { en: 'Seafood (Sm / Lg)',                            es: 'Mariscos (Peq / Gr)',                               price: '$16.95 / $17.95' },
+        { en: 'Vegetable (Sm / Lg)',                          es: 'Vegetales (Peq / Gr)',                              zh: '蔬菜炒饭（小 / 大）',             price: '$8.95 / $9.95'   },
+        { en: 'Pork / Chicken / Beef / Shrimp (Sm / Lg)',    es: 'Cerdo / Pollo / Res / Camarones (Peq / Gr)',        zh: '叉烧 / 鸡 / 牛 / 虾炒饭（小 / 大）', price: '$11.50 / $12.50' },
+        { en: 'Combination (Sm / Lg)',                        es: 'Combinación (Peq / Gr)',                            zh: '什锦炒饭（小 / 大）',             price: '$13.95 / $14.95' },
+        { en: 'Seafood (Sm / Lg)',                            es: 'Mariscos (Peq / Gr)',                               zh: '海鲜炒饭（小 / 大）',             price: '$16.95 / $17.95' },
       ]},
       lomein: { sections: [
-        { header: { en: 'Lo Mein',                    es: 'Lo Mein' },
+        { header: { en: 'Lo Mein',                    es: 'Lo Mein', zh: '捞面' },
           items: [
-            { en: 'Vegetable (Sm / Lg)',                       es: 'Vegetales (Peq / Gr)',                        price: '$8.95 / $9.95'   },
-            { en: 'Chicken / Pork / Beef / Shrimp (Sm / Lg)', es: 'Pollo / Cerdo / Res / Camarones (Peq / Gr)', price: '$11.50 / $12.50' },
-            { en: 'Combination (Sm / Lg)',                     es: 'Combinación (Peq / Gr)',                      price: '$13.95 / $14.95' },
-            { en: 'Seafood (Sm / Lg)',                         es: 'Mariscos (Peq / Gr)',                         price: '$16.95 / $17.95' },
+            { en: 'Vegetable (Sm / Lg)',                       es: 'Vegetales (Peq / Gr)',                        zh: '蔬菜捞面（小 / 大）',             price: '$8.95 / $9.95'   },
+            { en: 'Chicken / Pork / Beef / Shrimp (Sm / Lg)', es: 'Pollo / Cerdo / Res / Camarones (Peq / Gr)', zh: '鸡 / 叉烧 / 牛 / 虾捞面（小 / 大）', price: '$11.50 / $12.50' },
+            { en: 'Combination (Sm / Lg)',                     es: 'Combinación (Peq / Gr)',                      zh: '什锦捞面（小 / 大）',             price: '$13.95 / $14.95' },
+            { en: 'Seafood (Sm / Lg)',                         es: 'Mariscos (Peq / Gr)',                         zh: '海鲜捞面（小 / 大）',             price: '$16.95 / $17.95' },
           ]},
-        { header: { en: 'Rice Noodle',                es: 'Fideos de Arroz' },
+        { header: { en: 'Rice Noodle',                es: 'Fideos de Arroz', zh: '米粉' },
           items: [
-            { en: 'Vegetable',                                 es: 'Vegetales',                                   price: '$10.95'          },
-            { en: 'Pork / Chicken / Beef / Shrimp',           es: 'Cerdo / Pollo / Res / Camarones',             price: '$12.95'          },
-            { en: 'Combination',                               es: 'Combinación',                                 price: '$14.95'          },
-            { en: 'Seafood',                                   es: 'Mariscos',                                    price: '$17.95'          },
-            { en: 'Singapore Rice Noodle 🌶️',                 es: 'Fideos de Arroz Singapur 🌶️',                price: '$14.95'          },
+            { en: 'Vegetable',                                 es: 'Vegetales',                                   zh: '蔬菜炒米粉',            price: '$10.95'          },
+            { en: 'Pork / Chicken / Beef / Shrimp',           es: 'Cerdo / Pollo / Res / Camarones',             zh: '叉烧 / 鸡 / 牛 / 虾炒米粉', price: '$12.95'          },
+            { en: 'Combination',                               es: 'Combinación',                                 zh: '什锦炒米粉',            price: '$14.95'          },
+            { en: 'Seafood',                                   es: 'Mariscos',                                    zh: '海鲜炒米粉',            price: '$17.95'          },
+            { en: 'Singapore Rice Noodle 🌶️',                 es: 'Fideos de Arroz Singapur 🌶️',                zh: '星洲米粉 🌶️',          price: '$14.95'          },
           ]},
-        { header: { en: 'Chow Fun / Drunken Noodle',  es: 'Chow Fun / Fideos Borrachos' }, last: true,
+        { header: { en: 'Chow Fun / Drunken Noodle',  es: 'Chow Fun / Fideos Borrachos', zh: '河粉 / 醉面' }, last: true,
           items: [
-            { en: 'Vegetable',                                 es: 'Vegetales',                                   price: '$12.95' },
-            { en: 'Pork / Chicken / Beef / Shrimp',           es: 'Cerdo / Pollo / Res / Camarones',             price: '$14.95' },
-            { en: 'Combination',                               es: 'Combinación',                                 price: '$16.95' },
+            { en: 'Vegetable',                                 es: 'Vegetales',                                   zh: '蔬菜河粉',              price: '$12.95' },
+            { en: 'Pork / Chicken / Beef / Shrimp',           es: 'Cerdo / Pollo / Res / Camarones',             zh: '叉烧 / 鸡 / 牛 / 虾河粉',  price: '$14.95' },
+            { en: 'Combination',                               es: 'Combinación',                                 zh: '什锦河粉',              price: '$16.95' },
           ]},
       ]},
       chicken: { items: [
-        { en: 'Sweet & Sour Chicken (Sm / Lg)',      es: 'Pollo Agridulce (Peq / Gr)',             price: '$11.50 / $12.50' },
-        { en: 'Chicken Broccoli (Sm / Lg)',          es: 'Pollo con Brócoli (Peq / Gr)',           price: '$11.50 / $12.50' },
-        { en: 'Chicken w/ Vegetables (Sm / Lg)',     es: 'Pollo con Vegetales (Peq / Gr)',         price: '$11.50 / $12.50' },
-        { en: 'Moo Goo Gai Pan',                     es: 'Moo Goo Gai Pan',                        price: '$12.50'          },
-        { en: 'Hunan Chicken 🌶️ (Sm / Lg)',          es: 'Pollo Hunan 🌶️ (Peq / Gr)',              price: '$11.50 / $12.50' },
-        { en: 'Chicken Garlic Sauce 🌶️ (Sm / Lg)',  es: 'Pollo con Salsa de Ajo 🌶️ (Peq / Gr)',  price: '$11.50 / $12.50' },
-        { en: 'Curry Chicken 🌶️ (Sm / Lg)',          es: 'Pollo al Curry 🌶️ (Peq / Gr)',           price: '$11.50 / $12.50' },
-        { en: 'Szechuan Chicken 🌶️ (Sm / Lg)',       es: 'Pollo Szechuan 🌶️ (Peq / Gr)',           price: '$11.50 / $12.50' },
-        { en: 'Chicken & Bean Curd',                 es: 'Pollo y Tofu',                           price: '$13.50'          },
-        { en: 'Chicken String Beans',                es: 'Pollo con Ejotes',                       price: '$13.50'          },
-        { en: 'Kung Pao Chicken 🌶️ (Sm / Lg)',       es: 'Kung Pao Pollo 🌶️ (Peq / Gr)',           price: '$11.50 / $12.50' },
-        { en: 'Chicken Cashew Nut (Sm / Lg)',        es: 'Pollo con Nueces de Cajú (Peq / Gr)',    price: '$11.50 / $12.50' },
-        { en: 'Chicken Hot Garlic 🌶️ (Sm / Lg)',     es: 'Pollo con Ajo Picante 🌶️ (Peq / Gr)',   price: '$11.50 / $12.50' },
+        { en: 'Sweet & Sour Chicken (Sm / Lg)',      es: 'Pollo Agridulce (Peq / Gr)',             zh: '甜酸鸡（小 / 大）',        price: '$11.50 / $12.50' },
+        { en: 'Chicken Broccoli (Sm / Lg)',          es: 'Pollo con Brócoli (Peq / Gr)',           zh: '芥兰鸡（小 / 大）',        price: '$11.50 / $12.50' },
+        { en: 'Chicken w/ Vegetables (Sm / Lg)',     es: 'Pollo con Vegetales (Peq / Gr)',         zh: '什菜鸡（小 / 大）',        price: '$11.50 / $12.50' },
+        { en: 'Moo Goo Gai Pan',                     es: 'Moo Goo Gai Pan',                        zh: '蘑菇鸡片',               price: '$12.50'          },
+        { en: 'Hunan Chicken 🌶️ (Sm / Lg)',          es: 'Pollo Hunan 🌶️ (Peq / Gr)',              zh: '湖南鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
+        { en: 'Chicken Garlic Sauce 🌶️ (Sm / Lg)',  es: 'Pollo con Salsa de Ajo 🌶️ (Peq / Gr)',  zh: '鱼香鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
+        { en: 'Curry Chicken 🌶️ (Sm / Lg)',          es: 'Pollo al Curry 🌶️ (Peq / Gr)',           zh: '咖喱鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
+        { en: 'Szechuan Chicken 🌶️ (Sm / Lg)',       es: 'Pollo Szechuan 🌶️ (Peq / Gr)',           zh: '四川鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
+        { en: 'Chicken & Bean Curd',                 es: 'Pollo y Tofu',                           zh: '豆腐鸡',                 price: '$13.50'          },
+        { en: 'Chicken String Beans',                es: 'Pollo con Ejotes',                       zh: '四季豆鸡',                price: '$13.50'          },
+        { en: 'Kung Pao Chicken 🌶️ (Sm / Lg)',       es: 'Kung Pao Pollo 🌶️ (Peq / Gr)',           zh: '宫保鸡丁 🌶️（小 / 大）',  price: '$11.50 / $12.50' },
+        { en: 'Chicken Cashew Nut (Sm / Lg)',        es: 'Pollo con Nueces de Cajú (Peq / Gr)',    zh: '腰果鸡丁（小 / 大）',      price: '$11.50 / $12.50' },
+        { en: 'Chicken Hot Garlic 🌶️ (Sm / Lg)',     es: 'Pollo con Ajo Picante 🌶️ (Peq / Gr)',   zh: '蒜蓉辣鸡 🌶️（小 / 大）',  price: '$11.50 / $12.50' },
       ]},
       pork: { items: [
-        { en: 'Roast Pork Broccoli (Sm / Lg)',       es: 'Cerdo Asado con Brócoli (Peq / Gr)',           price: '$11.50 / $12.50' },
-        { en: 'Roast Pork Bean Curd',                es: 'Cerdo Asado con Tofu',                         price: '$13.95'          },
-        { en: 'Roast Pork w/ Vegetable (Sm / Lg)',   es: 'Cerdo Asado con Vegetales (Peq / Gr)',         price: '$11.50 / $12.50' },
-        { en: 'Roast Pork Hot Garlic 🌶️ (Sm / Lg)', es: 'Cerdo Asado con Ajo Picante 🌶️ (Peq / Gr)',  price: '$11.50 / $12.50' },
-        { en: 'Hunan Roast Pork 🌶️ (Sm / Lg)',       es: 'Cerdo Asado Hunan 🌶️ (Peq / Gr)',             price: '$11.50 / $12.50' },
-        { en: 'Roast Pork String Beans',             es: 'Cerdo Asado con Ejotes',                       price: '$13.50'          },
+        { en: 'Roast Pork Broccoli (Sm / Lg)',       es: 'Cerdo Asado con Brócoli (Peq / Gr)',           zh: '芥兰叉烧（小 / 大）',      price: '$11.50 / $12.50' },
+        { en: 'Roast Pork Bean Curd',                es: 'Cerdo Asado con Tofu',                         zh: '豆腐叉烧',               price: '$13.95'          },
+        { en: 'Roast Pork w/ Vegetable (Sm / Lg)',   es: 'Cerdo Asado con Vegetales (Peq / Gr)',         zh: '什菜叉烧（小 / 大）',      price: '$11.50 / $12.50' },
+        { en: 'Roast Pork Hot Garlic 🌶️ (Sm / Lg)', es: 'Cerdo Asado con Ajo Picante 🌶️ (Peq / Gr)',  zh: '蒜蓉辣叉烧 🌶️（小 / 大）', price: '$11.50 / $12.50' },
+        { en: 'Hunan Roast Pork 🌶️ (Sm / Lg)',       es: 'Cerdo Asado Hunan 🌶️ (Peq / Gr)',             zh: '湖南叉烧 🌶️（小 / 大）',  price: '$11.50 / $12.50' },
+        { en: 'Roast Pork String Beans',             es: 'Cerdo Asado con Ejotes',                       zh: '四季豆叉烧',              price: '$13.50'          },
       ]},
       beef: { items: [
-        { en: 'Beef Broccoli (Sm / Lg)',        es: 'Res con Brócoli (Peq / Gr)',           price: '$12.50 / $13.50' },
-        { en: 'Mongolian Beef',                 es: 'Res Mongol',                           price: '$17.95'          },
-        { en: 'Beef w/ Vegetables (Sm / Lg)',   es: 'Res con Vegetales (Peq / Gr)',         price: '$12.50 / $13.50' },
-        { en: 'Pepper Steak (Sm / Lg)',           es: 'Bistec con Pimientos (Peq / Gr)',  price: '$12.50 / $13.50' },
-        { en: 'Hunan Beef 🌶️ (Sm / Lg)',         es: 'Res Hunan 🌶️ (Peq / Gr)',             price: '$12.50 / $13.50' },
-        { en: 'Beef String Beans',              es: 'Res con Ejotes',                       price: '$14.50'          },
-        { en: 'Beef & Bean Curd',               es: 'Res con Tofu',                         price: '$14.95'          },
-        { en: 'Kung Pao Beef 🌶️ (Sm / Lg)',      es: 'Kung Pao Res 🌶️ (Peq / Gr)',          price: '$12.50 / $13.50' },
-        { en: 'Szechuan Beef 🌶️ (Sm / Lg)',      es: 'Res Szechuan 🌶️ (Peq / Gr)',          price: '$12.50 / $13.50' },
-        { en: 'Beef Hot Garlic 🌶️ (Sm / Lg)',    es: 'Res con Ajo Picante 🌶️ (Peq / Gr)',   price: '$12.50 / $13.50' },
-        { en: 'Curry Beef 🌶️',                   es: 'Res al Curry 🌶️',                     price: '$13.50'          },
+        { en: 'Beef Broccoli (Sm / Lg)',        es: 'Res con Brócoli (Peq / Gr)',           zh: '芥兰牛（小 / 大）',        price: '$12.50 / $13.50' },
+        { en: 'Mongolian Beef',                 es: 'Res Mongol',                           zh: '蒙古牛',                 price: '$17.95'          },
+        { en: 'Beef w/ Vegetables (Sm / Lg)',   es: 'Res con Vegetales (Peq / Gr)',         zh: '什菜牛（小 / 大）',        price: '$12.50 / $13.50' },
+        { en: 'Pepper Steak (Sm / Lg)',           es: 'Bistec con Pimientos (Peq / Gr)',  zh: '青椒牛（小 / 大）',        price: '$12.50 / $13.50' },
+        { en: 'Hunan Beef 🌶️ (Sm / Lg)',         es: 'Res Hunan 🌶️ (Peq / Gr)',             zh: '湖南牛 🌶️（小 / 大）',    price: '$12.50 / $13.50' },
+        { en: 'Beef String Beans',              es: 'Res con Ejotes',                       zh: '四季豆牛',                price: '$14.50'          },
+        { en: 'Beef & Bean Curd',               es: 'Res con Tofu',                         zh: '豆腐牛',                 price: '$14.95'          },
+        { en: 'Kung Pao Beef 🌶️ (Sm / Lg)',      es: 'Kung Pao Res 🌶️ (Peq / Gr)',          zh: '宫保牛 🌶️（小 / 大）',    price: '$12.50 / $13.50' },
+        { en: 'Szechuan Beef 🌶️ (Sm / Lg)',      es: 'Res Szechuan 🌶️ (Peq / Gr)',          zh: '四川牛 🌶️（小 / 大）',    price: '$12.50 / $13.50' },
+        { en: 'Beef Hot Garlic 🌶️ (Sm / Lg)',    es: 'Res con Ajo Picante 🌶️ (Peq / Gr)',   zh: '蒜蓉辣牛 🌶️（小 / 大）',  price: '$12.50 / $13.50' },
+        { en: 'Curry Beef 🌶️',                   es: 'Res al Curry 🌶️',                     zh: '咖喱牛 🌶️',             price: '$13.50'          },
       ]},
       seafood: { items: [
-        { en: 'Shrimp Broccoli (Sm / Lg)',      es: 'Camarones con Brócoli (Peq / Gr)',          price: '$12.50 / $13.50' },
-        { en: 'Shrimp w/ Vegetables (Sm / Lg)', es: 'Camarones con Vegetales (Peq / Gr)',         price: '$12.50 / $13.50' },
-        { en: 'Shrimp Lobster Sauce',           es: 'Camarones con Salsa de Langosta',            price: '$14.95'          },
-        { en: 'Shrimp Cashew Nuts (Sm / Lg)',   es: 'Camarones con Nueces de Cajú (Peq / Gr)',   price: '$12.50 / $13.50' },
-        { en: 'Curry Shrimp 🌶️',                es: 'Camarones al Curry 🌶️',                    price: '$13.50'          },
-        { en: 'Hunan Shrimp 🌶️ (Sm / Lg)',       es: 'Camarones Hunan 🌶️ (Peq / Gr)',            price: '$12.50 / $13.50' },
-        { en: 'Szechuan Shrimp 🌶️ (Sm / Lg)',    es: 'Camarones Szechuan 🌶️ (Peq / Gr)',         price: '$12.50 / $13.50' },
-        { en: 'Kung Pao Shrimp 🌶️ (Sm / Lg)',    es: 'Kung Pao Camarones 🌶️ (Peq / Gr)',         price: '$12.50 / $13.50' },
+        { en: 'Shrimp Broccoli (Sm / Lg)',      es: 'Camarones con Brócoli (Peq / Gr)',          zh: '芥兰虾（小 / 大）',       price: '$12.50 / $13.50' },
+        { en: 'Shrimp w/ Vegetables (Sm / Lg)', es: 'Camarones con Vegetales (Peq / Gr)',         zh: '什菜虾（小 / 大）',       price: '$12.50 / $13.50' },
+        { en: 'Shrimp Lobster Sauce',           es: 'Camarones con Salsa de Langosta',            zh: '虾龙糊',                price: '$14.95'          },
+        { en: 'Shrimp Cashew Nuts (Sm / Lg)',   es: 'Camarones con Nueces de Cajú (Peq / Gr)',   zh: '腰果虾（小 / 大）',       price: '$12.50 / $13.50' },
+        { en: 'Curry Shrimp 🌶️',                es: 'Camarones al Curry 🌶️',                    zh: '咖喱虾 🌶️',            price: '$13.50'          },
+        { en: 'Hunan Shrimp 🌶️ (Sm / Lg)',       es: 'Camarones Hunan 🌶️ (Peq / Gr)',            zh: '湖南虾 🌶️（小 / 大）',   price: '$12.50 / $13.50' },
+        { en: 'Szechuan Shrimp 🌶️ (Sm / Lg)',    es: 'Camarones Szechuan 🌶️ (Peq / Gr)',         zh: '四川虾 🌶️（小 / 大）',   price: '$12.50 / $13.50' },
+        { en: 'Kung Pao Shrimp 🌶️ (Sm / Lg)',    es: 'Kung Pao Camarones 🌶️ (Peq / Gr)',         zh: '宫保虾 🌶️（小 / 大）',   price: '$12.50 / $13.50' },
       ]},
       veggies: { items: [
-        { en: 'Mixed Vegetables (Sm / Lg)',         es: 'Vegetales Mixtos (Peq / Gr)',        price: '$9.95 / $10.95'  },
-        { en: 'Broccoli w/ Mushrooms (Sm / Lg)',    es: 'Brócoli con Champiñones (Peq / Gr)', price: '$9.95 / $10.95'  },
-        { en: 'Bean Curd Family Style 🌶️ (Sm / Lg)',   es: 'Tofu Estilo Familiar 🌶️ (Peq / Gr)',    price: '$12.95 / $13.95' },
-        { en: 'Bean Curd Szechuan 🌶️ (Sm / Lg)',   es: 'Tofu Szechuan 🌶️ (Peq / Gr)',       price: '$12.95 / $13.95' },
-        { en: 'Szechuan String Bean 🌶️ (Sm / Lg)', es: 'Ejotes Szechuan 🌶️ (Peq / Gr)',     price: '$12.95 / $13.95' },
+        { en: 'Mixed Vegetables (Sm / Lg)',         es: 'Vegetales Mixtos (Peq / Gr)',        zh: '炒什菜（小 / 大）',          price: '$9.95 / $10.95'  },
+        { en: 'Broccoli w/ Mushrooms (Sm / Lg)',    es: 'Brócoli con Champiñones (Peq / Gr)', zh: '蘑菇芥兰（小 / 大）',        price: '$9.95 / $10.95'  },
+        { en: 'Bean Curd Family Style 🌶️ (Sm / Lg)',   es: 'Tofu Estilo Familiar 🌶️ (Peq / Gr)',    zh: '家常豆腐 🌶️（小 / 大）',   price: '$12.95 / $13.95' },
+        { en: 'Bean Curd Szechuan 🌶️ (Sm / Lg)',   es: 'Tofu Szechuan 🌶️ (Peq / Gr)',       zh: '四川豆腐 🌶️（小 / 大）',    price: '$12.95 / $13.95' },
+        { en: 'Szechuan String Bean 🌶️ (Sm / Lg)', es: 'Ejotes Szechuan 🌶️ (Peq / Gr)',     zh: '四川四季豆 🌶️（小 / 大）',  price: '$12.95 / $13.95' },
       ]},
       efyoung: { items: [
-        { en: 'Vegetable',                        es: 'Vegetales',                          price: '$10.95' },
-        { en: 'Pork / Chicken / Beef / Shrimp',  es: 'Cerdo / Pollo / Res / Camarones',   price: '$14.95' },
-        { en: 'Combination',                      es: 'Combinación',                        price: '$16.95' },
+        { en: 'Vegetable',                        es: 'Vegetales',                          zh: '蔬菜芙蓉蛋',               price: '$10.95' },
+        { en: 'Pork / Chicken / Beef / Shrimp',  es: 'Cerdo / Pollo / Res / Camarones',   zh: '叉烧 / 鸡 / 牛 / 虾芙蓉蛋',  price: '$14.95' },
+        { en: 'Combination',                      es: 'Combinación',                        zh: '什锦芙蓉蛋',               price: '$16.95' },
       ]},
     };
 
@@ -1751,13 +1913,13 @@
       });
 
       // Sync both desktop + mobile lang buttons
-      ['lang-en','lang-es','lang-en-m','lang-es-m'].forEach(id => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        const isActive = (id.startsWith('lang-en') && lang === 'en') ||
-                         (id.startsWith('lang-es') && lang === 'es');
-        el.classList.toggle('active', isActive);
-        el.classList.toggle('text-brand-cream/60', !isActive);
+      ['en','es','zh'].forEach(code => {
+        ['lang-' + code, 'lang-' + code + '-m'].forEach(id => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.classList.toggle('active', code === lang);
+          el.classList.toggle('text-brand-cream/60', code !== lang);
+        });
       });
 
       // Update html lang attribute
@@ -1765,17 +1927,13 @@
 
       // Update feedback placeholder text
       const commentBox = document.getElementById('fb-comment');
-      if (commentBox) commentBox.placeholder = lang === 'es'
-        ? 'Cuéntanos tu experiencia...'
-        : 'Tell us about your experience...';
+      if (commentBox) commentBox.placeholder = t.fb_ph_comment;
 
       const nameBox = document.getElementById('fb-name');
-      if (nameBox) nameBox.placeholder = lang === 'es' ? 'p. ej. María G.' : 'e.g. Maria G.';
+      if (nameBox) nameBox.placeholder = t.fb_ph_name;
 
       const orderBox = document.getElementById('fb-order');
-      if (orderBox) orderBox.placeholder = lang === 'es'
-        ? 'p. ej. Alitas con salsa mambo'
-        : 'e.g. Chicken wings with mambo sauce';
+      if (orderBox) orderBox.placeholder = t.fb_ph_order;
 
       // Re-render menu items in the selected language
       renderMenuBodies(lang);
@@ -1819,9 +1977,9 @@
       }
     }
 
-    // Render menu on initial page load
-    renderMenuBodies('en');
-    updateOpenStatus();
+    // Render menu on initial page load (honor ?lang= from hreflang links)
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    setLang(['en','es','zh'].includes(urlLang) ? urlLang : 'en');
     setInterval(updateOpenStatus, 60000);
 
     // ─── Feedback form ─────────────────────────────────────────────────────────
@@ -1831,9 +1989,7 @@
 
       if (!rating) {
         e.preventDefault();
-        alert(currentLang === 'es'
-          ? 'Por favor selecciona una calificación de estrellas.'
-          : 'Please select a star rating before submitting.');
+        alert(translations[currentLang].fb_alert_rating);
         return;
       }
 
@@ -1848,7 +2004,7 @@
       // Real Formspree submission — let it proceed, then show success on next load
       const submitBtn = document.getElementById('fb-submit');
       submitBtn.disabled = true;
-      submitBtn.textContent = currentLang === 'es' ? 'Enviando…' : 'Sending…';
+      submitBtn.textContent = translations[currentLang].fb_sending;
     }
 
     // ─── Fade-in on scroll ────────────────────────────────────────────────────
