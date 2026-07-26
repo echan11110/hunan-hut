@@ -66,16 +66,16 @@
           </svg>
           <span class="text-sm font-medium">Hunan Hut</span>
         </a>
-        <span class="font-display text-brand-cream text-base" data-i18n="nav_menu">Menu</span>
+        <span class="hidden sm:block font-display text-brand-cream text-base" data-i18n="nav_menu">Menu</span>
         <div class="flex items-center gap-2">
           <div class="flex items-center gap-1 bg-brand-dark/60 rounded-full px-1 py-0.5 border border-brand-red/20">
-            <button id="lang-en" onclick="setLang('en')"
+            <button id="lang-en" onclick="setLang('en')" aria-label="English"
               class="text-xs font-semibold px-2.5 py-1 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold active text-brand-cream bg-brand-red/30">
-              English
+              <span class="sm:hidden">EN</span><span class="hidden sm:inline">English</span>
             </button>
-            <button id="lang-es" onclick="setLang('es')"
+            <button id="lang-es" onclick="setLang('es')" aria-label="Español"
               class="text-xs font-semibold px-2.5 py-1 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
-              Español
+              <span class="sm:hidden">ES</span><span class="hidden sm:inline">Español</span>
             </button>
             <button id="lang-zh" onclick="setLang('zh')"
               class="text-xs font-semibold px-2.5 py-1 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
