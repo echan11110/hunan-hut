@@ -63,25 +63,25 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-brand-darker/95 backdrop-blur-md transition-all duration-300">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="../" class="flex items-center gap-2 min-h-[44px] text-brand-cream/70 hover:text-brand-cream transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
+        <a href="../" aria-label="Back to Hunan Hut home" class="flex items-center gap-2 min-h-[44px] text-brand-cream/70 hover:text-brand-cream transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true">
             <path fill-rule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clip-rule="evenodd"/>
           </svg>
-          <span class="text-sm font-medium">Hunan Hut</span>
+          <span class="hidden min-[390px]:inline text-sm font-medium whitespace-nowrap">Hunan Hut</span>
         </a>
         <span class="hidden sm:block font-display text-brand-cream text-base" data-i18n="nav_menu">Menu</span>
         <div class="flex items-center gap-2">
           <div class="flex items-center gap-1 bg-brand-dark/60 rounded-full px-1 py-0.5 border border-brand-red/20">
             <button id="lang-en" onclick="setLang('en')" aria-label="English"
-              class="text-xs font-semibold px-2.5 min-h-[44px] inline-flex items-center justify-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold active text-brand-cream bg-brand-red/30">
+              class="text-xs font-semibold px-2.5 min-h-[44px] whitespace-nowrap inline-flex items-center justify-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold active text-brand-cream bg-brand-red/30">
               <span class="sm:hidden">EN</span><span class="hidden sm:inline">English</span>
             </button>
             <button id="lang-es" onclick="setLang('es')" aria-label="Español"
-              class="text-xs font-semibold px-2.5 min-h-[44px] inline-flex items-center justify-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
+              class="text-xs font-semibold px-2.5 min-h-[44px] whitespace-nowrap inline-flex items-center justify-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
               <span class="sm:hidden">ES</span><span class="hidden sm:inline">Español</span>
             </button>
-            <button id="lang-zh" onclick="setLang('zh')"
-              class="text-xs font-semibold px-2.5 min-h-[44px] inline-flex items-center justify-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
+            <button id="lang-zh" onclick="setLang('zh')" aria-label="中文"
+              class="text-xs font-semibold px-2.5 min-h-[44px] whitespace-nowrap inline-flex items-center justify-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-brand-cream/60">
               中文
             </button>
           </div>
