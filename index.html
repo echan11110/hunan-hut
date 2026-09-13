@@ -83,7 +83,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: shimmer 3s linear infinite;
+      animation: shimmer 8s linear infinite;
     }
 
     .pattern-bg {
@@ -426,14 +426,6 @@
         <span id="open-status-dot" class="w-2 h-2 rounded-full" aria-hidden="true"></span>
         <span id="open-status-text" class="text-sm font-semibold"></span>
       </div>
-    </div>
-
-    <!-- Scroll cue -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-brand-cream/55" aria-hidden="true">
-      <span data-i18n="hero_scroll" class="text-xs tracking-widest uppercase">Scroll</span>
-      <svg viewBox="0 0 24 24" class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-      </svg>
     </div>
   </section>
 
@@ -1131,12 +1123,10 @@
             <div class="w-full">
               <h3 data-i18n="contact_hours_title" class="text-brand-cream font-semibold mb-3">Hours</h3>
               <dl class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-6 gap-y-0.5 sm:gap-y-2 text-sm">
-                <dt data-i18n="hrs_mon_thu" class="text-brand-cream/55">Monday – Thursday</dt>
+                <dt data-i18n="hrs_sun_thu" class="text-brand-cream/55">Sunday – Thursday</dt>
                 <dd class="text-brand-cream/75 whitespace-nowrap mb-2 sm:mb-0">11:00 AM – 10:00 PM</dd>
                 <dt data-i18n="hrs_fri_sat" class="text-brand-cream/55">Friday – Saturday</dt>
                 <dd class="text-brand-cream/75 whitespace-nowrap mb-2 sm:mb-0">11:00 AM – 11:00 PM</dd>
-                <dt data-i18n="hrs_sun" class="text-brand-cream/55">Sunday</dt>
-                <dd class="text-brand-cream/75 whitespace-nowrap mb-2 sm:mb-0">11:00 AM – 10:00 PM</dd>
               </dl>
               <p data-i18n="contact_hours_note" class="text-brand-cream/55 text-xs mt-3">Hours subject to change — call to confirm.</p>
             </div>
@@ -1327,9 +1317,7 @@
         hero_sub:      'Serving Adelphi, Hyattsville, and Langley Park for 25+ years. Crispy chicken wings, rich lo mein, and the legendary mambo sauce — made fresh, served fast, loved by generations.',
         hero_btn_menu: 'View Full Menu',
         hero_btn_call: 'Call to Order',
-        hero_popular:  'Popular Dishes',
-        hero_scroll:   'Scroll',
-        hero_rating:   ' · Google reviews',
+        hero_popular:  'Popular Dishes',        hero_rating:   ' · Google reviews',
         hero_h1_sub_a: 'Chinese Carry-Out',
         hero_h1_sub_b: 'Adelphi, MD',
         open_now:      'Open Now · closes at ',
@@ -1432,9 +1420,8 @@
         contact_heading: 'Visit Hunan Hut',
         contact_addr_title:  'Address',
         contact_hours_title: 'Hours',
-        hrs_mon_thu:         'Monday – Thursday',
+        hrs_sun_thu:         'Sunday – Thursday',
         hrs_fri_sat:         'Friday – Saturday',
-        hrs_sun:             'Sunday',
         contact_hours_note:  'Hours subject to change — call to confirm.',
         contact_phone_title: 'Order by Phone',
         contact_phone_note:  'Call ahead — your order will be ready when you arrive.',
@@ -1475,9 +1462,7 @@
         hero_sub:      'Sirviendo a Adelphi, Hyattsville y Langley Park por más de 25 años. Alitas de pollo crujientes, lo mein delicioso y la legendaria salsa mambo — fresco, rápido, amado por generaciones.',
         hero_btn_menu: 'Ver Menú Completo',
         hero_btn_call: 'Llamar para Pedir',
-        hero_popular:  'Platos Populares',
-        hero_scroll:   'Desplazar',
-        hero_rating:   ' · opiniones en Google',
+        hero_popular:  'Platos Populares',        hero_rating:   ' · opiniones en Google',
         hero_h1_sub_a: 'Comida China para Llevar',
         hero_h1_sub_b: 'Adelphi, MD',
         open_now:      'Abierto Ahora · cierra a las ',
@@ -1580,9 +1565,8 @@
         contact_heading: 'Visita Hunan Hut',
         contact_addr_title:  'Dirección',
         contact_hours_title: 'Horario',
-        hrs_mon_thu:         'Lunes – Jueves',
+        hrs_sun_thu:         'Domingo – Jueves',
         hrs_fri_sat:         'Viernes – Sábado',
-        hrs_sun:             'Domingo',
         contact_hours_note:  'El horario puede cambiar — llame para confirmar.',
         contact_phone_title: 'Pedir por Teléfono',
         contact_phone_note:  'Llame antes — su pedido estará listo cuando llegue.',
@@ -1623,9 +1607,7 @@
         hero_sub:      '25年多来服务 Adelphi、Hyattsville 和 Langley Park 社区。香脆炸鸡翅、美味捞面，还有传奇的曼波酱 —— 现点现做，出餐快捷，深受几代人喜爱。',
         hero_btn_menu: '查看完整菜单',
         hero_btn_call: '电话订餐',
-        hero_popular:  '人气菜品',
-        hero_scroll:   '下滑',
-        hero_rating:   ' 条谷歌评价',
+        hero_popular:  '人气菜品',        hero_rating:   ' 条谷歌评价',
         hero_h1_sub_a: '中式外卖',
         hero_h1_sub_b: '马里兰州 Adelphi',
         open_now:      '营业中 · 关门时间 ',
@@ -1728,9 +1710,8 @@
         contact_heading: '到访 Hunan Hut',
         contact_addr_title:  '地址',
         contact_hours_title: '营业时间',
-        hrs_mon_thu:         '周一至周四',
+        hrs_sun_thu:         '周日至周四',
         hrs_fri_sat:         '周五至周六',
-        hrs_sun:             '周日',
         contact_hours_note:  '营业时间可能变动 —— 请来电确认。',
         contact_phone_title: '电话订餐',
         contact_phone_note:  '提前来电 —— 您到店时餐已备好。',
