@@ -960,14 +960,14 @@
 
         <!-- Name -->
         <div>
-          <label for="fb-name" data-i18n="fb_label_name" class="block text-brand-cream/70 text-sm font-medium mb-2">Your Name <span class="text-brand-cream/55">(optional)</span></label>
+          <label for="fb-name" class="block text-brand-cream/70 text-sm font-medium mb-2"><span data-i18n="fb_label_name">Your Name</span> <span class="text-brand-cream/55" data-i18n="fb_optional">(optional)</span></label>
           <input type="text" id="fb-name" name="name" placeholder="e.g. Maria G."
             class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
         </div>
 
         <!-- Star rating -->
         <div>
-          <p data-i18n="fb_label_rating" class="text-brand-cream/70 text-sm font-medium mb-3">Overall Rating <span class="text-brand-redLight">*</span></p>
+          <p class="text-brand-cream/70 text-sm font-medium mb-3"><span data-i18n="fb_label_rating">Overall Rating</span> <span class="text-brand-redLight" aria-hidden="true">*</span></p>
           <div class="star-rating" role="group" aria-label="Star rating">
             <input type="radio" id="s5" name="rating" value="5" aria-label="5 stars"/>
             <label for="s5">&#9733;</label>
@@ -980,18 +980,19 @@
             <input type="radio" id="s1" name="rating" value="1" aria-label="1 star"/>
             <label for="s1">&#9733;</label>
           </div>
+          <p id="fb-rating-error" class="hidden mt-2 text-brand-redLight text-sm" role="alert" data-i18n="fb_alert_rating">Please select a star rating before submitting.</p>
         </div>
 
         <!-- What they ordered -->
         <div>
-          <label for="fb-order" data-i18n="fb_label_order" class="block text-brand-cream/70 text-sm font-medium mb-2">What did you order? <span class="text-brand-cream/55">(optional)</span></label>
+          <label for="fb-order" class="block text-brand-cream/70 text-sm font-medium mb-2"><span data-i18n="fb_label_order">What did you order?</span> <span class="text-brand-cream/55" data-i18n="fb_optional">(optional)</span></label>
           <input type="text" id="fb-order" name="order" placeholder="e.g. Chicken wings with mambo sauce"
             class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
         </div>
 
         <!-- Comment -->
         <div>
-          <label for="fb-comment" data-i18n="fb_label_comment" class="block text-brand-cream/70 text-sm font-medium mb-2">Your Comment <span class="text-brand-redLight">*</span></label>
+          <label for="fb-comment" class="block text-brand-cream/70 text-sm font-medium mb-2"><span data-i18n="fb_label_comment">Your Comment</span> <span class="text-brand-redLight" aria-hidden="true">*</span></label>
           <textarea id="fb-comment" name="comment" rows="4" required
             placeholder="Tell us about your experience..."
             class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors resize-none"></textarea>
@@ -1253,6 +1254,7 @@
     // ─── Translation dictionary ────────────────────────────────────────────────
     const translations = {
       en: {
+        fb_optional: '(optional)',
         reviews_summary: ' out of 5 · 200+ Google reviews',
         rev_meta_google: 'Google review', rev_meta_lg: 'Local Guide · Google review', rev_meta_lgs: 'Local Guides · Google review',
         lang_label: 'Language:',
@@ -1350,9 +1352,9 @@
         fb_sub:          'We\'ve been serving this community for 25+ years because of customers like you. Tell us how we did.',
         fb_thanks_title: 'Thank You!',
         fb_thanks_body:  'Your feedback means everything to us. See you next time!',
-        fb_label_name:   'Your Name (optional)',
+        fb_label_name:   'Your Name',
         fb_label_rating: 'Overall Rating',
-        fb_label_order:  'What did you order? (optional)',
+        fb_label_order:  'What did you order?',
         fb_label_comment:'Your Comment',
         fb_label_type:   'How did you order?',
         fb_walkin:       'Walk-in',
@@ -1390,6 +1392,7 @@
         badge_best_seller:'Best Seller',
       },
       es: {
+        fb_optional: '(opcional)',
         reviews_summary: ' de 5 · más de 200 opiniones en Google',
         rev_meta_google: 'Reseña de Google', rev_meta_lg: 'Guía Local · Reseña de Google', rev_meta_lgs: 'Guías Locales · Reseña de Google',
         lang_label: 'Idioma:',
@@ -1487,9 +1490,9 @@
         fb_sub:          'Llevamos más de 25 años sirviendo a esta comunidad gracias a clientes como tú. Cuéntanos cómo lo hicimos.',
         fb_thanks_title: '¡Gracias!',
         fb_thanks_body:  'Tus comentarios son muy importantes para nosotros. ¡Hasta la próxima!',
-        fb_label_name:   'Tu Nombre (opcional)',
+        fb_label_name:   'Tu Nombre',
         fb_label_rating: 'Calificación General',
-        fb_label_order:  '¿Qué pediste? (opcional)',
+        fb_label_order:  '¿Qué pediste?',
         fb_label_comment:'Tu Comentario',
         fb_label_type:   '¿Cómo hiciste tu pedido?',
         fb_walkin:       'En persona',
@@ -1527,6 +1530,7 @@
         badge_best_seller:'El Más Vendido',
       },
       zh: {
+        fb_optional: '（选填）',
         reviews_summary: ' / 5 分 · 200+ 条谷歌评价',
         rev_meta_google: '谷歌评价', rev_meta_lg: '本地向导 · 谷歌评价', rev_meta_lgs: '本地向导 · 谷歌评价',
         lang_label: '语言：',
@@ -1624,9 +1628,9 @@
         fb_sub:          '25年多来我们能一直服务这个社区，全靠像您这样的顾客。告诉我们您的用餐体验吧。',
         fb_thanks_title: '谢谢您！',
         fb_thanks_body:  '您的反馈对我们无比重要。期待下次再见！',
-        fb_label_name:   '您的姓名（选填）',
+        fb_label_name:   '您的姓名',
         fb_label_rating: '总体评分',
-        fb_label_order:  '您点了什么？（选填）',
+        fb_label_order:  '您点了什么？',
         fb_label_comment:'您的评价',
         fb_label_type:   '您是怎么下单的？',
         fb_walkin:       '到店点餐',
@@ -2013,7 +2017,8 @@
 
       if (!rating) {
         e.preventDefault();
-        alert(translations[currentLang].fb_alert_rating);
+        document.getElementById('fb-rating-error').classList.remove('hidden');
+        form.querySelector('input[name="rating"]').focus();
         return;
       }
 
@@ -2030,6 +2035,11 @@
       submitBtn.disabled = true;
       submitBtn.textContent = translations[currentLang].fb_sending;
     }
+
+    // Clear the rating message as soon as a star is picked
+    document.querySelectorAll('.star-rating input').forEach(input => {
+      input.addEventListener('change', () => document.getElementById('fb-rating-error').classList.add('hidden'));
+    });
 
     // ─── Fade-in on scroll ────────────────────────────────────────────────────
     if ('IntersectionObserver' in window) {
