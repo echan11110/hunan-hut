@@ -11,29 +11,29 @@
   <meta name="geo.placename" content="Adelphi, Maryland">
   <meta name="geo.position" content="38.9943;-76.9857">
   <meta name="ICBM" content="38.9943, -76.9857">
-  <link rel="canonical" href="https://echan11110.github.io/hunan-hut/">
+  <link rel="canonical" href="https://hunan-hut.com/">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
   <!-- Open Graph -->
   <meta property="og:type" content="restaurant">
   <meta property="og:title" content="Hunan Hut — Chinese Carry-Out | Adelphi, MD">
   <meta property="og:description" content="Family-owned Chinese carry-out serving Adelphi &amp; Hyattsville for 25+ years. Wings with mambo sauce, lo mein, General Tso's, and more. Call (301) 439-3886.">
-  <meta property="og:url" content="https://echan11110.github.io/hunan-hut/">
+  <meta property="og:url" content="https://hunan-hut.com/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_MX">
   <meta property="og:locale:alternate" content="zh_CN">
   <!-- Twitter Card -->
-  <!-- TODO: Replace logo2.png with a 1200x630 food photo (wings, lo mein, etc.) for best social share preview -->
-  <meta property="og:image" content="https://echan11110.github.io/hunan-hut/logo2.png">
+  <meta property="og:image" content="https://hunan-hut.com/images/menu/wings-mambo.jpg">
+  <meta property="og:image:alt" content="Crispy fried chicken wings with a cup of mambo sauce from Hunan Hut in Adelphi, MD">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hunan Hut — Chinese Carry-Out | Adelphi, MD">
   <meta name="twitter:description" content="Crispy wings, lo mein, General Tso's. Family-owned 25+ years in Adelphi, MD.">
-  <meta name="twitter:image" content="https://echan11110.github.io/hunan-hut/logo2.png">
+  <meta name="twitter:image" content="https://hunan-hut.com/images/menu/wings-mambo.jpg">
   <!-- Hreflang -->
-  <link rel="alternate" hreflang="en" href="https://echan11110.github.io/hunan-hut/">
-  <link rel="alternate" hreflang="es" href="https://echan11110.github.io/hunan-hut/?lang=es">
-  <link rel="alternate" hreflang="zh" href="https://echan11110.github.io/hunan-hut/?lang=zh">
-  <link rel="alternate" hreflang="x-default" href="https://echan11110.github.io/hunan-hut/">
+  <link rel="alternate" hreflang="en" href="https://hunan-hut.com/">
+  <link rel="alternate" hreflang="es" href="https://hunan-hut.com/?lang=es">
+  <link rel="alternate" hreflang="zh" href="https://hunan-hut.com/?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://hunan-hut.com/">
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -161,7 +161,16 @@
     "name": "Hunan Hut",
     "alternateName": "Hunan Hut Chinese Carry-Out",
     "description": "Family-owned Chinese-American carry-out serving Adelphi and Hyattsville, MD for over 25 years. Famous for crispy chicken wings with mambo sauce, lo mein, General Tso's chicken, fried rice, and more. English and Spanish spoken.",
-    "url": "https://echan11110.github.io/hunan-hut/",
+    "@id": "https://hunan-hut.com/#restaurant",
+    "url": "https://hunan-hut.com/",
+    "image": [
+      "https://hunan-hut.com/images/menu/wings-mambo.jpg",
+      "https://hunan-hut.com/images/menu/triple-delight.jpg",
+      "https://hunan-hut.com/images/menu/shrimp-lo-mein.jpg"
+    ],
+    "logo": "https://hunan-hut.com/logo2.png",
+    "menu": "https://hunan-hut.com/menu/",
+    "hasMenu": "https://hunan-hut.com/menu/",
     "telephone": "+13014393886",
     "priceRange": "$",
     "servesCuisine": ["Chinese", "American Chinese", "Asian"],
@@ -179,29 +188,18 @@
       "longitude": -76.9857
     },
     "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-        "opens": "11:00",
-        "closes": "22:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Friday", "Saturday"],
-        "opens": "11:00",
-        "closes": "23:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "11:00",
-        "closes": "22:00"
-      }
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday",    "opens": "11:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Tuesday",   "opens": "11:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Wednesday", "opens": "11:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Thursday",  "opens": "11:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Friday",    "opens": "11:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday",  "opens": "11:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Sunday",    "opens": "11:00", "closes": "22:00" }
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.1",
-      "reviewCount": "200",
+      "reviewCount": "207",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -243,13 +241,7 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Hunan Hut",
-        "item": "https://echan11110.github.io/hunan-hut/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Menu",
-        "item": "https://echan11110.github.io/hunan-hut/#menu"
+        "item": "https://hunan-hut.com/"
       }
     ]
   }
@@ -265,7 +257,7 @@
 
         <!-- Logo -->
         <a href="#home" class="flex items-center gap-2 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded" aria-label="Hunan Hut home">
-          <img src="logo2.png" alt="Hunan Hut" class="object-contain flex-shrink-0" style="height:96px;width:96px;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5))"/>
+          <img src="logo2.png" alt="Hunan Hut logo: a gold rice bowl with chopsticks under a red brushstroke" class="object-contain flex-shrink-0" style="height:96px;width:96px;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5))"/>
         </a>
 
         <!-- Desktop nav links -->
@@ -448,7 +440,7 @@
         <!-- Card 1: Wings with Mambo Sauce -->
         <article class="flex flex-col bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover relative">
           <div class="relative">
-            <img src="images/menu/wings-mambo.webp" width="800" height="437" loading="lazy" decoding="async" alt="Wings with Mambo Sauce"
+            <img src="images/menu/wings-mambo.webp" width="800" height="437" loading="lazy" decoding="async" alt="Crispy fried chicken wings with a cup of mambo sauce for dipping"
               class="fav-img w-full h-48 object-cover"
               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div data-i18n="fav_title_wings" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/55 text-sm font-medium text-center px-4">Wings with Mambo Sauce</div>
@@ -463,7 +455,7 @@
 
         <!-- Card 2: Triple Delight -->
         <article class="flex flex-col bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover">
-          <img src="images/menu/triple-delight.webp" width="800" height="451" loading="lazy" decoding="async" alt="Triple Delight"
+          <img src="images/menu/triple-delight.webp" width="800" height="451" loading="lazy" decoding="async" alt="Triple Delight: beef, chicken, and shrimp stir-fried with mixed vegetables"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div data-i18n="fav_title_triple" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/55 text-sm font-medium text-center px-4">Triple Delight</div>
@@ -476,7 +468,7 @@
 
         <!-- Card 3: Buffalo Wings -->
         <article class="flex flex-col bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover">
-          <img src="images/menu/buffalo-wings.webp" width="800" height="450" loading="lazy" decoding="async" alt="Buffalo Wings with French Fries"
+          <img src="images/menu/buffalo-wings.webp" width="800" height="450" loading="lazy" decoding="async" alt="Buffalo wings in hot sauce piled on crinkle-cut French fries"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div data-i18n="fav_title_buffalo" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/55 text-sm font-medium text-center px-4">Buffalo Wings with French Fries</div>
@@ -489,7 +481,7 @@
 
         <!-- Card 4: Shrimp Lo Mein -->
         <article class="flex flex-col bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover">
-          <img src="images/menu/shrimp-lo-mein.webp" width="800" height="419" loading="lazy" decoding="async" alt="Shrimp Lo Mein"
+          <img src="images/menu/shrimp-lo-mein.webp" width="800" height="419" loading="lazy" decoding="async" alt="Shrimp lo mein: soft egg noodles tossed with shrimp and vegetables"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div data-i18n="fav_title_lomein" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/55 text-sm font-medium text-center px-4">Shrimp Lo Mein</div>
@@ -502,7 +494,7 @@
 
         <!-- Card 5: Chicken & Broccoli -->
         <article class="flex flex-col bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover">
-          <img src="images/menu/chicken-broccoli.webp" width="800" height="422" loading="lazy" decoding="async" alt="Chicken &amp; Broccoli"
+          <img src="images/menu/chicken-broccoli.webp" width="800" height="422" loading="lazy" decoding="async" alt="Chicken and broccoli in brown sauce on a white plate, with a bowl of steamed rice"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div data-i18n="fav_title_broccoli" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/55 text-sm font-medium text-center px-4">Chicken &amp; Broccoli</div>
@@ -515,7 +507,7 @@
 
         <!-- Card 6: Singapore Rice Noodle -->
         <article class="flex flex-col bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden card-hover">
-          <img src="images/menu/singapore-noodle.webp" width="768" height="461" loading="lazy" decoding="async" alt="Singapore Rice Noodle"
+          <img src="images/menu/singapore-noodle.webp" width="768" height="461" loading="lazy" decoding="async" alt="Singapore rice noodles with shrimp and green beans on a white plate"
             class="fav-img w-full h-48 object-cover"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div data-i18n="fav_title_singapore" class="fav-placeholder hidden w-full h-48 bg-brand-muted/40 items-center justify-center text-brand-cream/55 text-sm font-medium text-center px-4">Singapore Rice Noodle</div>
@@ -1195,6 +1187,10 @@
           <a href="#reviews"  data-i18n="nav_reviews"  class="inline-flex items-center min-h-[44px] px-2 text-brand-cream/55 hover:text-brand-cream/80 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Reviews</a>
           <a href="#feedback" data-i18n="nav_feedback" class="inline-flex items-center min-h-[44px] px-2 text-brand-cream/55 hover:text-brand-cream/80 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Feedback</a>
           <a href="#contact"  data-i18n="nav_find"     class="inline-flex items-center min-h-[44px] px-2 text-brand-cream/55 hover:text-brand-cream/80 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Find Us</a>
+          <a href="menu/"     data-i18n="pg_menu"      class="inline-flex items-center min-h-[44px] px-2 text-brand-cream/55 hover:text-brand-cream/80 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Full Menu</a>
+          <a href="order/"    data-i18n="pg_order"     class="inline-flex items-center min-h-[44px] px-2 text-brand-cream/55 hover:text-brand-cream/80 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">How to Order</a>
+          <a href="location/" data-i18n="pg_location"  class="inline-flex items-center min-h-[44px] px-2 text-brand-cream/55 hover:text-brand-cream/80 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Location &amp; Hours</a>
+          <a href="faq/"      data-i18n="pg_faq"       class="inline-flex items-center min-h-[44px] px-2 text-brand-cream/55 hover:text-brand-cream/80 text-xs cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">FAQ</a>
         </nav>
 
         <p data-i18n="footer_copy" class="text-brand-cream/55 text-xs text-center">
@@ -1400,6 +1396,10 @@
         // Footer
         footer_tagline: 'Family Owned Since 1999 · Adelphi, MD',
         footer_copy:    '© 2026 Hunan Hut. All rights reserved.',
+        pg_menu:        'Full Menu',
+        pg_order:       'How to Order',
+        pg_location:    'Location & Hours',
+        pg_faq:         'FAQ',
         // Menu badges
         badge_house_fav:  'House Favorites',
         badge_best_seller:'Best Seller',
@@ -1539,6 +1539,10 @@
         // Footer
         footer_tagline: 'Negocio Familiar Desde 1999 · Adelphi, MD',
         footer_copy:    '© 2026 Hunan Hut. Todos los derechos reservados.',
+        pg_menu:        'Menú Completo',
+        pg_order:       'Cómo Ordenar',
+        pg_location:    'Ubicación y Horario',
+        pg_faq:         'Preguntas Frecuentes',
         // Menu badges
         badge_house_fav:  'Favoritos de la Casa',
         badge_best_seller:'El Más Vendido',
@@ -1678,6 +1682,10 @@
         // Footer
         footer_tagline: '家族经营 自1999年 · 马里兰州 Adelphi',
         footer_copy:    '© 2026 Hunan Hut。保留所有权利。',
+        pg_menu:        '完整菜单',
+        pg_order:       '如何订餐',
+        pg_location:    '地址和营业时间',
+        pg_faq:         '常见问题',
         // Menu badges
         badge_house_fav:  '本店招牌',
         badge_best_seller:'畅销',

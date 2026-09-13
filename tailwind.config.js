@@ -3,7 +3,7 @@
  *   npx tailwindcss@3.4.17 -c tailwind.config.js -i src/tailwind.css -o assets/tailwind.css --minify
  */
 module.exports = {
-  content: ['./index.html', './menu/index.html'],
+  content: ['./index.html', './menu/index.html', './order/index.html', './location/index.html', './faq/index.html'],
   theme: {
     extend: {
       colors: {
