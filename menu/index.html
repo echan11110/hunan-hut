@@ -101,7 +101,15 @@
   <header class="pt-28 pb-10 text-center px-4">
     <p class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-3">Hunan Hut</p>
     <h1 class="font-display text-4xl sm:text-5xl text-brand-cream mb-4" data-i18n="page_title">Our Menu</h1>
-    <p class="text-brand-cream/55 text-sm mb-6"><span data-i18n="page_subtitle">All prices include tax · </span><span class="text-brand-redLight">🌶️</span><span data-i18n="page_spicy"> = spicy · Prices subject to change</span></p>
+    <p class="text-brand-cream/55 text-sm mb-1"><span data-i18n="page_subtitle">All prices include tax · </span><span class="text-brand-redLight">🌶️</span><span data-i18n="page_spicy"> = spicy · Prices subject to change</span></p>
+
+    <p class="text-brand-cream/55 text-sm" data-i18n="dd_menu_note">Prices shown are for pickup · DoorDash prices are higher</p>
+    <p class="mb-4">
+      <a href="https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 min-h-[44px] text-brand-cream/75 hover:text-brand-cream text-sm font-semibold underline underline-offset-4 decoration-brand-cream/30 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
+        <span data-i18n="dd_menu_link">Order delivery on DoorDash</span><svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
+      </a>
+    </p>
 
     <!-- PDF button -->
     <a href="../public/menu.pdf" target="_blank" rel="noopener"
@@ -786,6 +794,9 @@
     // ── i18n ────────────────────────────────────────────────────────────────
     const t = {
       en: {
+        // DoorDash delivery
+        dd_menu_note: "Prices shown are for pickup · DoorDash prices are higher",
+        dd_menu_link: "Order delivery on DoorDash",
         // menu labels: wing/chicken pieces, sauces, sizes, proteins
         m_w1:"1 Wing", m_w2:"2 Wings", m_w3:"3 Wings", m_w4:"4 Wings", m_w5:"5 Wings", m_w6:"6 Wings",
         m_w7:"7 Wings", m_w8:"8 Wings", m_br1:"1 Breast", m_br2:"2 Breasts", m_lg1:"1 Leg", m_lg2:"2 Legs",
@@ -963,6 +974,9 @@
         desc_EF6:'Pork, Chicken, Beef, Shrimp',
       },
       es: {
+        // DoorDash delivery
+        dd_menu_note: "Precios para recoger · En DoorDash los precios son más altos",
+        dd_menu_link: "Pedir a domicilio en DoorDash",
         // menu labels: wing/chicken pieces, sauces, sizes, proteins
         m_w1:"1 Ala", m_w2:"2 Alas", m_w3:"3 Alas", m_w4:"4 Alas", m_w5:"5 Alas", m_w6:"6 Alas",
         m_w7:"7 Alas", m_w8:"8 Alas", m_br1:"1 Pechuga", m_br2:"2 Pechugas", m_lg1:"1 Pierna", m_lg2:"2 Piernas",
@@ -1153,6 +1167,9 @@
         desc_EF6:'Cerdo, pollo, res, camarones',
       },
       zh: {
+        // DoorDash delivery
+        dd_menu_note: "所示为自取价格 · DoorDash 价格较高",
+        dd_menu_link: "在 DoorDash 订外送",
         // menu labels: wing/chicken pieces, sauces, sizes, proteins
         m_w1:"1只鸡翅", m_w2:"2只鸡翅", m_w3:"3只鸡翅", m_w4:"4只鸡翅", m_w5:"5只鸡翅", m_w6:"6只鸡翅",
         m_w7:"7只鸡翅", m_w8:"8只鸡翅", m_br1:"1块鸡胸", m_br2:"2块鸡胸", m_lg1:"1只鸡腿", m_lg2:"2只鸡腿",

@@ -206,16 +206,27 @@
       "worstRating": "1"
     },
     "hasMap": "https://maps.google.com/?q=7967+New+Hampshire+Ave+Adelphi+MD+20783",
-    "potentialAction": {
-      "@type": "OrderAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "tel:+13014393886"
+    "potentialAction": [
+      {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "tel:+13014393886"
+        }
+      },
+      {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/",
+          "actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+        }
       }
-    },
+    ],
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Takeout", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Carry-Out", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Delivery (via DoorDash)", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Bilingual Staff (English/Spanish)", "value": true }
     ],
     "keywords": "Chinese carry-out, lo mein, chicken wings, mambo sauce, General Tso's, fried rice, Adelphi MD, Hyattsville MD, Langley Park"
@@ -297,6 +308,7 @@
         <a href="#reviews"  data-i18n="nav_reviews"  class="text-brand-cream/75 hover:text-brand-cream text-base font-medium py-2.5 cursor-pointer transition-colors">Reviews</a>
         <a href="#feedback" data-i18n="nav_feedback" class="text-brand-cream/75 hover:text-brand-cream text-base font-medium py-2.5 cursor-pointer transition-colors">Feedback</a>
         <a href="#contact"  data-i18n="nav_find"     class="text-brand-cream/75 hover:text-brand-cream text-base font-medium py-2.5 cursor-pointer transition-colors">Find Us</a>
+        <a href="https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/" target="_blank" rel="noopener noreferrer" data-i18n="nav_delivery" class="text-brand-cream/75 hover:text-brand-cream text-base font-medium py-2.5 cursor-pointer transition-colors">Delivery on DoorDash</a>
         <!-- Language toggle mobile -->
         <div class="flex items-center gap-3">
           <span class="text-brand-cream/55 text-xs font-semibold uppercase tracking-wide" data-i18n="lang_label">Language:</span>
@@ -661,11 +673,18 @@
       </div><!-- end accordion -->
 
       <p class="text-center text-brand-cream/55 text-xs mt-8 italic" data-i18n="menu_tax">* All prices include tax. &#x1F336;&#xFE0F; = spicy</p>
+      <p class="text-center text-brand-cream/55 text-xs mt-1 italic" data-i18n="dd_short">Menu prices are for pickup. DoorDash prices are higher.</p>
       <p class="text-center mt-4">
         <a href="tel:+13014393886" data-i18n="menu_call_link"
           class="inline-flex items-center gap-2 text-brand-gold hover:text-brand-goldLight text-sm font-semibold underline underline-offset-4 cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded min-h-[44px]">
           Ready in minutes — just call ahead
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </p>
+      <p class="text-center">
+        <a href="https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 min-h-[44px] text-brand-cream/75 hover:text-brand-cream text-sm font-semibold underline underline-offset-4 decoration-brand-cream/30 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
+          <span data-i18n="fav_dd_link">Prefer delivery? Order on DoorDash</span><svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
         </a>
       </p>
     </div>
@@ -1010,6 +1029,10 @@
               <input type="radio" name="visit_type" value="Called ahead" class="accent-brand-red w-4 h-4"/>
               <span data-i18n="fb_callahead" class="text-brand-cream/75 text-sm">Called ahead</span>
             </label>
+            <label class="flex items-center gap-2 cursor-pointer min-h-[44px]">
+              <input type="radio" name="visit_type" value="DoorDash delivery" class="accent-brand-red w-4 h-4"/>
+              <span data-i18n="fb_doordash" class="text-brand-cream/75 text-sm">DoorDash delivery</span>
+            </label>
           </div>
         </div>
 
@@ -1036,7 +1059,7 @@
       <p data-i18n="cta_body" class="text-white/80 text-lg mb-8 max-w-xl mx-auto">
         Walk in or call ahead. We're at 7967 New Hampshire Ave, Adelphi, MD — serving you fresh, fast, and with a smile.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center">
         <a href="tel:+13014393886"
           class="bg-white text-brand-red font-bold text-lg px-8 py-4 rounded-full min-h-[56px] flex items-center justify-center gap-2 cursor-pointer hover:bg-brand-cream transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-red">
           <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -1052,7 +1075,13 @@
           </svg>
           <span data-i18n="cta_directions">Get Directions</span>
         </a>
+        <a href="https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/" target="_blank" rel="noopener noreferrer"
+          class="border-2 border-white/60 text-white font-bold text-lg px-8 py-4 rounded-full min-h-[56px] flex items-center justify-center gap-2 cursor-pointer hover:bg-white/10 hover:border-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span data-i18n="dd_btn">Delivery on DoorDash</span>
+        </a>
       </div>
+      <p data-i18n="dd_note" class="text-white/75 text-sm mt-6 max-w-xl mx-auto">Prices on DoorDash are higher than our menu to cover DoorDash's fees. For our regular prices, call ahead and pick up.</p>
     </div>
   </section>
 
@@ -1127,6 +1156,22 @@
                 (301) 439-3886
               </a>
               <p data-i18n="contact_phone_note" class="text-brand-cream/55 text-xs mt-1">Call ahead — your order will be ready when you arrive.</p>
+            </div>
+          </div>
+
+          <!-- Delivery (DoorDash) -->
+          <div class="reveal bg-brand-dark border border-brand-gold/15 rounded-2xl p-6 flex items-start gap-5">
+            <div class="w-11 h-11 rounded-xl bg-brand-gold/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-brand-gold">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="contact_dd_title" class="text-brand-cream font-semibold mb-1">Delivery</h3>
+              <a href="https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 min-h-[44px] text-brand-gold hover:text-brand-goldLight text-lg font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
+                <span data-i18n="contact_dd_link">Order on DoorDash</span><svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
+              </a>
+              <p data-i18n="contact_dd_hours" class="text-brand-cream/75 text-sm mt-1">Delivery orders until 9:25 PM (Fri–Sat until 10:25 PM)</p>
+              <p data-i18n="dd_note" class="text-brand-cream/55 text-xs mt-2">Prices on DoorDash are higher than our menu to cover DoorDash's fees. For our regular prices, call ahead and pick up.</p>
             </div>
           </div>
 
@@ -1254,6 +1299,16 @@
     // ─── Translation dictionary ────────────────────────────────────────────────
     const translations = {
       en: {
+        // DoorDash delivery
+        dd_short: "Menu prices are for pickup. DoorDash prices are higher.",
+        dd_note: "Prices on DoorDash are higher than our menu to cover DoorDash's fees. For our regular prices, call ahead and pick up.",
+        dd_btn: "Delivery on DoorDash",
+        fav_dd_link: "Prefer delivery? Order on DoorDash",
+        contact_dd_title: "Delivery",
+        contact_dd_link: "Order on DoorDash",
+        contact_dd_hours: "Delivery orders until 9:25 PM (Fri–Sat until 10:25 PM)",
+        nav_delivery: "Delivery on DoorDash",
+        fb_doordash: "DoorDash delivery",
         fb_optional: '(optional)',
         reviews_summary: ' out of 5 · 200+ Google reviews',
         rev_meta_google: 'Google review', rev_meta_lg: 'Local Guide · Google review', rev_meta_lgs: 'Local Guides · Google review',
@@ -1392,6 +1447,16 @@
         badge_best_seller:'Best Seller',
       },
       es: {
+        // DoorDash delivery
+        dd_short: "Los precios del menú son para recoger. En DoorDash los precios son más altos.",
+        dd_note: "Los precios en DoorDash son más altos que los de nuestro menú para cubrir las comisiones de DoorDash. Para nuestros precios normales, llama y recoge tu pedido.",
+        dd_btn: "Entrega por DoorDash",
+        fav_dd_link: "¿Prefieres entrega a domicilio? Pide en DoorDash",
+        contact_dd_title: "Entrega a Domicilio",
+        contact_dd_link: "Pedir en DoorDash",
+        contact_dd_hours: "Pedidos a domicilio hasta las 9:25 PM (viernes y sábado hasta las 10:25 PM)",
+        nav_delivery: "Entrega por DoorDash",
+        fb_doordash: "Entrega por DoorDash",
         fb_optional: '(opcional)',
         reviews_summary: ' de 5 · más de 200 opiniones en Google',
         rev_meta_google: 'Reseña de Google', rev_meta_lg: 'Guía Local · Reseña de Google', rev_meta_lgs: 'Guías Locales · Reseña de Google',
@@ -1530,6 +1595,16 @@
         badge_best_seller:'El Más Vendido',
       },
       zh: {
+        // DoorDash delivery
+        dd_short: "菜单价格为到店自取价格，DoorDash 上的价格较高。",
+        dd_note: "DoorDash 上的价格高于本店菜单，用于支付 DoorDash 的服务费用。如需享受本店原价，请提前来电并到店自取。",
+        dd_btn: "DoorDash 外送",
+        fav_dd_link: "需要外送？在 DoorDash 下单",
+        contact_dd_title: "外送",
+        contact_dd_link: "在 DoorDash 下单",
+        contact_dd_hours: "外送接单至晚上 9:25（周五、周六至晚上 10:25）",
+        nav_delivery: "DoorDash 外送",
+        fb_doordash: "DoorDash 外送",
         fb_optional: '（选填）',
         reviews_summary: ' / 5 分 · 200+ 条谷歌评价',
         rev_meta_google: '谷歌评价', rev_meta_lg: '本地向导 · 谷歌评价', rev_meta_lgs: '本地向导 · 谷歌评价',
