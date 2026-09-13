@@ -347,20 +347,20 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
 
       <!-- Tagline pill -->
-      <div class="fade-in-up inline-flex items-center gap-2 border border-brand-gold/30 rounded-full px-4 py-1.5 mb-8">
+      <div class="fade-in-up inline-flex items-center gap-2 border border-brand-gold/30 rounded-full px-4 py-1.5 mb-8 max-[374px]:mb-4">
         <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" aria-hidden="true"></span>
         <span data-i18n="hero_pill" class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Family Owned &amp; Operated · Est. 1999</span>
       </div>
 
       <!-- Main headline -->
       <h1 class="mb-4 fade-in-up delay-1">
-        <span class="block font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-brand-cream leading-none">Hunan Hut</span>
+        <span class="block font-display text-6xl max-[374px]:text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-brand-cream leading-none">Hunan Hut</span>
         <span data-i18n="hero_h1_sub" class="block mt-4 text-brand-gold/90 text-sm sm:text-base font-semibold tracking-[0.3em] uppercase">Chinese Carry-Out · Adelphi, MD</span>
       </h1>
       <p class="font-display text-2xl sm:text-3xl md:text-4xl fade-in-up delay-2 mb-6">
         <span data-i18n="hero_shimmer" class="gold-shimmer">25+ Years of Flavor</span>
       </p>
-      <p data-i18n="hero_sub" class="text-brand-cream/70 text-lg sm:text-xl max-w-2xl mx-auto mb-6 md:mb-10 fade-in-up delay-3 leading-relaxed">
+      <p data-i18n="hero_sub" class="text-brand-cream/70 text-lg max-[374px]:text-base sm:text-xl max-w-2xl mx-auto mb-6 md:mb-10 fade-in-up delay-3 leading-relaxed">
         Serving Adelphi, Hyattsville, and Langley Park for 25+ years.
         Crispy chicken wings, rich lo mein, and the legendary mambo sauce —
         made fresh, served fast, loved by generations.
@@ -410,7 +410,7 @@
       </div>
 
       <!-- Open / Closed status badge -->
-      <div id="open-status" class="order-2 md:order-4 mb-7 md:mb-0 md:mt-5 hidden items-center justify-center gap-2 fade-in-up delay-4" role="status">
+      <div id="open-status" class="order-2 md:order-4 mb-7 md:mb-0 md:mt-5 invisible flex min-h-[20px] items-center justify-center gap-2 fade-in-up delay-4" role="status">
         <span id="open-status-dot" class="w-2 h-2 rounded-full" aria-hidden="true"></span>
         <span id="open-status-text" class="text-sm font-semibold"></span>
       </div>
@@ -1973,7 +1973,7 @@
       const closeHour = (day === 'Fri' || day === 'Sat') ? 23 : 22;
       const isOpen = mins >= 11 * 60 && mins < closeHour * 60;
       const t = translations[currentLang];
-      badge.classList.remove('hidden');
+      badge.classList.remove('hidden', 'invisible');
       badge.classList.add('flex');
       if (isOpen) {
         dot.className  = 'w-2 h-2 rounded-full bg-green-400 animate-pulse';
