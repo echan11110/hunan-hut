@@ -940,15 +940,11 @@
 
   <!-- ===== FEEDBACK ===== -->
   <!-- To receive submissions by email: sign up free at formspree.io, create a form, and replace "YOUR_FORM_ID" below -->
-  <section id="feedback" class="py-20 sm:py-28 bg-brand-dark/50">
-    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="feedback" class="py-12 sm:py-16 bg-brand-dark/50">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="text-center mb-12 reveal">
-        <p data-i18n="fb_eyebrow" class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-3">Your Voice Matters</p>
-        <h2 data-i18n="fb_heading" class="font-display text-4xl sm:text-5xl text-brand-cream mb-4">Leave Feedback</h2>
-        <p data-i18n="fb_sub" class="text-brand-cream/55 leading-relaxed">
-          We've been serving this community for 25+ years because of customers like you. Tell us how we did.
-        </p>
+      <div class="text-center mb-6 reveal">
+        <h2 data-i18n="fb_heading" class="font-display text-3xl sm:text-4xl text-brand-cream">Leave Feedback</h2>
       </div>
 
       <!-- Success message (shown after submit) -->
@@ -967,18 +963,25 @@
         action="https://formspree.io/f/xbdbozby"
         method="POST"
         onsubmit="handleFeedbackSubmit(event)"
-        class="reveal bg-brand-dark border border-brand-red/20 rounded-2xl p-6 sm:p-8 space-y-6">
+        class="reveal bg-brand-dark border border-brand-red/20 rounded-2xl p-5 sm:p-6 space-y-4">
 
-        <!-- Name -->
-        <div>
-          <label for="fb-name" class="block text-brand-cream/75 text-sm font-medium mb-2"><span data-i18n="fb_label_name">Your Name</span> <span class="text-brand-cream/55" data-i18n="fb_optional">(optional)</span></label>
-          <input type="text" id="fb-name" name="name" placeholder="e.g. Maria G."
-            class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
+        <!-- Name + what they ordered (side by side to save height; inputs pinned to the bottom so they align when a label wraps) -->
+        <div class="grid grid-cols-2 max-[359px]:grid-cols-1 gap-3">
+          <div class="flex flex-col">
+            <label for="fb-name" class="block text-brand-cream/75 text-sm font-medium mb-1.5"><span data-i18n="fb_label_name">Your Name</span> <span class="text-brand-cream/55" data-i18n="fb_optional">(optional)</span></label>
+            <input type="text" id="fb-name" name="name" placeholder="e.g. Maria G."
+              class="mt-auto w-full min-h-[44px] bg-brand-darker border border-brand-cream/10 rounded-xl px-3 py-2.5 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
+          </div>
+          <div class="flex flex-col">
+            <label for="fb-order" class="block text-brand-cream/75 text-sm font-medium mb-1.5"><span data-i18n="fb_label_order">What did you order?</span> <span class="text-brand-cream/55" data-i18n="fb_optional">(optional)</span></label>
+            <input type="text" id="fb-order" name="order" placeholder="e.g. Chicken wings with mambo sauce"
+              class="mt-auto w-full min-h-[44px] bg-brand-darker border border-brand-cream/10 rounded-xl px-3 py-2.5 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
+          </div>
         </div>
 
         <!-- Star rating -->
         <div>
-          <p class="text-brand-cream/75 text-sm font-medium mb-3"><span data-i18n="fb_label_rating">Overall Rating</span> <span class="text-brand-redLight" aria-hidden="true">*</span></p>
+          <p class="text-brand-cream/75 text-sm font-medium mb-1"><span data-i18n="fb_label_rating">Overall Rating</span> <span class="text-brand-redLight" aria-hidden="true">*</span></p>
           <div class="star-rating" role="group" aria-label="Star rating">
             <input type="radio" id="s5" name="rating" value="5" aria-label="5 stars"/>
             <label for="s5">&#9733;</label>
@@ -994,44 +997,18 @@
           <p id="fb-rating-error" class="hidden mt-2 text-brand-redLight text-sm" role="alert" data-i18n="fb_alert_rating">Please select a star rating before submitting.</p>
         </div>
 
-        <!-- What they ordered -->
-        <div>
-          <label for="fb-order" class="block text-brand-cream/75 text-sm font-medium mb-2"><span data-i18n="fb_label_order">What did you order?</span> <span class="text-brand-cream/55" data-i18n="fb_optional">(optional)</span></label>
-          <input type="text" id="fb-order" name="order" placeholder="e.g. Chicken wings with mambo sauce"
-            class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors"/>
-        </div>
-
         <!-- Comment -->
         <div>
-          <label for="fb-comment" class="block text-brand-cream/75 text-sm font-medium mb-2"><span data-i18n="fb_label_comment">Your Comment</span> <span class="text-brand-redLight" aria-hidden="true">*</span></label>
-          <textarea id="fb-comment" name="comment" rows="4" required
+          <label for="fb-comment" class="block text-brand-cream/75 text-sm font-medium mb-1.5"><span data-i18n="fb_label_comment">Your Comment</span> <span class="text-brand-redLight" aria-hidden="true">*</span></label>
+          <textarea id="fb-comment" name="comment" rows="2" required
             placeholder="Tell us about your experience..."
-            class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-4 py-3 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors resize-none"></textarea>
-        </div>
-
-        <!-- Visit type -->
-        <div>
-          <p data-i18n="fb_label_type" class="text-brand-cream/75 text-sm font-medium mb-3">How did you order?</p>
-          <div class="flex flex-wrap gap-3">
-            <label class="flex items-center gap-2 cursor-pointer min-h-[44px]">
-              <input type="radio" name="visit_type" value="Walk-in" class="accent-brand-red w-4 h-4"/>
-              <span data-i18n="fb_walkin" class="text-brand-cream/75 text-sm">Walk-in</span>
-            </label>
-            <label class="flex items-center gap-2 cursor-pointer min-h-[44px]">
-              <input type="radio" name="visit_type" value="Called ahead" class="accent-brand-red w-4 h-4"/>
-              <span data-i18n="fb_callahead" class="text-brand-cream/75 text-sm">Called ahead</span>
-            </label>
-            <label class="flex items-center gap-2 cursor-pointer min-h-[44px]">
-              <input type="radio" name="visit_type" value="DoorDash delivery" class="accent-brand-red w-4 h-4"/>
-              <span data-i18n="fb_doordash" class="text-brand-cream/75 text-sm">DoorDash delivery</span>
-            </label>
-          </div>
+            class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-3 py-2.5 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors resize-none"></textarea>
         </div>
 
         <!-- Submit -->
         <button type="submit" id="fb-submit"
           data-i18n="fb_submit"
-          class="w-full bg-brand-red hover:bg-red-700 disabled:opacity-50 text-white font-semibold text-base py-4 rounded-full min-h-[52px] cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+          class="w-full bg-brand-red hover:bg-red-700 disabled:opacity-50 text-white font-semibold text-base py-3 rounded-full min-h-[44px] cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
           Submit Feedback
         </button>
 
@@ -1298,7 +1275,6 @@
         contact_dd_link: "Order on DoorDash",
         contact_dd_hours: "Delivery orders until 9:25 PM (Fri–Sat until 10:25 PM)",
         nav_delivery: "Delivery on DoorDash",
-        fb_doordash: "DoorDash delivery",
         fb_optional: '(optional)',
         reviews_summary: ' out of 5 · 200+ Google reviews',
         rev_meta_google: 'Google review', rev_meta_lg: 'Local Guide · Google review', rev_meta_lgs: 'Local Guides · Google review',
@@ -1390,18 +1366,13 @@
         reviews_heading: 'What People Say',
         reviews_google:  'Read all 200+ reviews on Google',
         // Feedback
-        fb_eyebrow:      'Your Voice Matters',
         fb_heading:      'Leave Feedback',
-        fb_sub:          'We\'ve been serving this community for 25+ years because of customers like you. Tell us how we did.',
         fb_thanks_title: 'Thank You!',
         fb_thanks_body:  'Your feedback means everything to us. See you next time!',
         fb_label_name:   'Your Name',
         fb_label_rating: 'Overall Rating',
         fb_label_order:  'What did you order?',
         fb_label_comment:'Your Comment',
-        fb_label_type:   'How did you order?',
-        fb_walkin:       'Walk-in',
-        fb_callahead:    'Called ahead',
         fb_delivery:     'Delivery',
         fb_submit:       'Submit Feedback',
         fb_formspree_note: 'Your feedback goes directly to the Hunan Hut team.',
@@ -1443,7 +1414,6 @@
         contact_dd_link: "Pedir en DoorDash",
         contact_dd_hours: "Pedidos a domicilio hasta las 9:25 PM (viernes y sábado hasta las 10:25 PM)",
         nav_delivery: "Entrega por DoorDash",
-        fb_doordash: "Entrega por DoorDash",
         fb_optional: '(opcional)',
         reviews_summary: ' de 5 · más de 200 opiniones en Google',
         rev_meta_google: 'Reseña de Google', rev_meta_lg: 'Guía Local · Reseña de Google', rev_meta_lgs: 'Guías Locales · Reseña de Google',
@@ -1535,18 +1505,13 @@
         reviews_heading: 'Lo Que Dicen',
         reviews_google:  'Leer las 200+ opiniones en Google',
         // Feedback
-        fb_eyebrow:      'Tu Opinión Importa',
         fb_heading:      'Déjanos tus Comentarios',
-        fb_sub:          'Llevamos más de 25 años sirviendo a esta comunidad gracias a clientes como tú. Cuéntanos cómo lo hicimos.',
         fb_thanks_title: '¡Gracias!',
         fb_thanks_body:  'Tus comentarios son muy importantes para nosotros. ¡Hasta la próxima!',
         fb_label_name:   'Tu Nombre',
         fb_label_rating: 'Calificación General',
         fb_label_order:  '¿Qué pediste?',
         fb_label_comment:'Tu Comentario',
-        fb_label_type:   '¿Cómo hiciste tu pedido?',
-        fb_walkin:       'En persona',
-        fb_callahead:    'Llamé antes',
         fb_delivery:     'A domicilio',
         fb_submit:       'Enviar Comentario',
         fb_formspree_note: 'Tus comentarios van directamente al equipo de Hunan Hut.',
@@ -1588,7 +1553,6 @@
         contact_dd_link: "在 DoorDash 下单",
         contact_dd_hours: "外送接单至晚上 9:25（周五、周六至晚上 10:25）",
         nav_delivery: "DoorDash 外送",
-        fb_doordash: "DoorDash 外送",
         fb_optional: '（选填）',
         reviews_summary: ' / 5 分 · 200+ 条谷歌评价',
         rev_meta_google: '谷歌评价', rev_meta_lg: '本地向导 · 谷歌评价', rev_meta_lgs: '本地向导 · 谷歌评价',
@@ -1680,18 +1644,13 @@
         reviews_heading: '顾客怎么说',
         reviews_google:  '在谷歌上阅读全部 200+ 条评价',
         // Feedback
-        fb_eyebrow:      '您的意见很重要',
         fb_heading:      '留下反馈',
-        fb_sub:          '25年多来我们能一直服务这个社区，全靠像您这样的顾客。告诉我们您的用餐体验吧。',
         fb_thanks_title: '谢谢您！',
         fb_thanks_body:  '您的反馈对我们无比重要。期待下次再见！',
         fb_label_name:   '您的姓名',
         fb_label_rating: '总体评分',
         fb_label_order:  '您点了什么？',
         fb_label_comment:'您的评价',
-        fb_label_type:   '您是怎么下单的？',
-        fb_walkin:       '到店点餐',
-        fb_callahead:    '提前来电',
         fb_delivery:     '外送',
         fb_submit:       '提交反馈',
         fb_formspree_note: '您的反馈会直接送达 Hunan Hut 团队。',
