@@ -317,7 +317,7 @@
   <main id="main">
 
   <!-- ===== HERO ===== -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-16">
 
     <!-- Background red radial glow -->
     <div class="absolute inset-0 bg-gradient-to-b from-brand-red/10 via-transparent to-transparent pointer-events-none" aria-hidden="true"></div>
@@ -349,13 +349,13 @@
       <!-- Tagline pill -->
       <div class="fade-in-up inline-flex items-center gap-2 border border-brand-gold/30 rounded-full px-4 py-1.5 mb-8 max-[374px]:mb-4">
         <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" aria-hidden="true"></span>
-        <span data-i18n="hero_pill" class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Family Owned &amp; Operated · Est. 1999</span>
+        <span class="text-brand-gold text-xs font-semibold tracking-widest max-[374px]:tracking-wider uppercase text-center"><span data-i18n="hero_pill_a">Family Owned &amp; Operated</span><span class="max-[374px]:hidden"> · </span><span data-i18n="hero_pill_b" class="max-[374px]:block">Est. 1999</span></span>
       </div>
 
       <!-- Main headline -->
       <h1 class="mb-4 fade-in-up delay-1">
         <span class="block font-display text-6xl max-[374px]:text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-brand-cream leading-none">Hunan Hut</span>
-        <span data-i18n="hero_h1_sub" class="block mt-4 text-brand-gold/90 text-sm sm:text-base font-semibold tracking-[0.3em] uppercase">Chinese Carry-Out · Adelphi, MD</span>
+        <span class="block mt-4 text-brand-gold text-sm sm:text-base font-semibold tracking-[0.3em] max-[374px]:tracking-[0.2em] uppercase"><span data-i18n="hero_h1_sub_a" class="block sm:inline">Chinese Carry-Out</span><span class="hidden sm:inline"> · </span><span data-i18n="hero_h1_sub_b" class="block sm:inline">Adelphi, MD</span></span>
       </h1>
       <p class="font-display text-2xl sm:text-3xl md:text-4xl fade-in-up delay-2 mb-6">
         <span data-i18n="hero_shimmer" class="gold-shimmer">25+ Years of Flavor</span>
@@ -1261,7 +1261,8 @@
         nav_find:      'Find Us',
         nav_order:     'Order by Phone',
         // Hero
-        hero_pill:     'Family Owned & Operated · Est. 1999',
+        hero_pill_a:   'Family Owned & Operated',
+        hero_pill_b:   'Est. 1999',
         hero_shimmer:  '25+ Years of Flavor',
         hero_sub:      'Serving Adelphi, Hyattsville, and Langley Park for 25+ years. Crispy chicken wings, rich lo mein, and the legendary mambo sauce — made fresh, served fast, loved by generations.',
         hero_btn_menu: 'View Full Menu',
@@ -1269,7 +1270,8 @@
         hero_popular:  'Popular Dishes',
         hero_scroll:   'Scroll',
         hero_rating:   ' · Google reviews',
-        hero_h1_sub:   'Chinese Carry-Out · Adelphi, MD',
+        hero_h1_sub_a: 'Chinese Carry-Out',
+        hero_h1_sub_b: 'Adelphi, MD',
         open_now:      'Open Now · closes at ',
         open_closed:   'Closed · opens at 11:00 AM',
         sticky_call:   'Call (301) 439-3886',
@@ -1393,7 +1395,8 @@
         nav_find:      'Encuéntranos',
         nav_order:     'Pedir por Teléfono',
         // Hero
-        hero_pill:     'Negocio Familiar · Est. 1999',
+        hero_pill_a:   'Negocio Familiar',
+        hero_pill_b:   'Est. 1999',
         hero_shimmer:  '25+ Años de Sabor',
         hero_sub:      'Sirviendo a Adelphi, Hyattsville y Langley Park por más de 25 años. Alitas de pollo crujientes, lo mein delicioso y la legendaria salsa mambo — fresco, rápido, amado por generaciones.',
         hero_btn_menu: 'Ver Menú Completo',
@@ -1401,7 +1404,8 @@
         hero_popular:  'Platos Populares',
         hero_scroll:   'Desplazar',
         hero_rating:   ' · opiniones en Google',
-        hero_h1_sub:   'Comida China para Llevar · Adelphi, MD',
+        hero_h1_sub_a: 'Comida China para Llevar',
+        hero_h1_sub_b: 'Adelphi, MD',
         open_now:      'Abierto Ahora · cierra a las ',
         open_closed:   'Cerrado · abre a las 11:00 AM',
         sticky_call:   'Llamar (301) 439-3886',
@@ -1525,7 +1529,8 @@
         nav_find:      '门店位置',
         nav_order:     '电话订餐',
         // Hero
-        hero_pill:     '家族经营 · 创立于1999年',
+        hero_pill_a:   '家族经营',
+        hero_pill_b:   '创立于1999年',
         hero_shimmer:  '25年多的好味道',
         hero_sub:      '25年多来服务 Adelphi、Hyattsville 和 Langley Park 社区。香脆炸鸡翅、美味捞面，还有传奇的曼波酱 —— 现点现做，出餐快捷，深受几代人喜爱。',
         hero_btn_menu: '查看完整菜单',
@@ -1533,7 +1538,8 @@
         hero_popular:  '人气菜品',
         hero_scroll:   '下滑',
         hero_rating:   ' 条谷歌评价',
-        hero_h1_sub:   '中式外卖 · 马里兰州 Adelphi',
+        hero_h1_sub_a: '中式外卖',
+        hero_h1_sub_b: '马里兰州 Adelphi',
         open_now:      '营业中 · 关门时间 ',
         open_closed:   '已打烊 · 上午 11:00 开门',
         sticky_call:   '致电 (301) 439-3886',
