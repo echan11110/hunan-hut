@@ -1264,6 +1264,16 @@
       });
     });
 
+    // Escape closes the open menu and returns focus to the toggle
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape' || mobileMenu.classList.contains('hidden')) return;
+      mobileMenu.classList.add('hidden');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
+    });
+
     // ─── Accordion ────────────────────────────────────────────────────────────
     function toggleAccordion(triggerBtn) {
       const body = triggerBtn.nextElementSibling;
