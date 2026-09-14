@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hunan Hut | Chinese Carry-Out &amp; Wings in Adelphi, MD</title>
-  <meta name="description" content="Hunan Hut is Adelphi's favorite Chinese carry-out. Famous for crispy chicken wings with mambo sauce, lo mein, General Tso's, and fried rice. Family-owned 25+ years. 7967 New Hampshire Ave. Call (301) 439-3886.">
+  <meta name="description" content="Family-owned Chinese carry-out in Adelphi, MD since 1997. Crispy wings with mambo sauce, lo mein &amp; General Tso's. 7967 New Hampshire Ave · (301) 439-3886.">
   <meta name="keywords" content="Chinese carry-out Adelphi MD, lo mein Adelphi, Chinese takeout Hyattsville, chicken wings mambo sauce, General Tso's chicken Maryland, Chinese food Langley Park, fried rice carry-out, Chinese food near me, American Chinese food Maryland, Prince George's County Chinese restaurant, bilingual Chinese carry-out, cheap Chinese food DMV">
   <meta name="robots" content="index, follow">
   <meta name="geo.region" content="US-MD">
@@ -134,21 +134,9 @@
     .star-rating label:hover ~ label,
     .star-rating input:checked ~ label { color: #FCD34D; }
 
-    /* Menu category tabs */
-    .menu-tab { transition: all 0.2s ease; }
-    .menu-tab.active {
-      background: #DC2626; color: #fff; border-color: #DC2626;
-    }
-
-    /* Language toggle */
-    .lang-btn { transition: all 0.2s ease; }
-    .lang-btn.active { background: #DC2626; color: #fff; }
-
-    /* Accordion */
-    .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .accordion-body.open { max-height: 2000px; }
-    .accordion-icon { transition: transform 0.3s ease; }
-    .accordion-icon.open { transform: rotate(180deg); }
+    /* Language toggle — same pill style as the other pages */
+    .lang-btn { border-radius: 9999px; transition: color 0.2s ease, background-color 0.2s ease; }
+    .lang-btn.active { background: rgba(220,38,38,0.3); color: #FEF2F2; }
 
     /* Feedback form success */
     #feedback-success { display: none; }
@@ -284,7 +272,7 @@
           <a href="#feedback"  data-i18n="nav_feedback" class="inline-flex items-center min-h-[44px] text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Feedback</a>
           <a href="#contact"   data-i18n="nav_find"     class="inline-flex items-center min-h-[44px] text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Find Us</a>
           <!-- Language toggle -->
-          <div class="flex items-center border border-brand-cream/20 rounded-full overflow-hidden text-xs font-bold" role="group" aria-label="Language selector">
+          <div class="flex items-center gap-1 bg-brand-dark/60 rounded-full px-1 py-0.5 border border-brand-red/20 text-xs font-semibold" role="group" aria-label="Language selector">
             <button id="lang-en" onclick="setLang('en')" class="lang-btn active px-3 py-1.5 min-h-[44px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">English</button>
             <button id="lang-es" onclick="setLang('es')" class="lang-btn px-3 py-1.5 min-h-[44px] text-brand-cream/55 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">Español</button>
             <button id="lang-zh" onclick="setLang('zh')" class="lang-btn px-3 py-1.5 min-h-[44px] text-brand-cream/55 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">中文</button>
@@ -320,7 +308,7 @@
         <!-- Language toggle mobile -->
         <div class="flex items-center gap-3">
           <span class="text-brand-cream/55 text-xs font-semibold uppercase tracking-wide" data-i18n="lang_label">Language:</span>
-          <div class="flex border border-brand-cream/20 rounded-full overflow-hidden text-xs font-bold">
+          <div class="flex items-center gap-1 bg-brand-dark/60 rounded-full px-1 py-0.5 border border-brand-red/20 text-xs font-semibold" role="group" aria-label="Language selector">
             <button id="lang-en-m" onclick="setLang('en')" class="lang-btn active px-4 py-2 min-h-[44px] cursor-pointer">English</button>
             <button id="lang-es-m" onclick="setLang('es')" class="lang-btn px-4 py-2 min-h-[44px] text-brand-cream/55 cursor-pointer">Español</button>
             <button id="lang-zh-m" onclick="setLang('zh')" class="lang-btn px-4 py-2 min-h-[44px] text-brand-cream/55 cursor-pointer">中文</button>
@@ -538,139 +526,17 @@
 
       <!-- CTA block -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-        <a href="menu/" data-i18n="fav_cta_menu"
-          class="inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red/90 text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-sm">
-          View Full Menu
+        <a href="menu/"
+          class="inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red/90 text-white font-semibold px-8 py-4 rounded-full transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-sm">
+          <span data-i18n="fav_cta_menu">View Full Menu</span>
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
         </a>
-        <a href="tel:+13014393886" data-i18n="fav_cta_call"
-          class="inline-flex items-center justify-center gap-2 border border-brand-gold/40 text-brand-gold hover:border-brand-gold hover:text-brand-goldLight font-semibold px-8 py-4 rounded-xl transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-sm">
+        <a href="tel:+13014393886"
+          class="inline-flex items-center justify-center gap-2 border border-brand-gold/40 text-brand-gold hover:border-brand-gold hover:text-brand-goldLight font-semibold px-8 py-4 rounded-full transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold text-sm">
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd"/></svg>
-          Call to Order · (301) 439-3886
+          <span data-i18n="fav_cta_call">Call to Order · (301) 439-3886</span>
         </a>
       </div>
-
-      <!-- Hidden accordion container kept for JS compatibility -->
-      <div class="hidden" id="menu-accordion">
-
-        <!-- CHEF SPECIALS -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="true">
-            <span class="font-display text-lg text-brand-cream flex items-center gap-3"><span data-i18n="cat_specials">Chef Specials</span> <span class="badge bg-brand-gold/15 text-brand-goldLight border border-brand-gold/20" data-i18n="badge_house_fav">House Favorites</span></span>
-            <svg class="accordion-icon open w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body open border-t border-brand-red/10" id="body-specials"></div>
-        </div>
-
-        <!-- WINGS & FRIED CHICKEN -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream flex items-center gap-3"><span data-i18n="cat_wings">Wings &amp; Fried Chicken</span> <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20" data-i18n="badge_best_seller">Best Seller</span></span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-wings"></div>
-        </div>
-
-        <!-- CLASSIC FAVORITES -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_classics">Classic Favorites</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-classics"></div>
-        </div>
-
-        <!-- APPETIZERS -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_appetizers">Appetizers</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-appetizers"></div>
-        </div>
-
-        <!-- SOUPS -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_soups">Soups</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-soups"></div>
-        </div>
-
-        <!-- FRIED RICE -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_friedrice">Fried Rice</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-friedrice"></div>
-        </div>
-
-        <!-- LO MEIN & NOODLES -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_lomein">Lo Mein &amp; Noodles</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-lomein"></div>
-        </div>
-
-        <!-- CHICKEN -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_chicken">Chicken</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-chicken"></div>
-        </div>
-
-        <!-- ROAST PORK -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_pork">Roast Pork</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-pork"></div>
-        </div>
-
-        <!-- BEEF -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_beef">Beef</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-beef"></div>
-        </div>
-
-        <!-- SEAFOOD -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_seafood">Seafood</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-seafood"></div>
-        </div>
-
-        <!-- VEGETABLES & BEAN CURD -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_veggies">Vegetables &amp; Bean Curd</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-veggies"></div>
-        </div>
-
-        <!-- EGG FOO YOUNG -->
-        <div class="bg-brand-dark border border-brand-red/20 rounded-2xl overflow-hidden">
-          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold" aria-expanded="false">
-            <span class="font-display text-lg text-brand-cream" data-i18n="cat_efyoung">Egg Foo Young</span>
-            <svg class="accordion-icon w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </button>
-          <div class="accordion-body border-t border-brand-red/10" id="body-efyoung"></div>
-        </div>
-
-      </div><!-- end accordion -->
 
       <p class="text-center text-brand-cream/55 text-xs mt-8 italic" data-i18n="menu_tax">* All prices include tax. &#x1F336;&#xFE0F; = spicy</p>
       <p class="text-center text-brand-cream/55 text-xs mt-1 italic" data-i18n="dd_short">Menu prices are for pickup. DoorDash prices are higher.</p>
@@ -930,14 +796,13 @@
 
       <!-- Google links -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-        <!-- TODO: If you obtain the real numeric Google CID for Hunan Hut, replace hrefs with:
-             https://maps.google.com/?cid=<NUMERIC_CID_HERE> (links directly to the verified listing) -->
-        <a href="https://www.google.com/maps/search/Hunan+Hut+7967+New+Hampshire+Ave+Adelphi+MD" target="_blank" rel="noopener noreferrer"
+        <!-- Both links open the verified Google listing (CID 963080187798572148). A direct write-review link needs the Place ID from Google Business Profile. -->
+        <a href="https://maps.google.com/?cid=963080187798572148" target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center gap-2 border border-brand-gold/40 hover:border-brand-gold text-brand-gold hover:text-brand-goldLight text-sm font-semibold px-6 py-3 rounded-full cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
           <svg class="w-4 h-4 star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           <span data-i18n="reviews_leave">Leave Us a Google Review</span>
         </a>
-        <a href="https://www.google.com/maps/search/Hunan+Hut+7967+New+Hampshire+Ave+Adelphi+MD" target="_blank" rel="noopener noreferrer"
+        <a href="https://maps.google.com/?cid=963080187798572148" target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center gap-2 min-h-[44px] text-brand-cream/55 hover:text-brand-cream text-sm cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
           <span data-i18n="reviews_google">Read all 200+ reviews on Google</span>
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
@@ -971,6 +836,7 @@
         action="https://formspree.io/f/xbdbozby"
         method="POST"
         onsubmit="handleFeedbackSubmit(event)"
+        novalidate
         class="reveal bg-brand-dark border border-brand-red/20 rounded-2xl p-5 sm:p-6 space-y-4">
 
         <!-- Name + what they ordered (side by side to save height; inputs pinned to the bottom so they align when a label wraps) -->
@@ -1011,6 +877,7 @@
           <textarea id="fb-comment" name="comment" rows="2" required
             placeholder="Tell us about your experience..."
             class="w-full bg-brand-darker border border-brand-cream/10 rounded-xl px-3 py-2.5 text-brand-cream placeholder-brand-cream/25 text-sm focus:outline-none focus:border-brand-red/50 focus:ring-1 focus:ring-brand-red/30 transition-colors resize-none"></textarea>
+          <p id="fb-comment-error" class="hidden mt-2 text-brand-redLight text-sm" role="alert" data-i18n="fb_alert_comment">Please tell us about your experience.</p>
         </div>
 
         <!-- Submit -->
@@ -1088,8 +955,7 @@
               <address class="text-brand-cream/55 text-sm not-italic leading-relaxed">
                 7967 New Hampshire Ave<br/>
                 Langley Park Plaza<br/>
-                Adelphi, MD 20783<br/>
-                United States
+                Adelphi, MD 20783
               </address>
               <a href="https://maps.google.com/?q=7967+New+Hampshire+Ave+Adelphi+MD+20783" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-1 mt-3 text-brand-gold hover:text-brand-goldLight text-xs font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded min-h-[44px]">
@@ -1152,7 +1018,7 @@
                 class="inline-flex items-center gap-1.5 min-h-[44px] text-brand-gold hover:text-brand-goldLight text-lg font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
                 <span data-i18n="contact_dd_link">Order on DoorDash</span><svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
               </a>
-              <p data-i18n="contact_dd_hours" class="text-brand-cream/75 text-sm mt-1">Delivery orders until 9:25 PM (Fri–Sat until 10:25 PM)</p>
+              <p data-i18n="contact_dd_hours" class="text-brand-cream/75 text-sm mt-1">Delivery orders until 9:25 PM (Fri&#8288;–&#8288;Sat until 10:25 PM)</p>
               <p data-i18n="dd_note" class="text-brand-cream/55 text-xs mt-2">Prices on DoorDash are higher than our menu to cover DoorDash's fees. For our regular prices, call ahead and pick up.</p>
             </div>
           </div>
@@ -1282,16 +1148,6 @@
       btn.focus();
     });
 
-    // ─── Accordion ────────────────────────────────────────────────────────────
-    function toggleAccordion(triggerBtn) {
-      const body = triggerBtn.nextElementSibling;
-      const icon = triggerBtn.querySelector('.accordion-icon');
-      const isOpen = body.classList.contains('open');
-      body.classList.toggle('open', !isOpen);
-      icon.classList.toggle('open', !isOpen);
-      triggerBtn.setAttribute('aria-expanded', String(!isOpen));
-    }
-
     // ─── Translation dictionary ────────────────────────────────────────────────
     const translations = {
       en: {
@@ -1302,7 +1158,7 @@
         fav_dd_link: "Prefer delivery? Order on DoorDash",
         contact_dd_title: "Delivery",
         contact_dd_link: "Order on DoorDash",
-        contact_dd_hours: "Delivery orders until 9:25 PM (Fri–Sat until 10:25 PM)",
+        contact_dd_hours: "Delivery orders until 9:25 PM (Fri⁠–⁠Sat until 10:25 PM)",
         nav_delivery: "Delivery on DoorDash",
         fb_optional: '(optional)',
         reviews_summary: ' out of 5 · 200+ Google reviews',
@@ -1409,6 +1265,7 @@
         fb_ph_order:     'e.g. Chicken wings with mambo sauce',
         fb_ph_comment:   'Tell us about your experience...',
         fb_alert_rating: 'Please select a star rating before submitting.',
+        fb_alert_comment: 'Please tell us about your experience.',
         fb_sending:      'Sending…',
         // CTA
         cta_heading:    'Ready to Order?',
@@ -1552,6 +1409,7 @@
         fb_ph_order:     'p. ej. Alitas con salsa mambo',
         fb_ph_comment:   'Cuéntanos tu experiencia...',
         fb_alert_rating: 'Por favor selecciona una calificación de estrellas.',
+        fb_alert_comment: 'Por favor cuéntanos sobre tu experiencia.',
         fb_sending:      'Enviando…',
         // CTA
         cta_heading:    '¿Listo para Pedir?',
@@ -1695,6 +1553,7 @@
         fb_ph_order:     '例如：曼波酱鸡翅',
         fb_ph_comment:   '和我们分享您的体验……',
         fb_alert_rating: '提交前请先选择星级评分。',
+        fb_alert_comment: '请告诉我们您的用餐体验。',
         fb_sending:      '提交中……',
         // CTA
         cta_heading:    '准备点餐了吗？',
@@ -1724,263 +1583,6 @@
         badge_best_seller:'畅销',
       }
     };
-
-    // ─── Menu item data (EN + ES) ─────────────────────────────────────────────
-    const menuData = {
-      specials: { items: [
-        { en: 'Sesame Chicken',                      es: 'Pollo al Sésamo',                               zh: '芝麻鸡',              price: '$14.95', badge: { en: 'Popular', es: 'Popular', zh: '人气' } },
-        { en: 'Sesame Beef',                         es: 'Res al Sésamo',                                 zh: '芝麻牛',              price: '$17.95' },
-        { en: "General Tso's Chicken 🌶️",              es: 'Pollo del General Tso 🌶️',                      zh: '左宗棠鸡 🌶️',         price: '$14.95', badge: { en: 'Popular', es: 'Popular', zh: '人气' } },
-        { en: "General Tso's Shrimp 🌶️",             es: 'Camarones del General Tso 🌶️',                  zh: '左宗棠虾 🌶️',         price: '$17.95' },
-        { en: "General Tso's Tofu 🌶️",               es: 'Tofu del General Tso 🌶️',                       zh: '左宗棠豆腐 🌶️',       price: '$12.95' },
-        { en: 'Orange Chicken 🌶️',                   es: 'Pollo a la Naranja 🌶️',                         zh: '陈皮鸡 🌶️',           price: '$14.95' },
-        { en: 'Orange Beef 🌶️',                      es: 'Res a la Naranja 🌶️',                           zh: '陈皮牛 🌶️',           price: '$17.95' },
-        { en: 'Orange Shrimp 🌶️',                    es: 'Camarones a la Naranja 🌶️',                     zh: '陈皮虾 🌶️',           price: '$17.95' },
-        { en: 'Seafood Combination',                 es: 'Combinación de Mariscos',                       zh: '海鲜大会',            price: '$17.95' },
-        { en: 'Crispy Beef 🌶️',                      es: 'Res Crujiente 🌶️',                              zh: '脆皮牛 🌶️',           price: '$17.95' },
-        { en: 'Happy Family',                        es: 'Familia Feliz',                                 zh: '全家福',              price: '$16.95' },
-        { en: 'Triple Delight 🌶️',                   es: 'Triple Delicia 🌶️',                             zh: '三鲜大会 🌶️',         price: '$14.95' },
-        { en: 'Hunan Delight 🌶️',                    es: 'Delicias Hunan 🌶️',                             zh: '湖南三鲜 🌶️',         price: '$17.95' },
-        { en: 'Kung Pao Delight 🌶️',                 es: 'Delicias Kung Pao 🌶️',                          zh: '宫保三鲜 🌶️',         price: '$17.95' },
-        { en: 'Beef w/ Scallop',                     es: 'Res con Escalope',                              zh: '干贝牛',              price: '$17.95' },
-        { en: 'Scallops & Shrimp Garlic Sauce 🌶️',  es: 'Escalopes y Camarones con Salsa de Ajo 🌶️',    zh: '鱼香干贝虾 🌶️',       price: '$17.95' },
-        { en: 'Lemon Chicken',                       es: 'Pollo al Limón',                                zh: '柠檬鸡',              price: '$14.95' },
-      ]},
-      wings: { sections: [
-        // ── Fried Chicken Only ──────────────────────────────────────────────
-        { groupHeader: { en: 'Fried Chicken Only', es: 'Solo Pollo Frito', zh: '净炸鸡' } },
-        { header: { en: 'Wings', es: 'Alitas', zh: '鸡翅' },
-          items: [
-            { en: '1 Wing',  es: '1 Alita',  zh: '鸡翅 1只', price: '$2.95'  },
-            { en: '2 Wings', es: '2 Alitas', zh: '鸡翅 2只', price: '$5.75'  },
-            { en: '3 Wings', es: '3 Alitas', zh: '鸡翅 3只', price: '$7.95'  },
-            { en: '4 Wings', es: '4 Alitas', zh: '鸡翅 4只', price: '$9.95'  },
-            { en: '5 Wings', es: '5 Alitas', zh: '鸡翅 5只', price: '$11.95' },
-            { en: '6 Wings', es: '6 Alitas', zh: '鸡翅 6只', price: '$13.95' },
-            { en: '7 Wings', es: '7 Alitas', zh: '鸡翅 7只', price: '$15.95' },
-            { en: '8 Wings', es: '8 Alitas', zh: '鸡翅 8只', price: '$17.95' },
-          ]},
-        { header: { en: 'Breasts', es: 'Pechugas', zh: '鸡胸' },
-          items: [
-            { en: '1 Breast',  es: '1 Pechuga',  zh: '鸡胸 1块', price: '$7.00'  },
-            { en: '2 Breasts', es: '2 Pechugas', zh: '鸡胸 2块', price: '$14.00' },
-          ]},
-        { header: { en: 'Leg', es: 'Pierna', zh: '鸡小腿' },
-          items: [
-            { en: '1 Leg',  es: '1 Pierna',  zh: '鸡小腿 1只', price: '$4.00' },
-            { en: '2 Legs', es: '2 Piernas', zh: '鸡小腿 2只', price: '$7.00' },
-          ]},
-        { header: { en: 'Thigh', es: 'Muslo', zh: '鸡大腿' },
-          items: [
-            { en: '1 Thigh',  es: '1 Muslo',  zh: '鸡大腿 1只', price: '$6.50'  },
-            { en: '2 Thighs', es: '2 Muslos', zh: '鸡大腿 2只', price: '$12.00' },
-          ]},
-        // ── Chicken Special ─────────────────────────────────────────────────
-        { groupHeader: { en: 'Chicken Special', es: 'Especial de Pollo', zh: '炸鸡特餐' },
-          note: { en: 'Served w. Your Choice of: Steamed Rice, Fried Rice, or French Fries. Upgrade: Add Both Rice and Fries +$2', es: 'Servido con tu elección de: Arroz al Vapor, Arroz Frito o Papas Fritas. Mejora: Agrega Ambos Arroces y Papas +$2', zh: '配白米饭、炒饭或薯条任选一种。升级：米饭和薯条都要 +$2' } },
-        { header: { en: 'Wings', es: 'Alitas', zh: '鸡翅' },
-          items: [
-            { en: '1 Wing',  es: '1 Alita',  zh: '鸡翅 1只', price: '$6.50'  },
-            { en: '2 Wings', es: '2 Alitas', zh: '鸡翅 2只', price: '$7.95'  },
-            { en: '3 Wings', es: '3 Alitas', zh: '鸡翅 3只', price: '$9.95'  },
-            { en: '4 Wings', es: '4 Alitas', zh: '鸡翅 4只', price: '$11.95' },
-            { en: '5 Wings', es: '5 Alitas', zh: '鸡翅 5只', price: '$14.95' },
-            { en: '6 Wings', es: '6 Alitas', zh: '鸡翅 6只', price: '$16.95' },
-            { en: '7 Wings', es: '7 Alitas', zh: '鸡翅 7只', price: '$18.95' },
-            { en: '8 Wings', es: '8 Alitas', zh: '鸡翅 8只', price: '$20.95' },
-          ]},
-        { header: { en: 'Breasts', es: 'Pechugas', zh: '鸡胸' },
-          items: [
-            { en: '1 Breast',  es: '1 Pechuga',  zh: '鸡胸 1块', price: '$9.00'  },
-            { en: '2 Breasts', es: '2 Pechugas', zh: '鸡胸 2块', price: '$16.00' },
-          ]},
-        { header: { en: 'Leg and Thigh', es: 'Pierna y Muslo', zh: '鸡小腿和鸡大腿' }, last: true,
-          items: [
-            { en: '1 Leg',               es: '1 Pierna',                    zh: '鸡小腿 1只',            price: '$6.50'  },
-            { en: '1 Thigh',             es: '1 Muslo',                     zh: '鸡大腿 1只',            price: '$8.95'  },
-            { en: '2 Piece Leg & Thigh', es: '2 Piezas Pierna y Muslo',     zh: '鸡小腿+鸡大腿 2件',      price: '$9.95'  },
-            { en: '2 Legs',              es: '2 Piernas',                   zh: '鸡小腿 2只',            price: '$9.95'  },
-            { en: 'Leg & Breast',        es: 'Pierna y Pechuga',            zh: '鸡小腿+鸡胸',           price: '$12.00' },
-            { en: '2 Legs & 2 Thighs',  es: '2 Piernas y 2 Muslos',        zh: '鸡小腿 2只+鸡大腿 2只',  price: '$15.95' },
-            { en: '2 Legs & 1 Wing',     es: '2 Piernas y 1 Alita',         zh: '鸡小腿 2只+鸡翅 1只',    price: '$11.95' },
-          ]},
-      ]},
-      sauces: { tags: [
-        { en: 'Mambo Sauce',   es: 'Salsa Mambo',     zh: '曼波酱'    },
-        { en: 'Ketchup',       es: 'Ketchup',         zh: '番茄酱'    },
-        { en: 'Chili Oil',     es: 'Aceite de Chile', zh: '辣椒油'    },
-        { en: 'Hot Sauce',     es: 'Salsa Picante',   zh: '辣酱'      },
-      ], note: { en: 'Extra sauce is 25¢', es: 'La salsa extra cuesta 25¢', zh: '加酱 25¢' } },
-      classics: { items: [
-        { en: 'Shrimp Basket',              es: 'Canasta de Camarones',           zh: '炸虾篮',               price: '$12.50' },
-        { en: 'Buffalo Wings 🌶️ (8 pc)',    es: 'Alitas Buffalo 🌶️ (8 pzas)',     zh: '布法罗辣鸡翅 🌶️（8只）',  price: '$12.50' },
-        { en: 'Buffalo Wings 🌶️ (12 pc)',   es: 'Alitas Buffalo 🌶️ (12 pzas)',    zh: '布法罗辣鸡翅 🌶️（12只）', price: '$18.50' },
-        { en: 'Buffalo Wings 🌶️ (16 pc)',   es: 'Alitas Buffalo 🌶️ (16 pzas)',    zh: '布法罗辣鸡翅 🌶️（16只）', price: '$24.50' },
-        { en: 'Pork Rib Tips',              es: 'Puntas de Costilla',             zh: '排骨尖',               price: '$12.95' },
-        { en: 'Spare Ribs (4 pc)',          es: 'Costillas (4 pzas)',             zh: '排骨（4条）',           price: '$13.95' },
-        { en: 'Chicken Tenders (3 pc)',     es: 'Tiras de Pollo (3 pzas)',        zh: '炸鸡柳（3条）',         price: '$11.95' },
-        { en: 'Fried Fish (3 pc)',          es: 'Pescado Frito (3 pzas)',         zh: '炸鱼（3块）',           price: '$12.95' },
-        { en: 'Shrimp Box (7 pc)',          es: 'Cajita de Camarones (7 pzas)',   zh: '炸虾盒（7只）',         price: '$16.95' },
-      ]},
-      appetizers: { items: [
-        { en: 'French Fries (Sm / Med / Lg)',            es: 'Papas Fritas (Peq / Med / Gr)',                zh: '薯条（小 / 中 / 大）',      price: '$3.75 / $5.95 / $7.95' },
-        { en: 'Seasoned Fries (Sm / Med / Lg)',          es: 'Papas Sazonadas (Peq / Med / Gr)',             zh: '调味薯条（小 / 中 / 大）',   price: '$4.75 / $6.95 / $8.95' },
-        { en: 'Fried Jumbo Shrimp (4 pc)',               es: 'Camarones Jumbo Fritos (4 pzas)',              zh: '炸大虾（4只）',            price: '$7.00' },
-        { en: 'Crab Rangoon (8 pc)',                     es: 'Crab Rangoon (8 pzas)',                        zh: '炸蟹角（8个）',            price: '$7.95' },
-        { en: 'Fried Wonton (7 pc)',                     es: 'Wonton Frito (7 pzas)',                        zh: '炸云吞（7个）',            price: '$7.95' },
-        { en: 'BBQ Spareribs (4 pc)',                    es: 'Costillas BBQ (4 pzas)',                       zh: '烧排骨（4条）',            price: '$11.95' },
-        { en: 'Fried or Steamed Dumplings (7 pc)',       es: 'Dumplings Fritos o al Vapor (7 pzas)',         zh: '煎饺或蒸饺（7个）',         price: '$7.95' },
-        { en: 'Spicy Steamed Shrimp 🌶️ (½ lb / 1 lb)', es: 'Camarones Picantes al Vapor 🌶️ (½ lb / 1 lb)', zh: '香辣蒸虾 🌶️（½磅 / 1磅）', price: '$14.95 / $27.95' },
-        { en: 'Mozzarella Sticks (6 pc)',                es: 'Dedos de Queso (6 pzas)',                      zh: '炸芝士条（6条）',           price: '$4.75' },
-        { en: 'Egg Roll',                                es: 'Rollito de Huevo',                             zh: '春卷',                    price: '$2.00' },
-        { en: 'Vegetable Spring Roll',                   es: 'Rollito Primavera de Vegetales',               zh: '素春卷',                  price: '$2.00' },
-        { en: 'Steak and Cheese Roll',                   es: 'Rollo de Carne y Queso',                      zh: '牛肉芝士卷',               price: '$3.00' },
-      ]},
-      soups: { items: [
-        { en: 'Egg Drop (Sm / Lg)',                es: 'Sopa de Huevo (Peq / Gr)',          zh: '蛋花汤（小 / 大）',      price: '$3.75 / $7.95'  },
-        { en: 'Pork Wonton (Sm / Lg)',             es: 'Wonton de Cerdo (Peq / Gr)',        zh: '鲜肉云吞汤（小 / 大）',   price: '$3.75 / $7.95'  },
-        { en: 'Hot & Sour 🌶️ (Sm / Lg)',          es: 'Agripicante 🌶️ (Peq / Gr)',        zh: '酸辣汤 🌶️（小 / 大）',  price: '$3.75 / $7.95'  },
-        { en: 'Chicken Noodle (Sm / Lg)',          es: 'Fideos con Pollo (Peq / Gr)',       zh: '鸡汤面（小 / 大）',      price: '$4.75 / $8.95'  },
-        { en: 'Combination Noodle (Sm / Lg)',      es: 'Fideos Combinados (Peq / Gr)',      zh: '什锦汤面（小 / 大）',    price: '$7.95 / $14.95' },
-        { en: 'Mixed Vegetable (Sm / Lg)',         es: 'Vegetales Mixtos (Peq / Gr)',       zh: '什菜汤（小 / 大）',      price: '$3.75 / $7.95'  },
-        { en: 'Chicken & Vegetable (Sm / Lg)',     es: 'Pollo y Verduras (Peq / Gr)',       zh: '鸡肉什菜汤（小 / 大）',   price: '$6.95 / $9.95'  },
-        { en: 'Chicken & Corn Soup',               es: 'Sopa de Pollo y Maíz',             zh: '鸡茸玉米汤',            price: '$12.95' },
-        { en: 'Egg & Corn Soup',                   es: 'Sopa de Huevo y Maíz',             zh: '蛋花玉米汤',            price: '$10.95' },
-      ]},
-      friedrice: { items: [
-        { en: 'Vegetable (Sm / Lg)',                          es: 'Vegetales (Peq / Gr)',                              zh: '蔬菜炒饭（小 / 大）',             price: '$8.95 / $9.95'   },
-        { en: 'Pork / Chicken / Beef / Shrimp (Sm / Lg)',    es: 'Cerdo / Pollo / Res / Camarones (Peq / Gr)',        zh: '叉烧 / 鸡 / 牛 / 虾炒饭（小 / 大）', price: '$11.50 / $12.50' },
-        { en: 'Combination (Sm / Lg)',                        es: 'Combinación (Peq / Gr)',                            zh: '什锦炒饭（小 / 大）',             price: '$13.95 / $14.95' },
-        { en: 'Seafood (Sm / Lg)',                            es: 'Mariscos (Peq / Gr)',                               zh: '海鲜炒饭（小 / 大）',             price: '$16.95 / $17.95' },
-      ]},
-      lomein: { sections: [
-        { header: { en: 'Lo Mein',                    es: 'Lo Mein', zh: '捞面' },
-          items: [
-            { en: 'Vegetable (Sm / Lg)',                       es: 'Vegetales (Peq / Gr)',                        zh: '蔬菜捞面（小 / 大）',             price: '$8.95 / $9.95'   },
-            { en: 'Chicken / Pork / Beef / Shrimp (Sm / Lg)', es: 'Pollo / Cerdo / Res / Camarones (Peq / Gr)', zh: '鸡 / 叉烧 / 牛 / 虾捞面（小 / 大）', price: '$11.50 / $12.50' },
-            { en: 'Combination (Sm / Lg)',                     es: 'Combinación (Peq / Gr)',                      zh: '什锦捞面（小 / 大）',             price: '$13.95 / $14.95' },
-            { en: 'Seafood (Sm / Lg)',                         es: 'Mariscos (Peq / Gr)',                         zh: '海鲜捞面（小 / 大）',             price: '$16.95 / $17.95' },
-          ]},
-        { header: { en: 'Rice Noodle',                es: 'Fideos de Arroz', zh: '米粉' },
-          items: [
-            { en: 'Vegetable',                                 es: 'Vegetales',                                   zh: '蔬菜炒米粉',            price: '$10.95'          },
-            { en: 'Pork / Chicken / Beef / Shrimp',           es: 'Cerdo / Pollo / Res / Camarones',             zh: '叉烧 / 鸡 / 牛 / 虾炒米粉', price: '$12.95'          },
-            { en: 'Combination',                               es: 'Combinación',                                 zh: '什锦炒米粉',            price: '$14.95'          },
-            { en: 'Seafood',                                   es: 'Mariscos',                                    zh: '海鲜炒米粉',            price: '$17.95'          },
-            { en: 'Singapore Rice Noodle 🌶️',                 es: 'Fideos de Arroz Singapur 🌶️',                zh: '星洲米粉 🌶️',          price: '$14.95'          },
-          ]},
-        { header: { en: 'Chow Fun / Drunken Noodle',  es: 'Chow Fun / Fideos Borrachos', zh: '河粉 / 醉面' }, last: true,
-          items: [
-            { en: 'Vegetable',                                 es: 'Vegetales',                                   zh: '蔬菜河粉',              price: '$12.95' },
-            { en: 'Pork / Chicken / Beef / Shrimp',           es: 'Cerdo / Pollo / Res / Camarones',             zh: '叉烧 / 鸡 / 牛 / 虾河粉',  price: '$14.95' },
-            { en: 'Combination',                               es: 'Combinación',                                 zh: '什锦河粉',              price: '$16.95' },
-          ]},
-      ]},
-      chicken: { items: [
-        { en: 'Sweet & Sour Chicken (Sm / Lg)',      es: 'Pollo Agridulce (Peq / Gr)',             zh: '甜酸鸡（小 / 大）',        price: '$11.50 / $12.50' },
-        { en: 'Chicken Broccoli (Sm / Lg)',          es: 'Pollo con Brócoli (Peq / Gr)',           zh: '芥兰鸡（小 / 大）',        price: '$11.50 / $12.50' },
-        { en: 'Chicken w/ Vegetables (Sm / Lg)',     es: 'Pollo con Vegetales (Peq / Gr)',         zh: '什菜鸡（小 / 大）',        price: '$11.50 / $12.50' },
-        { en: 'Moo Goo Gai Pan',                     es: 'Moo Goo Gai Pan',                        zh: '蘑菇鸡片',               price: '$12.50'          },
-        { en: 'Hunan Chicken 🌶️ (Sm / Lg)',          es: 'Pollo Hunan 🌶️ (Peq / Gr)',              zh: '湖南鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
-        { en: 'Chicken Garlic Sauce 🌶️ (Sm / Lg)',  es: 'Pollo con Salsa de Ajo 🌶️ (Peq / Gr)',  zh: '鱼香鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
-        { en: 'Curry Chicken 🌶️ (Sm / Lg)',          es: 'Pollo al Curry 🌶️ (Peq / Gr)',           zh: '咖喱鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
-        { en: 'Szechuan Chicken 🌶️ (Sm / Lg)',       es: 'Pollo Szechuan 🌶️ (Peq / Gr)',           zh: '四川鸡 🌶️（小 / 大）',    price: '$11.50 / $12.50' },
-        { en: 'Chicken & Bean Curd',                 es: 'Pollo y Tofu',                           zh: '豆腐鸡',                 price: '$13.50'          },
-        { en: 'Chicken String Beans',                es: 'Pollo con Ejotes',                       zh: '四季豆鸡',                price: '$13.50'          },
-        { en: 'Kung Pao Chicken 🌶️ (Sm / Lg)',       es: 'Kung Pao Pollo 🌶️ (Peq / Gr)',           zh: '宫保鸡丁 🌶️（小 / 大）',  price: '$11.50 / $12.50' },
-        { en: 'Chicken Cashew Nut (Sm / Lg)',        es: 'Pollo con Nueces de Cajú (Peq / Gr)',    zh: '腰果鸡丁（小 / 大）',      price: '$11.50 / $12.50' },
-        { en: 'Chicken Hot Garlic 🌶️ (Sm / Lg)',     es: 'Pollo con Ajo Picante 🌶️ (Peq / Gr)',   zh: '蒜蓉辣鸡 🌶️（小 / 大）',  price: '$11.50 / $12.50' },
-      ]},
-      pork: { items: [
-        { en: 'Roast Pork Broccoli (Sm / Lg)',       es: 'Cerdo Asado con Brócoli (Peq / Gr)',           zh: '芥兰叉烧（小 / 大）',      price: '$11.50 / $12.50' },
-        { en: 'Roast Pork Bean Curd',                es: 'Cerdo Asado con Tofu',                         zh: '豆腐叉烧',               price: '$13.95'          },
-        { en: 'Roast Pork w/ Vegetable (Sm / Lg)',   es: 'Cerdo Asado con Vegetales (Peq / Gr)',         zh: '什菜叉烧（小 / 大）',      price: '$11.50 / $12.50' },
-        { en: 'Roast Pork Hot Garlic 🌶️ (Sm / Lg)', es: 'Cerdo Asado con Ajo Picante 🌶️ (Peq / Gr)',  zh: '蒜蓉辣叉烧 🌶️（小 / 大）', price: '$11.50 / $12.50' },
-        { en: 'Hunan Roast Pork 🌶️ (Sm / Lg)',       es: 'Cerdo Asado Hunan 🌶️ (Peq / Gr)',             zh: '湖南叉烧 🌶️（小 / 大）',  price: '$11.50 / $12.50' },
-        { en: 'Roast Pork String Beans',             es: 'Cerdo Asado con Ejotes',                       zh: '四季豆叉烧',              price: '$13.50'          },
-      ]},
-      beef: { items: [
-        { en: 'Beef Broccoli (Sm / Lg)',        es: 'Res con Brócoli (Peq / Gr)',           zh: '芥兰牛（小 / 大）',        price: '$12.50 / $13.50' },
-        { en: 'Mongolian Beef',                 es: 'Res Mongol',                           zh: '蒙古牛',                 price: '$17.95'          },
-        { en: 'Beef w/ Vegetables (Sm / Lg)',   es: 'Res con Vegetales (Peq / Gr)',         zh: '什菜牛（小 / 大）',        price: '$12.50 / $13.50' },
-        { en: 'Pepper Steak (Sm / Lg)',           es: 'Bistec con Pimientos (Peq / Gr)',  zh: '青椒牛（小 / 大）',        price: '$12.50 / $13.50' },
-        { en: 'Hunan Beef 🌶️ (Sm / Lg)',         es: 'Res Hunan 🌶️ (Peq / Gr)',             zh: '湖南牛 🌶️（小 / 大）',    price: '$12.50 / $13.50' },
-        { en: 'Beef String Beans',              es: 'Res con Ejotes',                       zh: '四季豆牛',                price: '$14.50'          },
-        { en: 'Beef & Bean Curd',               es: 'Res con Tofu',                         zh: '豆腐牛',                 price: '$14.95'          },
-        { en: 'Kung Pao Beef 🌶️ (Sm / Lg)',      es: 'Kung Pao Res 🌶️ (Peq / Gr)',          zh: '宫保牛 🌶️（小 / 大）',    price: '$12.50 / $13.50' },
-        { en: 'Szechuan Beef 🌶️ (Sm / Lg)',      es: 'Res Szechuan 🌶️ (Peq / Gr)',          zh: '四川牛 🌶️（小 / 大）',    price: '$12.50 / $13.50' },
-        { en: 'Beef Hot Garlic 🌶️ (Sm / Lg)',    es: 'Res con Ajo Picante 🌶️ (Peq / Gr)',   zh: '蒜蓉辣牛 🌶️（小 / 大）',  price: '$12.50 / $13.50' },
-        { en: 'Curry Beef 🌶️',                   es: 'Res al Curry 🌶️',                     zh: '咖喱牛 🌶️',             price: '$13.50'          },
-      ]},
-      seafood: { items: [
-        { en: 'Shrimp Broccoli (Sm / Lg)',      es: 'Camarones con Brócoli (Peq / Gr)',          zh: '芥兰虾（小 / 大）',       price: '$12.50 / $13.50' },
-        { en: 'Shrimp w/ Vegetables (Sm / Lg)', es: 'Camarones con Vegetales (Peq / Gr)',         zh: '什菜虾（小 / 大）',       price: '$12.50 / $13.50' },
-        { en: 'Shrimp Lobster Sauce',           es: 'Camarones con Salsa de Langosta',            zh: '虾龙糊',                price: '$14.95'          },
-        { en: 'Shrimp Cashew Nuts (Sm / Lg)',   es: 'Camarones con Nueces de Cajú (Peq / Gr)',   zh: '腰果虾（小 / 大）',       price: '$12.50 / $13.50' },
-        { en: 'Curry Shrimp 🌶️',                es: 'Camarones al Curry 🌶️',                    zh: '咖喱虾 🌶️',            price: '$13.50'          },
-        { en: 'Hunan Shrimp 🌶️ (Sm / Lg)',       es: 'Camarones Hunan 🌶️ (Peq / Gr)',            zh: '湖南虾 🌶️（小 / 大）',   price: '$12.50 / $13.50' },
-        { en: 'Szechuan Shrimp 🌶️ (Sm / Lg)',    es: 'Camarones Szechuan 🌶️ (Peq / Gr)',         zh: '四川虾 🌶️（小 / 大）',   price: '$12.50 / $13.50' },
-        { en: 'Kung Pao Shrimp 🌶️ (Sm / Lg)',    es: 'Kung Pao Camarones 🌶️ (Peq / Gr)',         zh: '宫保虾 🌶️（小 / 大）',   price: '$12.50 / $13.50' },
-      ]},
-      veggies: { items: [
-        { en: 'Mixed Vegetables (Sm / Lg)',         es: 'Vegetales Mixtos (Peq / Gr)',        zh: '炒什菜（小 / 大）',          price: '$9.95 / $10.95'  },
-        { en: 'Broccoli w/ Mushrooms (Sm / Lg)',    es: 'Brócoli con Champiñones (Peq / Gr)', zh: '蘑菇芥兰（小 / 大）',        price: '$9.95 / $10.95'  },
-        { en: 'Bean Curd Family Style 🌶️ (Sm / Lg)',   es: 'Tofu Estilo Familiar 🌶️ (Peq / Gr)',    zh: '家常豆腐 🌶️（小 / 大）',   price: '$12.95 / $13.95' },
-        { en: 'Bean Curd Szechuan 🌶️ (Sm / Lg)',   es: 'Tofu Szechuan 🌶️ (Peq / Gr)',       zh: '四川豆腐 🌶️（小 / 大）',    price: '$12.95 / $13.95' },
-        { en: 'Szechuan String Bean 🌶️ (Sm / Lg)', es: 'Ejotes Szechuan 🌶️ (Peq / Gr)',     zh: '四川四季豆 🌶️（小 / 大）',  price: '$12.95 / $13.95' },
-      ]},
-      efyoung: { items: [
-        { en: 'Vegetable',                        es: 'Vegetales',                          zh: '蔬菜芙蓉蛋',               price: '$10.95' },
-        { en: 'Pork / Chicken / Beef / Shrimp',  es: 'Cerdo / Pollo / Res / Camarones',   zh: '叉烧 / 鸡 / 牛 / 虾芙蓉蛋',  price: '$14.95' },
-        { en: 'Combination',                      es: 'Combinación',                        zh: '什锦芙蓉蛋',               price: '$16.95' },
-      ]},
-    };
-
-    // ─── Menu renderer ────────────────────────────────────────────────────────
-    function renderMenuBodies(lang) {
-      const itemRow = (item) => {
-        const badgeHtml = item.badge
-          ? ` <span class="badge bg-brand-red/15 text-brand-redLight border border-brand-red/20">${item.badge[lang]}</span>`
-          : '';
-        const hasBadge = !!item.badge;
-        return `<div class="bg-brand-dark px-6 py-3 flex justify-between items-center">` +
-          `<span class="text-brand-cream/75 text-sm${hasBadge ? ' flex items-center gap-2' : ''}">${item[lang]}${badgeHtml}</span>` +
-          `<span class="text-brand-gold text-sm font-semibold">${item.price}</span></div>`;
-      };
-      const grid = (items, extra) =>
-        `<div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-brand-red/10${extra || ''}">${items.map(itemRow).join('')}</div>`;
-      const subhead = (text) =>
-        `<p class="text-brand-cream/55 text-xs px-6 pt-4 pb-1 uppercase tracking-widest font-semibold">${text}</p>`;
-      const groupHead = (text, note) =>
-        `<div class="px-6 pt-5 pb-1 border-t border-brand-red/20 mt-2 first:border-t-0 first:mt-0">` +
-        `<p class="text-brand-redLight text-sm font-bold uppercase tracking-wider">${text}</p>` +
-        (note ? `<p class="text-brand-cream/55 text-xs mt-1 leading-snug">${note}</p>` : '') +
-        `</div>`;
-
-      Object.entries(menuData).forEach(([id, data]) => {
-        const el = document.getElementById('body-' + id);
-        if (!el) return;
-        let html = '';
-        if (data.sections) {
-          data.sections.forEach((sec) => {
-            if (sec.groupHeader) {
-              html += groupHead(sec.groupHeader[lang], sec.note ? sec.note[lang] : null);
-            } else {
-              html += subhead(sec.header[lang]);
-              html += grid(sec.items, sec.last ? ' mb-3' : '');
-            }
-          });
-        } else if (data.tags) {
-          html += `<div class="px-6 py-4"><p class="text-brand-cream/55 text-xs mb-3">${data.note[lang]}</p>` +
-            `<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">` +
-            data.tags.map(t => `<span class="text-brand-cream/75 text-sm py-1">${t[lang]}</span>`).join('') +
-            `</div></div>`;
-        } else {
-          html += grid(data.items);
-        }
-        el.innerHTML = html;
-      });
-    }
 
     let currentLang = 'en';
 
@@ -2016,9 +1618,6 @@
 
       const orderBox = document.getElementById('fb-order');
       if (orderBox) orderBox.placeholder = t.fb_ph_order;
-
-      // Re-render menu items in the selected language
-      renderMenuBodies(lang);
 
       // Refresh open/closed badge in the selected language
       updateOpenStatus();
@@ -2067,12 +1666,16 @@
     // ─── Feedback form ─────────────────────────────────────────────────────────
     function handleFeedbackSubmit(e) {
       const form   = document.getElementById('feedback-form');
-      const rating = form.querySelector('input[name="rating"]:checked');
+      const rating  = form.querySelector('input[name="rating"]:checked');
+      const comment = document.getElementById('fb-comment');
+      const noComment = !comment.value.trim();
 
-      if (!rating) {
+      // Check both so both messages show at once; focus the first problem
+      document.getElementById('fb-rating-error').classList.toggle('hidden', !!rating);
+      document.getElementById('fb-comment-error').classList.toggle('hidden', !noComment);
+      if (!rating || noComment) {
         e.preventDefault();
-        document.getElementById('fb-rating-error').classList.remove('hidden');
-        form.querySelector('input[name="rating"]').focus();
+        (rating ? comment : form.querySelector('input[name="rating"]')).focus();
         return;
       }
 
@@ -2113,6 +1716,9 @@
     document.querySelectorAll('.star-rating input').forEach(input => {
       input.addEventListener('change', () => document.getElementById('fb-rating-error').classList.add('hidden'));
     });
+
+    // Clear the comment message as soon as they start typing
+    document.getElementById('fb-comment').addEventListener('input', () => document.getElementById('fb-comment-error').classList.add('hidden'));
 
     // ─── Fade-in on scroll ────────────────────────────────────────────────────
     if ('IntersectionObserver' in window) {
