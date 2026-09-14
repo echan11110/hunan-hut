@@ -275,17 +275,18 @@
         </a>
 
         <!-- Desktop nav links -->
-        <div class="hidden md:flex items-center gap-5">
-          <a href="#menu"      data-i18n="nav_menu"     class="text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Menu</a>
-          <a href="#about"     data-i18n="nav_story"    class="text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Our Story</a>
-          <a href="#reviews"   data-i18n="nav_reviews"  class="text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Reviews</a>
-          <a href="#feedback"  data-i18n="nav_feedback" class="text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Feedback</a>
-          <a href="#contact"   data-i18n="nav_find"     class="text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Find Us</a>
+        <!-- lg, not md: at 768–1023px the full nav wraps and clips the 中文 button, so tablets get the hamburger -->
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="#menu"      data-i18n="nav_menu"     class="inline-flex items-center min-h-[44px] text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Menu</a>
+          <a href="#about"     data-i18n="nav_story"    class="inline-flex items-center min-h-[44px] text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Our Story</a>
+          <a href="#reviews"   data-i18n="nav_reviews"  class="inline-flex items-center min-h-[44px] text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Reviews</a>
+          <a href="#feedback"  data-i18n="nav_feedback" class="inline-flex items-center min-h-[44px] text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Feedback</a>
+          <a href="#contact"   data-i18n="nav_find"     class="inline-flex items-center min-h-[44px] text-brand-cream/75 hover:text-brand-cream transition-colors duration-200 text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded px-1">Find Us</a>
           <!-- Language toggle -->
           <div class="flex items-center border border-brand-cream/20 rounded-full overflow-hidden text-xs font-bold" role="group" aria-label="Language selector">
-            <button id="lang-en" onclick="setLang('en')" class="lang-btn active px-3 py-1.5 min-h-[36px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">English</button>
-            <button id="lang-es" onclick="setLang('es')" class="lang-btn px-3 py-1.5 min-h-[36px] text-brand-cream/55 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">Español</button>
-            <button id="lang-zh" onclick="setLang('zh')" class="lang-btn px-3 py-1.5 min-h-[36px] text-brand-cream/55 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">中文</button>
+            <button id="lang-en" onclick="setLang('en')" class="lang-btn active px-3 py-1.5 min-h-[44px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">English</button>
+            <button id="lang-es" onclick="setLang('es')" class="lang-btn px-3 py-1.5 min-h-[44px] text-brand-cream/55 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">Español</button>
+            <button id="lang-zh" onclick="setLang('zh')" class="lang-btn px-3 py-1.5 min-h-[44px] text-brand-cream/55 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">中文</button>
           </div>
           <a href="tel:+13014393886" data-i18n="nav_order"
             class="bg-brand-red hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-full min-h-[44px] flex items-center transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
@@ -295,7 +296,7 @@
 
         <!-- Mobile menu button -->
         <button id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
-          class="md:hidden p-2.5 rounded text-brand-cream/75 hover:text-brand-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold cursor-pointer">
+          class="lg:hidden p-2.5 rounded text-brand-cream/75 hover:text-brand-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold cursor-pointer">
           <svg id="icon-menu" viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -307,7 +308,7 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur border-t border-brand-red/20">
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark/95 backdrop-blur border-t border-brand-red/20">
       <div class="px-4 py-4 flex flex-col gap-4">
         <a href="#menu"     data-i18n="nav_menu"     class="text-brand-cream/75 hover:text-brand-cream text-base font-medium py-2.5 cursor-pointer transition-colors">Menu</a>
         <a href="#about"    data-i18n="nav_story"    class="text-brand-cream/75 hover:text-brand-cream text-base font-medium py-2.5 cursor-pointer transition-colors">Our Story</a>
