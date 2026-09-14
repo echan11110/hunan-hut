@@ -152,6 +152,8 @@
 
     /* Feedback form success */
     #feedback-success { display: none; }
+    /* Focus is moved here after sending so screen readers announce it; it isn't clickable, so no ring */
+    #feedback-success:focus { outline: none; }
   </style>
 
   <!-- JSON-LD: WebSite (gives Google the site name "Hunan Hut" for search results) -->
@@ -2067,19 +2069,38 @@
         return;
       }
 
-      // If Formspree ID is still placeholder, intercept and show success locally
-      if (form.action.includes('YOUR_FORM_ID')) {
-        e.preventDefault();
-        form.style.display = 'none';
-        document.getElementById('feedback-success').style.display = 'block';
-        return;
-      }
-
-      // Real Formspree submission — let it proceed, then show success on next load
+      // Send in the background so the customer stays on the page and sees the thank-you panel.
+      // If Formspree rejects the background request (e.g. its CAPTCHA is on) or the network
+      // fails, fall back to a normal form post so no feedback is ever lost.
+      e.preventDefault();
       const submitBtn = document.getElementById('fb-submit');
       submitBtn.disabled = true;
       submitBtn.textContent = translations[currentLang].fb_sending;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (!res.ok) throw new Error('Formspree ' + res.status);
+        form.style.display = 'none';
+        const success = document.getElementById('feedback-success');
+        success.style.display = 'block';
+        success.setAttribute('tabindex', '-1');
+        success.focus();
+      }).catch(() => {
+        form.submit(); // native post; does not re-run this handler
+      });
     }
+
+    // Coming back from the fallback post (browser back button) restores the page from cache
+    // with the button still disabled and reading "Sending…" — reset it.
+    window.addEventListener('pageshow', () => {
+      const submitBtn = document.getElementById('fb-submit');
+      if (!submitBtn) return;
+      submitBtn.disabled = false;
+      submitBtn.textContent = translations[currentLang].fb_submit;
+    });
 
     // Clear the rating message as soon as a star is picked
     document.querySelectorAll('.star-rating input').forEach(input => {
