@@ -32,10 +32,6 @@
   <meta name="twitter:description" content="Crispy wings, lo mein, General Tso's. Family-owned 25+ years in Adelphi, MD.">
   <meta name="twitter:image" content="https://hunan-hut.com/images/menu/wings-mambo.jpg">
   <!-- Hreflang -->
-  <link rel="alternate" hreflang="en" href="https://hunan-hut.com/">
-  <link rel="alternate" hreflang="es" href="https://hunan-hut.com/?lang=es">
-  <link rel="alternate" hreflang="zh" href="https://hunan-hut.com/?lang=zh">
-  <link rel="alternate" hreflang="x-default" href="https://hunan-hut.com/">
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -206,7 +202,13 @@
       "bestRating": "5",
       "worstRating": "1"
     },
-    "hasMap": "https://maps.google.com/?q=7967+New+Hampshire+Ave+Adelphi+MD+20783",
+    "hasMap": "https://maps.google.com/?cid=963080187798572148",
+    "sameAs": [
+      "https://maps.google.com/?cid=963080187798572148",
+      "https://maps.apple.com/place?place-id=I8BC66DBC13714AF1",
+      "https://www.yelp.com/biz/hunan-hut-hyattsville",
+      "https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/"
+    ],
     "potentialAction": [
       {
         "@type": "OrderAction",
@@ -1658,7 +1660,7 @@
       }
     }
 
-    // Render menu on initial page load (honor ?lang= from hreflang links)
+    // Render menu on initial page load (honor ?lang= links)
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     setLang(['en','es','zh'].includes(urlLang) ? urlLang : 'en');
     setInterval(updateOpenStatus, 60000);

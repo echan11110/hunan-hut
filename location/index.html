@@ -18,10 +18,6 @@
   <meta property="og:image" content="https://hunan-hut.com/images/menu/wings-mambo.jpg">
   <meta property="og:image:alt" content="Crispy fried chicken wings with a cup of mambo sauce from Hunan Hut in Adelphi, MD">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="alternate" hreflang="en" href="https://hunan-hut.com/location/">
-  <link rel="alternate" hreflang="es" href="https://hunan-hut.com/location/?lang=es">
-  <link rel="alternate" hreflang="zh" href="https://hunan-hut.com/location/?lang=zh">
-  <link rel="alternate" hreflang="x-default" href="https://hunan-hut.com/location/">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
@@ -70,7 +66,13 @@
       "addressCountry": "US"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 38.9943, "longitude": -76.9857 },
-    "hasMap": "https://maps.google.com/?q=7967+New+Hampshire+Ave+Adelphi+MD+20783",
+    "hasMap": "https://maps.google.com/?cid=963080187798572148",
+    "sameAs": [
+      "https://maps.google.com/?cid=963080187798572148",
+      "https://maps.apple.com/place?place-id=I8BC66DBC13714AF1",
+      "https://www.yelp.com/biz/hunan-hut-hyattsville",
+      "https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/"
+    ],
     "areaServed": ["Adelphi, MD", "Hyattsville, MD", "Langley Park, MD", "College Park, MD", "Silver Spring, MD"]
   }
   </script>
@@ -309,7 +311,7 @@
       });
     }
 
-    // Honor ?lang= in the URL (hreflang alternates point here)
+    // Honor ?lang= in the URL (shareable language links)
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     if (['es','zh'].includes(urlLang)) setLang(urlLang);
   </script>
