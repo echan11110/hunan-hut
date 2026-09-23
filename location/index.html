@@ -53,6 +53,15 @@
     "name": "Hunan Hut",
     "url": "https://hunan-hut.com/",
     "telephone": "+13014393886",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+13014393886",
+      "contactType": "Phone orders",
+      "hoursAvailable": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["https://schema.org/Sunday", "https://schema.org/Monday", "https://schema.org/Tuesday", "https://schema.org/Wednesday", "https://schema.org/Thursday"], "opens": "11:00", "closes": "21:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["https://schema.org/Friday", "https://schema.org/Saturday"], "opens": "11:00", "closes": "22:30" }
+      ]
+    },
     "servesCuisine": "Chinese",
     "priceRange": "$",
     "menu": "https://hunan-hut.com/menu/",
@@ -71,7 +80,8 @@
       "https://maps.google.com/?cid=963080187798572148",
       "https://maps.apple.com/place?place-id=I8BC66DBC13714AF1",
       "https://www.yelp.com/biz/hunan-hut-hyattsville",
-      "https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/"
+      "https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/",
+      "https://www.ubereats.com/store/hunan-hut-7967-new-hampshire-ave/MPtkKogYWBaCLc2bOMifbw"
     ],
     "areaServed": ["Adelphi, MD", "Hyattsville, MD", "Langley Park, MD", "College Park, MD", "Silver Spring, MD"]
   }
@@ -151,13 +161,15 @@
           <dt class="text-brand-cream/55" data-i18n="hrs_fri_sat">Friday – Saturday</dt>
           <dd class="text-brand-cream/75 whitespace-nowrap">11 AM – 11 PM</dd>
         </dl>
-        <p class="text-brand-cream/55 text-sm mt-3" data-i18n="loc_hours_note">Open seven days a week. Hours subject to change — call to confirm.</p>
+        <p class="text-brand-cream/75 text-sm mt-3" data-i18n="loc_hours_lastcall">Last call for phone orders: 9:30 PM (Fri&#8288;–&#8288;Sat 10:30 PM)</p>
+        <p class="text-brand-cream/55 text-sm mt-1" data-i18n="loc_hours_note">Open seven days a week. Hours subject to change — call to confirm.</p>
       </div>
 
       <div class="sm:col-span-2 bg-brand-dark border border-brand-red/15 rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h2 class="text-brand-cream font-semibold text-lg mb-1" data-i18n="loc_phone_h">Phone</h2>
-          <p class="text-brand-cream/55 text-sm" data-i18n="loc_phone_note">Call ahead — your order will be ready when you arrive.</p>
+          <p class="text-brand-cream/75 text-sm" data-i18n="loc_phone_hours">Phone orders until 9:30 PM (Fri&#8288;–&#8288;Sat until 10:30 PM)</p>
+          <p class="text-brand-cream/55 text-sm mt-1" data-i18n="loc_phone_note">Call ahead — your order will be ready when you arrive.</p>
         </div>
         <div class="flex flex-col sm:items-end gap-1">
           <a href="tel:+13014393886"
@@ -191,7 +203,7 @@
         <p data-i18n="loc_p1">Hunan Hut has been cooking on New Hampshire Avenue in Adelphi since 1997. We're a family-owned Chinese-American carry-out, and after more than 25 years, many of the faces at our counter are regulars we've known for years. Customers who first came in as kids now bring their own families.</p>
         <p data-i18n="loc_p2">We're a short drive from Hyattsville, Langley Park, and Silver Spring, and close to the University of Maryland campus in College Park. Whether you're a UMD student looking for a late dinner, a family grabbing dinner on the way home, or a longtime regular, you'll get a big, affordable meal that's ready fast.</p>
         <p data-i18n="loc_p3">What brings people back is the food. Our crispy fried wings with mambo sauce — the sweet, tangy sauce DC-area carry-outs are known for — are our best seller. Regulars also swear by our shrimp lo mein, Singapore rice noodle, General Tso's chicken, Triple Delight, and chicken with broccoli. Every order is cooked fresh when you place it.</p>
-        <p data-i18n="loc_p4">We're open seven days a week: Sunday through Thursday from 11 AM to 10 PM, and Friday and Saturday until 11 PM. Call (301) 439-3886 to order ahead for pickup, or get delivery through DoorDash.</p>
+        <p data-i18n="loc_p4">We're open seven days a week: Sunday through Thursday from 11 AM to 10 PM, and Friday and Saturday until 11 PM. Call (301) 439-3886 to order ahead for pickup — phone orders are taken until 9:30 PM, and until 10:30 PM on Friday and Saturday. You can also get delivery through DoorDash or Uber Eats.</p>
       </div>
       <div class="flex flex-col sm:flex-row gap-3 mt-8">
         <a href="../menu/" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full border border-brand-gold/50 hover:border-brand-gold text-brand-gold hover:text-brand-goldLight font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
@@ -246,13 +258,16 @@
         loc_intro: "Family-owned Chinese carry-out at 7967 New Hampshire Ave, serving Adelphi, Hyattsville, Langley Park, and College Park for more than 25 years.",
         loc_addr_h: "Address", loc_maps: "Open in Google Maps",
         loc_hours_h: "Hours", hrs_sun_thu: "Sunday – Thursday", hrs_fri_sat: "Friday – Saturday",
+        loc_hours_lastcall: "Last call for phone orders: 9:30 PM (Fri⁠–⁠Sat 10:30 PM)",
         loc_hours_note: "Open seven days a week. Hours subject to change — call to confirm.",
-        loc_phone_h: "Phone", loc_phone_note: "Call ahead — your order will be ready when you arrive.",
+        loc_phone_h: "Phone",
+        loc_phone_hours: "Phone orders until 9:30 PM (Fri⁠–⁠Sat until 10:30 PM)",
+        loc_phone_note: "Call ahead — your order will be ready when you arrive.",
         loc_story_h: "Your Neighborhood Chinese Carry-Out Since 1997",
         loc_p1: "Hunan Hut has been cooking on New Hampshire Avenue in Adelphi since 1997. We're a family-owned Chinese-American carry-out, and after more than 25 years, many of the faces at our counter are regulars we've known for years. Customers who first came in as kids now bring their own families.",
         loc_p2: "We're a short drive from Hyattsville, Langley Park, and Silver Spring, and close to the University of Maryland campus in College Park. Whether you're a UMD student looking for a late dinner, a family grabbing dinner on the way home, or a longtime regular, you'll get a big, affordable meal that's ready fast.",
         loc_p3: "What brings people back is the food. Our crispy fried wings with mambo sauce — the sweet, tangy sauce DC-area carry-outs are known for — are our best seller. Regulars also swear by our shrimp lo mein, Singapore rice noodle, General Tso's chicken, Triple Delight, and chicken with broccoli. Every order is cooked fresh when you place it.",
-        loc_p4: "We're open seven days a week: Sunday through Thursday from 11 AM to 10 PM, and Friday and Saturday until 11 PM. Call (301) 439-3886 to order ahead for pickup, or get delivery through DoorDash.",
+        loc_p4: "We're open seven days a week: Sunday through Thursday from 11 AM to 10 PM, and Friday and Saturday until 11 PM. Call (301) 439-3886 to order ahead for pickup — phone orders are taken until 9:30 PM, and until 10:30 PM on Friday and Saturday. You can also get delivery through DoorDash or Uber Eats.",
         loc_menu_link: "See the full menu", loc_order_link: "How to order",
         pg_home: "Home", pg_menu: "Menu", pg_order: "How to Order", pg_location: "Location & Hours", pg_faq: "FAQ",
         footer_copy: "© 2026 Hunan Hut. All rights reserved.",
@@ -264,13 +279,16 @@
         loc_intro: "Comida china para llevar, de negocio familiar, en 7967 New Hampshire Ave, sirviendo a Adelphi, Hyattsville, Langley Park y College Park por más de 25 años.",
         loc_addr_h: "Dirección", loc_maps: "Abrir en Google Maps",
         loc_hours_h: "Horario", hrs_sun_thu: "Domingo – Jueves", hrs_fri_sat: "Viernes – Sábado",
+        loc_hours_lastcall: "Última llamada para pedidos por teléfono: 9:30 PM (viernes y sábado 10:30 PM)",
         loc_hours_note: "Abierto los siete días de la semana. El horario puede cambiar — llama para confirmar.",
-        loc_phone_h: "Teléfono", loc_phone_note: "Llama antes — tu pedido estará listo cuando llegues.",
+        loc_phone_h: "Teléfono",
+        loc_phone_hours: "Pedidos por teléfono hasta las 9:30 PM (viernes y sábado hasta las 10:30 PM)",
+        loc_phone_note: "Llama antes — tu pedido estará listo cuando llegues.",
         loc_story_h: "Tu Comida China del Vecindario Desde 1997",
         loc_p1: "Hunan Hut cocina en New Hampshire Avenue, en Adelphi, desde 1997. Somos un restaurante familiar de comida china-americana para llevar y, después de más de 25 años, muchas de las caras en nuestro mostrador son clientes que conocemos desde hace años. Quienes vinieron de niños ahora traen a sus propias familias.",
         loc_p2: "Estamos a poca distancia en auto de Hyattsville, Langley Park y Silver Spring, y cerca del campus de la Universidad de Maryland en College Park. Ya seas estudiante de UMD buscando una cena tarde, una familia que recoge la cena de camino a casa o un cliente de toda la vida, tendrás una comida abundante y económica, lista rápido.",
         loc_p3: "Lo que hace volver a la gente es la comida. Nuestras alitas fritas crujientes con salsa mambo — la salsa dulce y ácida por la que son famosas las comidas chinas para llevar del área de DC — son lo más vendido. Los clientes frecuentes también adoran nuestro lo mein de camarón, los fideos de arroz Singapur, el pollo General Tso's, la Triple Delicia y el pollo con brócoli. Cada pedido se cocina al momento.",
-        loc_p4: "Abrimos los siete días de la semana: de domingo a jueves de 11 AM a 10 PM, y viernes y sábado hasta las 11 PM. Llama al (301) 439-3886 para ordenar y recoger, o pide entrega por DoorDash.",
+        loc_p4: "Abrimos los siete días de la semana: de domingo a jueves de 11 AM a 10 PM, y viernes y sábado hasta las 11 PM. Llama al (301) 439-3886 para ordenar y recoger — los pedidos por teléfono se aceptan hasta las 9:30 PM, y hasta las 10:30 PM los viernes y sábados. También puedes pedir entrega por DoorDash o Uber Eats.",
         loc_menu_link: "Ver el menú completo", loc_order_link: "Cómo ordenar",
         pg_home: "Inicio", pg_menu: "Menú", pg_order: "Cómo Ordenar", pg_location: "Ubicación y Horario", pg_faq: "Preguntas Frecuentes",
         footer_copy: "© 2026 Hunan Hut. Todos los derechos reservados.",
@@ -282,13 +300,16 @@
         loc_intro: "家族经营的中餐外卖店，位于 7967 New Hampshire Ave，25年多来服务 Adelphi、Hyattsville、Langley Park 和 College Park。",
         loc_addr_h: "地址", loc_maps: "在 Google 地图中打开",
         loc_hours_h: "营业时间", hrs_sun_thu: "周日至周四", hrs_fri_sat: "周五至周六",
+        loc_hours_lastcall: "电话订餐截止：晚上 9:30（周五、周六 10:30）",
         loc_hours_note: "每周七天营业。营业时间可能调整，请来电确认。",
-        loc_phone_h: "电话", loc_phone_note: "提前来电，到店即可取餐。",
+        loc_phone_h: "电话",
+        loc_phone_hours: "电话接单至晚上 9:30（周五、周六至晚上 10:30）",
+        loc_phone_note: "提前来电，到店即可取餐。",
         loc_story_h: "自1997年起的街坊中餐外卖",
         loc_p1: "自1997年起，Hunan Hut 就在 Adelphi 的 New Hampshire Avenue 为大家掌勺。我们是家族经营的美式中餐外卖店，25年多来，柜台前的许多面孔都是相识多年的老顾客。当年还是孩子的顾客，如今带着自己的家人来光顾。",
         loc_p2: "我们距离 Hyattsville、Langley Park 和 Silver Spring 只有几分钟车程，离 College Park 的马里兰大学校园也很近。无论您是想吃顿夜宵的马里兰大学学生、下班顺路带晚餐的家庭，还是多年的老主顾，都能吃到分量足、价格实惠、出餐快的好菜。",
         loc_p3: "让大家一再光顾的是我们的菜。招牌炸鸡翅配曼波酱（华盛顿地区中餐外卖店闻名的酸甜酱汁）是我们的销量冠军。老顾客们也钟爱虾捞面、星洲米粉、左宗棠鸡、三鲜大会和芥兰鸡。每一份都是现点现做。",
-        loc_p4: "我们每周七天营业：周日至周四上午11点至晚上10点，周五和周六营业至晚上11点。拨打 (301) 439-3886 提前订餐到店自取，或通过 DoorDash 订外送。",
+        loc_p4: "我们每周七天营业：周日至周四上午11点至晚上10点，周五和周六营业至晚上11点。拨打 (301) 439-3886 提前订餐到店自取——电话订餐截止至晚上 9:30，周五和周六至晚上 10:30。也可通过 DoorDash 或 Uber Eats 订外送。",
         loc_menu_link: "查看完整菜单", loc_order_link: "如何订餐",
         pg_home: "首页", pg_menu: "菜单", pg_order: "如何订餐", pg_location: "地址和营业时间", pg_faq: "常见问题",
         footer_copy: "© 2026 Hunan Hut。保留所有权利。",
