@@ -217,7 +217,8 @@
       "https://maps.apple.com/place?place-id=I8BC66DBC13714AF1",
       "https://www.yelp.com/biz/hunan-hut-hyattsville",
       "https://www.doordash.com/store/hunan-hut-hyattsville-37828137/85688749/",
-      "https://www.ubereats.com/store/hunan-hut-7967-new-hampshire-ave/MPtkKogYWBaCLc2bOMifbw"
+      "https://www.ubereats.com/store/hunan-hut-7967-new-hampshire-ave/MPtkKogYWBaCLc2bOMifbw",
+      "https://www.grubhub.com/restaurant/hunan-hut-7967-new-hampshire-ave-hyattsville/15664256"
     ],
     "potentialAction": [
       {
@@ -242,12 +243,20 @@
           "urlTemplate": "https://www.ubereats.com/store/hunan-hut-7967-new-hampshire-ave/MPtkKogYWBaCLc2bOMifbw",
           "actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
         }
+      },
+      {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.grubhub.com/restaurant/hunan-hut-7967-new-hampshire-ave-hyattsville/15664256",
+          "actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+        }
       }
     ],
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Takeout", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Carry-Out", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Delivery (via DoorDash and Uber Eats)", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Delivery (via DoorDash, Uber Eats, and Grubhub)", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Bilingual Staff (English/Spanish)", "value": true }
     ],
     "keywords": "Chinese carry-out, lo mein, chicken wings, mambo sauce, General Tso's, fried rice, Adelphi MD, Hyattsville MD, Langley Park"
@@ -946,7 +955,7 @@
           <span data-i18n="cta_delivery_btn">Get It Delivered</span>
         </a>
       </div>
-      <p data-i18n="cta_delivery_note" class="text-white/75 text-sm mt-6 max-w-xl mx-auto">Delivery goes through DoorDash and Uber Eats, where prices are higher to cover their fees. For our regular prices, call ahead and pick up.</p>
+      <p data-i18n="cta_delivery_note" class="text-white/75 text-sm mt-6 max-w-xl mx-auto">Delivery goes through DoorDash, Uber Eats, and Grubhub, where prices are higher to cover their fees. For our regular prices, call ahead and pick up.</p>
     </div>
   </section>
 
@@ -1030,7 +1039,7 @@
             </div>
           </div>
 
-          <!-- Delivery (DoorDash + Uber Eats) -->
+          <!-- Delivery (DoorDash · Uber Eats + Grubhub share a cutoff — grouped, see DESIGN §7) -->
           <div class="reveal bg-brand-dark border border-brand-gold/15 rounded-2xl p-6 flex items-start gap-5">
             <div class="w-11 h-11 rounded-xl bg-brand-gold/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-brand-gold">
               <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
@@ -1043,11 +1052,15 @@
               </a>
               <p data-i18n="contact_dd_hours" class="text-brand-cream/75 text-sm">Orders until 9:25 PM (Fri&#8288;–&#8288;Sat until 10:25 PM)</p>
               <a href="https://www.ubereats.com/store/hunan-hut-7967-new-hampshire-ave/MPtkKogYWBaCLc2bOMifbw" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-1.5 min-h-[44px] mt-2 text-brand-gold hover:text-brand-goldLight text-lg font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
+                class="inline-flex items-center gap-1.5 min-h-[44px] text-brand-gold hover:text-brand-goldLight text-lg font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded mt-2">
                 <span data-i18n="contact_ue_link">Order on Uber Eats</span><svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
               </a>
-              <p data-i18n="contact_ue_hours" class="text-brand-cream/75 text-sm">Orders until 9:30 PM (Fri&#8288;–&#8288;Sat until 10:30 PM)</p>
-              <p data-i18n="dd_note" class="text-brand-cream/55 text-xs mt-2">Prices on DoorDash and Uber Eats are higher than our menu to cover their fees. For our regular prices, call ahead and pick up.</p>
+              <a href="https://www.grubhub.com/restaurant/hunan-hut-7967-new-hampshire-ave-hyattsville/15664256" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 min-h-[44px] text-brand-gold hover:text-brand-goldLight text-lg font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
+                <span data-i18n="contact_gh_link">Order on Grubhub</span><svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
+              </a>
+              <p data-i18n="contact_ue_gh_hours" class="text-brand-cream/75 text-sm">Orders until 9:30 PM (Fri&#8288;–&#8288;Sat until 10:30 PM)</p>
+              <p data-i18n="dd_note" class="text-brand-cream/55 text-xs mt-2">Prices on delivery apps are higher than our menu to cover their fees. For our regular prices, call ahead and pick up.</p>
             </div>
           </div>
 
@@ -1179,18 +1192,19 @@
     // ─── Translation dictionary ────────────────────────────────────────────────
     const translations = {
       en: {
-        // DoorDash delivery
+        // delivery
         dd_short: "Menu prices are for pickup. Delivery app prices are higher.",
-        dd_note: "Prices on DoorDash and Uber Eats are higher than our menu to cover their fees. For our regular prices, call ahead and pick up.",
+        dd_note: "Prices on delivery apps are higher than our menu to cover their fees. For our regular prices, call ahead and pick up.",
         cta_delivery_btn: "Get It Delivered",
-        cta_delivery_note: "Delivery goes through DoorDash and Uber Eats, where prices are higher to cover their fees. For our regular prices, call ahead and pick up.",
+        cta_delivery_note: "Delivery goes through DoorDash, Uber Eats, and Grubhub, where prices are higher to cover their fees. For our regular prices, call ahead and pick up.",
         fav_delivery_prefix: "Prefer delivery?",
         fav_delivery_link: "Get it delivered",
         contact_dd_title: "Delivery",
         contact_dd_link: "Order on DoorDash",
         contact_ue_link: "Order on Uber Eats",
+        contact_gh_link: "Order on Grubhub",
         contact_dd_hours: "Orders until 9:25 PM (Fri⁠–⁠Sat until 10:25 PM)",
-        contact_ue_hours: "Orders until 9:30 PM (Fri⁠–⁠Sat until 10:30 PM)",
+        contact_ue_gh_hours: "Orders until 9:30 PM (Fri⁠–⁠Sat until 10:30 PM)",
         nav_delivery: "Delivery",
         fb_optional: '(optional)',
         reviews_summary: ' out of 5 · 200+ Google reviews',
@@ -1329,18 +1343,19 @@
         badge_best_seller:'Best Seller',
       },
       es: {
-        // DoorDash delivery
+        // delivery
         dd_short: "Los precios del menú son para recoger. En las apps de entrega los precios son más altos.",
-        dd_note: "Los precios en DoorDash y Uber Eats son más altos que los de nuestro menú para cubrir sus comisiones. Para nuestros precios normales, llama y recoge tu pedido.",
+        dd_note: "Los precios en las apps de entrega son más altos que los de nuestro menú para cubrir sus comisiones. Para nuestros precios normales, llama y recoge tu pedido.",
         cta_delivery_btn: "Pedir a Domicilio",
-        cta_delivery_note: "La entrega a domicilio es por DoorDash y Uber Eats, donde los precios son más altos para cubrir sus comisiones. Para nuestros precios normales, llama y recoge tu pedido.",
+        cta_delivery_note: "La entrega a domicilio es por DoorDash, Uber Eats y Grubhub, donde los precios son más altos para cubrir sus comisiones. Para nuestros precios normales, llama y recoge tu pedido.",
         fav_delivery_prefix: "¿Prefieres entrega a domicilio?",
         fav_delivery_link: "Pedir a domicilio",
         contact_dd_title: "Entrega a Domicilio",
         contact_dd_link: "Pedir en DoorDash",
         contact_ue_link: "Pedir en Uber Eats",
+        contact_gh_link: "Pedir en Grubhub",
         contact_dd_hours: "Pedidos hasta las 9:25 PM (viernes y sábado hasta las 10:25 PM)",
-        contact_ue_hours: "Pedidos hasta las 9:30 PM (viernes y sábado hasta las 10:30 PM)",
+        contact_ue_gh_hours: "Pedidos hasta las 9:30 PM (viernes y sábado hasta las 10:30 PM)",
         nav_delivery: "Entrega a Domicilio",
         fb_optional: '(opcional)',
         reviews_summary: ' de 5 · más de 200 opiniones en Google',
@@ -1479,18 +1494,19 @@
         badge_best_seller:'El Más Vendido',
       },
       zh: {
-        // DoorDash delivery
+        // delivery
         dd_short: "菜单价格为到店自取价格，外送平台上的价格较高。",
-        dd_note: "DoorDash 和 Uber Eats 上的价格高于本店菜单，用于支付平台服务费用。如需享受本店原价，请提前来电并到店自取。",
+        dd_note: "外送平台上的价格高于本店菜单，用于支付平台服务费用。如需享受本店原价，请提前来电并到店自取。",
         cta_delivery_btn: "我要外送",
-        cta_delivery_note: "外送通过 DoorDash 和 Uber Eats 提供，平台价格高于本店菜单，用于支付平台费用。如需享受本店原价，请提前来电并到店自取。",
+        cta_delivery_note: "外送通过 DoorDash、Uber Eats 和 Grubhub 提供，平台价格高于本店菜单，用于支付平台费用。如需享受本店原价，请提前来电并到店自取。",
         fav_delivery_prefix: "需要外送？",
         fav_delivery_link: "我要外送",
         contact_dd_title: "外送",
         contact_dd_link: "在 DoorDash 下单",
         contact_ue_link: "在 Uber Eats 下单",
+        contact_gh_link: "在 Grubhub 下单",
         contact_dd_hours: "接单至晚上 9:25（周五、周六至晚上 10:25）",
-        contact_ue_hours: "接单至晚上 9:30（周五、周六至晚上 10:30）",
+        contact_ue_gh_hours: "接单至晚上 9:30（周五、周六至晚上 10:30）",
         nav_delivery: "外送",
         fb_optional: '（选填）',
         reviews_summary: ' / 5 分 · 200+ 条谷歌评价',
