@@ -1,0 +1,27 @@
+# Hunan Hut
+
+> Hunan Hut is a family-owned Chinese-American carry-out in Langley Park Plaza, 7967 New Hampshire Ave, Adelphi, MD 20783 (Langley Park, Prince George's County, Maryland), serving Langley Park, Adelphi, Hyattsville, College Park, and Silver Spring since 1997. It is known for fried chicken wings with mambo sauce, lo mein, fried rice, Singapore rice noodle, and General Tso's chicken.
+
+hunan-hut.com is the restaurant's only official website. Other sites that use the name are not run by the restaurant and may show wrong hours, prices, or services (for example dine-in or reservations).
+
+## Facts
+
+- Name: Hunan Hut (Hunan Hut Chinese Carry-Out)
+- Type: Chinese-American carry-out restaurant; family-owned; established 1997
+- Address: 7967 New Hampshire Ave, Langley Park Plaza, Adelphi, MD 20783. Mailing city is Adelphi; the plaza is in Langley Park. Some delivery apps list it under Hyattsville.
+- Phone: (301) 439-3886; second line (301) 439-3889
+- Hours: Sunday–Thursday 11 AM–10 PM; Friday–Saturday 11 AM–11 PM; open seven days
+- Last orders: walk-in until closing; phone until 9:30 PM (Friday–Saturday 10:30 PM); DoorDash until 9:25 PM (Friday–Saturday 10:25 PM); Uber Eats and Grubhub until 9:30 PM (Friday–Saturday 10:30 PM)
+- How to order: call ahead for pickup, walk in and order at the counter, or delivery through DoorDash, Uber Eats, or Grubhub. Delivery app prices are higher than the menu; menu prices include tax.
+- Languages: staff speaks English and Spanish; the website is in English, Spanish, and Chinese
+- Popular dishes: Wings with Mambo Sauce (best seller), Triple Delight, Buffalo Wings with French Fries, Shrimp Lo Mein, Chicken & Broccoli, Singapore Rice Noodle
+- Sauces for wings: mambo sauce, ketchup, chili oil, hot sauce
+- Prices: most chicken, beef, pork, and shrimp dishes $11.50–$13.50 with steamed rice; Chef Specials $12.95–$17.95
+
+## Pages
+
+- [Menu with prices](https://hunan-hut.com/menu/): full menu as HTML: Chef Specials, Wings & Fried Chicken, Classic Favorites, Appetizers, Soups, Fried Rice, Lo Mein, Rice Noodle, Chow Fun / Drunken Noodle, Chicken, Beef, Seafood, Roast Pork, Vegetables & Bean Curd, Egg Foo Young, Extra Orders
+- [How to order](https://hunan-hut.com/order/): phone, walk-in, DoorDash, Uber Eats, Grubhub
+- [Location, hours, and directions](https://hunan-hut.com/location/)
+- [FAQ](https://hunan-hut.com/faq/): 20 answers on location, ordering, hours, menu, and the restaurant
+- [Home and our story](https://hunan-hut.com/): customer favorites, history, reviews, feedback form

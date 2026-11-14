@@ -1,4 +1,26 @@
+# hunan-hut.com: every crawler may read the whole site.
+# Owner decision 2026-11-14: allow AI search crawlers AND model-training crawlers,
+# so AI assistants can learn and cite the restaurant's real hours, menu, and location.
 User-agent: *
+Allow: /
+
+# Named explicitly so the policy is clear. Search/citation: Googlebot, Bingbot (Copilot),
+# OAI-SearchBot, ChatGPT-User, PerplexityBot, Perplexity-User, Claude-SearchBot, Claude-User, Applebot.
+# Training: GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, CCBot.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Applebot
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://hunan-hut.com/sitemap.xml

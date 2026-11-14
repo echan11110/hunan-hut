@@ -9,8 +9,8 @@
   <meta name="robots" content="index, follow">
   <meta name="geo.region" content="US-MD">
   <meta name="geo.placename" content="Adelphi, Maryland">
-  <meta name="geo.position" content="38.9943;-76.9857">
-  <meta name="ICBM" content="38.9943, -76.9857">
+  <meta name="geo.position" content="38.99016;-76.98619">
+  <meta name="ICBM" content="38.99016, -76.98619">
   <link rel="canonical" href="https://hunan-hut.com/">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
@@ -159,7 +159,7 @@
     "@type": ["Restaurant", "LocalBusiness", "FoodEstablishment"],
     "name": "Hunan Hut",
     "alternateName": "Hunan Hut Chinese Carry-Out",
-    "description": "Family-owned Chinese-American carry-out serving Adelphi and Hyattsville, MD for over 25 years. Famous for crispy chicken wings with mambo sauce, lo mein, General Tso's chicken, fried rice, and more. English and Spanish spoken.",
+    "description": "Hunan Hut is a family-owned Chinese-American carry-out in Langley Park Plaza, 7967 New Hampshire Ave, Adelphi, MD, serving Langley Park, Adelphi, Hyattsville, College Park, and Silver Spring since 1997. Known for fried chicken wings with mambo sauce, lo mein, fried rice, Singapore rice noodle, and General Tso's chicken. Order by phone for pickup, walk in, or get delivery through DoorDash, Uber Eats, or Grubhub.",
     "@id": "https://hunan-hut.com/#restaurant",
     "url": "https://hunan-hut.com/",
     "image": [
@@ -167,9 +167,11 @@
       "https://hunan-hut.com/images/menu/triple-delight.jpg",
       "https://hunan-hut.com/images/menu/shrimp-lo-mein.jpg"
     ],
-    "logo": "https://hunan-hut.com/logo2.png",
+    "logo": "https://hunan-hut.com/logo.jpg",
+    "foundingDate": "1997",
+    "knowsLanguage": ["en", "es"],
     "menu": "https://hunan-hut.com/menu/",
-    "hasMenu": "https://hunan-hut.com/menu/",
+    "hasMenu": { "@id": "https://hunan-hut.com/menu/#menu" },
     "telephone": "+13014393886",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -190,11 +192,13 @@
       "postalCode": "20783",
       "addressCountry": "US"
     },
+    "containedInPlace": { "@type": "ShoppingCenter", "name": "Langley Park Plaza" },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 38.9943,
-      "longitude": -76.9857
+      "latitude": 38.99016,
+      "longitude": -76.98619
     },
+    "areaServed": ["Langley Park, MD", "Adelphi, MD", "Hyattsville, MD", "College Park, MD", "Silver Spring, MD", "Takoma Park, MD", "University Park, MD", "Prince George's County, MD"],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday",    "opens": "11:00", "closes": "22:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Tuesday",   "opens": "11:00", "closes": "22:00" },
@@ -941,7 +945,7 @@
           </svg>
           <span data-i18n="cta_call">Call Now</span>
         </a>
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=7967+New+Hampshire+Ave,+Adelphi,+MD+20783" target="_blank" rel="noopener noreferrer"
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Hunan+Hut,+7967+New+Hampshire+Ave,+Adelphi,+MD+20783" target="_blank" rel="noopener noreferrer"
           class="border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-full min-h-[56px] flex items-center justify-center gap-2 cursor-pointer hover:bg-white/10 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
           <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -987,7 +991,7 @@
                 Langley Park Plaza<br/>
                 Adelphi, MD 20783
               </address>
-              <a href="https://maps.google.com/?q=7967+New+Hampshire+Ave+Adelphi+MD+20783" target="_blank" rel="noopener noreferrer"
+              <a href="https://maps.google.com/?cid=963080187798572148" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-1 mt-3 text-brand-gold hover:text-brand-goldLight text-xs font-semibold cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded min-h-[44px]">
                 <span data-i18n="contact_maps_link">Open in Google Maps</span>
                 <svg viewBox="0 0 16 16" fill="currentColor" class="w-3 h-3" aria-hidden="true"><path fill-rule="evenodd" d="M4.22 11.78a.75.75 0 001.06 0l6.5-6.5V9.5a.75.75 0 001.5 0v-7a.75.75 0 00-.75-.75h-7a.75.75 0 000 1.5h4.22l-6.5 6.5a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
@@ -1078,7 +1082,7 @@
         <div class="rounded-2xl overflow-hidden border border-brand-red/15 h-96 lg:h-full min-h-80">
           <iframe
             title="Hunan Hut location map"
-            src="https://www.google.com/maps?q=7967+New+Hampshire+Ave,+Adelphi,+MD+20783&output=embed"
+            src="https://www.google.com/maps?q=Hunan+Hut,+7967+New+Hampshire+Ave,+Adelphi,+MD+20783&output=embed"
             width="100%"
             height="100%"
             style="border:0; min-height:320px;"
