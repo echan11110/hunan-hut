@@ -1654,6 +1654,7 @@
 
     function setLang(lang) {
       currentLang = lang;
+      try { localStorage.setItem('hh-lang', lang); } catch (e) {} // remembered across pages
       const t = translations[lang];
 
       // Update all data-i18n elements
@@ -1724,9 +1725,11 @@
       }
     }
 
-    // Render menu on initial page load (honor ?lang= links)
+    // Initial language: a ?lang= link wins, then the visitor's last choice on any page, else English
     const urlLang = new URLSearchParams(window.location.search).get('lang');
-    setLang(['en','es','zh'].includes(urlLang) ? urlLang : 'en');
+    let savedLang = null;
+    try { savedLang = localStorage.getItem('hh-lang'); } catch (e) {}
+    setLang([urlLang, savedLang].find(l => ['en','es','zh'].includes(l)) || 'en');
     setInterval(updateOpenStatus, 60000);
 
     // ─── Feedback form ─────────────────────────────────────────────────────────

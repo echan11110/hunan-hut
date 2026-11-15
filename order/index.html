@@ -375,6 +375,7 @@
     };
 
     function setLang(lang) {
+      try { localStorage.setItem('hh-lang', lang); } catch (e) {} // remembered across pages
       document.documentElement.setAttribute('lang', lang);
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -389,9 +390,12 @@
       });
     }
 
-    // Honor ?lang= in the URL (shareable language links)
+    // Initial language: a ?lang= link wins, then the visitor's last choice on any page
     const urlLang = new URLSearchParams(window.location.search).get('lang');
-    if (['es','zh'].includes(urlLang)) setLang(urlLang);
+    let savedLang = null;
+    try { savedLang = localStorage.getItem('hh-lang'); } catch (e) {}
+    const startLang = [urlLang, savedLang].find(l => ['en','es','zh'].includes(l));
+    if (startLang) setLang(startLang);
   </script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "90dade2e0686435e9443643fe495cb93"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
