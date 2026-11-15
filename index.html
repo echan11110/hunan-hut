@@ -1225,6 +1225,8 @@
         hero_h1_sub_a: 'Chinese Carry-Out',
         hero_h1_sub_b: 'Adelphi, MD',
         open_now:      'Open Now · closes at ',
+        open_until_10: '10:00 PM',
+        open_until_11: '11:00 PM',
         open_closed:   'Closed · opens at 11:00 AM',
         sticky_call:   'Call (301) 439-3886',
         reviews_leave: 'Leave Us a Google Review',
@@ -1376,6 +1378,8 @@
         hero_h1_sub_a: 'Comida China para Llevar',
         hero_h1_sub_b: 'Adelphi, MD',
         open_now:      'Abierto Ahora · cierra a las ',
+        open_until_10: '10:00 PM',
+        open_until_11: '11:00 PM',
         open_closed:   'Cerrado · abre a las 11:00 AM',
         sticky_call:   'Llamar (301) 439-3886',
         reviews_leave: 'Déjanos una Opinión en Google',
@@ -1526,7 +1530,9 @@
         hero_popular:  '人气菜品',        hero_rating:   ' 条谷歌评价',
         hero_h1_sub_a: '中式外卖',
         hero_h1_sub_b: '马里兰州 Adelphi',
-        open_now:      '营业中 · 关门时间 ',
+        open_now:      '营业中 · ',
+        open_until_10: '晚上 10:00 打烊',
+        open_until_11: '晚上 11:00 打烊',
         open_closed:   '已打烊 · 上午 11:00 开门',
         sticky_call:   '致电 (301) 439-3886',
         reviews_leave: '在谷歌上给我们留个评价',
@@ -1710,7 +1716,7 @@
       if (isOpen) {
         dot.className  = 'w-2 h-2 rounded-full bg-green-400 animate-pulse';
         text.className = 'text-sm font-semibold text-green-400';
-        text.textContent = t.open_now + (closeHour === 23 ? '11:00 PM' : '10:00 PM');
+        text.textContent = t.open_now + (closeHour === 23 ? t.open_until_11 : t.open_until_10);
       } else {
         dot.className  = 'w-2 h-2 rounded-full bg-brand-redLight';
         text.className = 'text-sm font-semibold text-brand-cream/55';
